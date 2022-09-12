@@ -1,18 +1,19 @@
-const nomi:string[] = []
+const nomi:any[] = []
 
-function aggiungiNome(nome:string){
-    if(nomi.length < 5){
-        nomi.push(nome)
-    } else {
-        console.log("Errore...")
+function creaOggetto(v1:any, v2:any, v3:any) {
+
+    const persona = {
+        nome: v1,
+        cognome: v2,
+        eta: v3
     }
+
+    return persona
+
 }
 
-aggiungiNome("Nome1")
-aggiungiNome("Nome2")
-aggiungiNome("Nome3")
-aggiungiNome("Nome4")
-aggiungiNome("Nome5")
-aggiungiNome("Nome6")
+nomi.push(creaOggetto("Renzo","Tramaglino",20))
+nomi.push(creaOggetto("Lucia","Mondella",19))
+nomi.push(creaOggetto("Don","Abbondio",50))
 
 console.log(nomi)
