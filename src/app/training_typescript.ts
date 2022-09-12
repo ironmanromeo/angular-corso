@@ -1,8 +1,13 @@
-const nome = "Renzo"
-const cognome = "Tramaglino"
+const nomi:string[] = []
 
-const nomeCognome = nome + " " + cognome
-const nomeCognome2 = `${nome} ${cognome}`
+function riempi(arr:string[]) {
+    while (arr.length < 5) {
+        arr.push("UnNnome")
+    }
 
-console.log(nomeCognome)
-console.log(nomeCognome2)
+console.log("Array pieno")
+
+    return arr
+}
+
+riempi(nomi)
