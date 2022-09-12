@@ -1,17 +1,12 @@
 let nomi: string[] = []
 
-
-
-function addnome(n: string){
-        
-        if(nomi.length<5){
-            nomi.push(n)
-            
-        }
-        else{
-            console.log("Hai raggiunto il numero massimo di elementi inseribili")
-        }
-    
+function addnome(n: string){   
+    if(nomi.length<5){
+        nomi.push(n)        
+    }    
+    else{
+        console.log("Hai raggiunto il numero massimo di elementi inseribili")
+   }    
 }
 
 addnome("Marco")
