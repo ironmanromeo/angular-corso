@@ -8,7 +8,7 @@ function aggiungiNome(nomi:Array<string>, nome:string) {
     }
 }
 
-aggiungiNome(nomi,"Jimwell")
+aggiungiNome(nomi,"Bea")
 console.log(nomi);
 
 aggiungiNome(nomi,"Luffy")
