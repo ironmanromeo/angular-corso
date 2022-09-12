@@ -1,17 +1,12 @@
-class Persona{
+import { Componente, SuperPagina, logger, ComponenteDecoratore } from './mia_libreria'
 
-nome:string
-cognome:string
-eta:number
 
-constructor(nome:string,cognome:string,eta:number){
-    this.nome=nome
-    this.cognome=cognome
-    this.eta=eta
-}
-
-nomeCognome(){
-    return `nome:${this.nome},cognome:${this.cognome},eta:${this.eta}`
-}
+@ComponenteDecoratore({
+    selettore:"componente",
+    template:"<h1> components nuovo </h1>"
+})
+class Pagina extends SuperPagina{
 
 }
+
+const pagina = new Pagina()
