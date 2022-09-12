@@ -6,6 +6,9 @@ import { AppComponent } from './app.component';
 import './training_javascript';
 import './training_typescript';
 
+import './training_javascript'
+import './training_typescript'
+
 @NgModule({
   declarations: [
     AppComponent
