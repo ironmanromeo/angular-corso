@@ -1,6 +1,6 @@
 const nome = "Renzo"
 const cognome = "Tramaglino"
-const nomecognome= nome + cognome
+const nomeCognome= nome + cognome
 console.log (nomecognome)
-const nomecognome2 = `${nome} ${cognome}` 
+const nomeCognome2 = `${nome} ${cognome}` 
 console.log (nomecognome2)
