@@ -1,13 +1,16 @@
-const persone:any[] = []
 
-function creaPersona(nome:string,cognome:string,eta:number){
-    const persona = {
-                    nome,
-                    cognome,
-                    eta:eta
+    type persona={
+        nome:string
+        cognome:string
+        eta:number
     }
-    return persona     
+    
+
+    const persona2:{nome:string,cognome:string,eta:number}= {
+        nome:"Lucia",
+        cognome:"Montella",
+        eta:19,
 }
 
-const persona1 = creaPersona("Renzo","Tramaglino",22)
-persone.push(persona1)
+console.log(persona2.nome,persona2.nome);
+
