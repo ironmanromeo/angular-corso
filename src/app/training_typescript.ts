@@ -5,7 +5,7 @@ aggiungiNome();
 
 
 function aggiungiNome(){
-    if(nomi.length<5)
+    if(nomi.length==0)
     {
         nomi.push("a");
         nomi.push("a");    
