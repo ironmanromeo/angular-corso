@@ -1,27 +1,30 @@
-let list: any[] = []
+type Persona = {
+    nome: string,
+    cognome: string,
+    eta: number,
+    nomeCognome: any
+}
 
-function creapersona (nome: string, cognome: string, eta: number){
-    const persona = {
-        nome,
-        cognome,
-        eta
+const persona1:Persona = {
+    nome: "Renzo",
+    cognome: "Tramaglino",
+    eta: 20,
+    nomeCognome(){
+        return this.nome + " " + this.cognome
     }
+}
 
-    return persona
+console.log(persona1.nomeCognome())
+
+const persona2:Persona = {
+    nome: "Lucia",
+    cognome: "Mondella",
+    eta: 19,
+    nomeCognome(){
+        return this.nome + " " + this.cognome
+    }
 }
 
 
+console.log(persona2.nomeCognome())
 
-
-const persona1 = creapersona("Renzo", "Tramaglino", 20)
-const persona2 = creapersona("Lucia", "Mondella", 19)
-const persona3 = creapersona("Don", "Abbondio", 50)
-
-list.push(persona1)
-list.push(persona2)
-list.push(persona3)
-
-
-list.forEach(persona => {
-    console.log(list)
-});
