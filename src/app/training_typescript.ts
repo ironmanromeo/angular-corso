@@ -1,14 +1,30 @@
-const numero1 = 28.5
-const numero2 = "3"
+let nomi: string[] = []
 
-function somma(v1:number|string, v2:number|string){
-    if (typeof v1 === "number" && typeof v2 === "number") {
-        return v1 + v2
+function aggiungiNome(nomi:Array<string>, nome:string) {
+    if(nomi.length < 5) {
+        nomi.push(nome)
     } else {
-        return "Non sono numeri: il valore 1 è " + v1 + " e il valore 2 è " + v2
+        console.log("Limite 5 superato!");
     }
 }
 
-const risultato = somma(numero1, numero2)
+aggiungiNome(nomi,"Jimwell")
+console.log(nomi);
 
-console.log(risultato)
+aggiungiNome(nomi,"Luffy")
+console.log(nomi);
+
+aggiungiNome(nomi,"Zoro")
+console.log(nomi);
+
+aggiungiNome(nomi,"Sanji")
+console.log(nomi);
+
+aggiungiNome(nomi,"Robin")
+console.log(nomi);
+
+aggiungiNome(nomi,"Nami")
+console.log(nomi);
+
+aggiungiNome(nomi,"Jimbei")
+console.log(nomi);
