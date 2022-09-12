@@ -1,27 +1,12 @@
-type Persona = {
-    nome:string
-    cognome:string
-    eta:number
-    nomecognome:Function
+import { componente, superpagina, logger, ComponenteDecoratori  } from './mia-libreria'
+
+@ComponenteDecoratori({
+    selettore:"componente",
+    template:"<h1>componente nuovo</h1>"
+})
+
+class pagina extends superpagina{
+
 }
 
-const persona1:Persona={
-    nome: "Renzo",
-    cognome: "Tramaglini",
-    eta:20,
-    nomecognome(){
-        return this.nome + " " + this.cognome
-    }
-}
-
-const persona2:Persona={
-    nome: "Lucia",
-    cognome: "Mondella",
-    eta: 19,
-    nomecognome(){
-        return this.nome + " " + this.cognome
-    }
-}
-
-console.log(persona1)
-console.log(persona1.nomecognome())
+const pagine = new pagina
