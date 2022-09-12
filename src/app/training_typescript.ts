@@ -1,29 +1,11 @@
-const eta = 32
+class Persona {
+    nome:string
+    cognome:string
+    eta:number
 
-type Persona = {
-    nome: string,
-    cognome: string,
-    eta: number,
-    nomeCognome:any
-}
-
-const persona1:Persona = {
-    nome:"Renzo",
-    cognome:"Tramaglino",
-    eta:20,
-    nomeCognome(){
-        return this.nome + " " + this.cognome
+    constructor(nome:string,cognome:string,eta:number) {
+        this.nome = nome
+        this.cognome = cognome
+        this.eta = eta 
     }
 }
-
-const persona2:Persona = {
-    nome:"Lucia",
-    cognome:"Mondella",
-    eta:19,
-    nomeCognome(){
-        return this.nome + " " + this.cognome
-    }
-}
-
-console.log(persona1.nomeCognome())
-console.log(persona2.nomeCognome())
