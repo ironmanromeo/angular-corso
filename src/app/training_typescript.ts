@@ -1,32 +1,12 @@
+import {Componente, ComponenteDecorator, SuperPagina} from "./mia-libreria"
 
-const eta = 32
+@ComponenteDecorator({
+    selettore:"componente",
+    template:"<p>h1<p>"
+})
 
-type persona = {
-    nome: string,
-    cognome: string,
-    eta: number,
-    nomeCognome: any
+class Pagina extends SuperPagina{
+
 }
 
-const persona1:persona= {
-    nome:"marca",
-    cognome:"marca",
-    eta:41,
-    nomeCognome()
-    {
-        return this.nome + " " + this.cognome
-    }
-}
-
-
-const persona2:persona = {
-    nome:"marca",
-    cognome:"marca",
-    eta:41,
-    nomeCognome()
-    {
-        return this.nome + " " + this.cognome
-    }
-}
-
-console.log(persona2.nomeCognome())
+const pagina = new Pagina()
