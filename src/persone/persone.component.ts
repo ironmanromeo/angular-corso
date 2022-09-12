@@ -7,4 +7,14 @@ import { Component } from "@angular/core"
 })
 export class PersoneComponent {
     nomePagina = "Persone Component"
-}
+    disabilitato = true
+    contatore = 0
+    constructor(){
+        setTimeout(() => {
+            this.disabilitato = false
+        }, 1000
+        )}
+        incContatore(){
+            console.log(this.contatore++)
+        }
+    }
