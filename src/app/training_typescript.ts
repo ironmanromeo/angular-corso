@@ -1,22 +1,18 @@
 const nomi:string[] = []
 
-function aggiungiNome(arr:string[], nome:string) {
-
-    if (arr.length < 5) {
-        arr.push(nome)
+function aggiungiNome(nome:string){
+    if(nomi.length < 5){
+        nomi.push(nome)
     } else {
-        console.log("Errore: array pieno")
+        console.log("Errore...")
     }
-
-    return nomi
-
 }
 
-aggiungiNome(nomi, "nome1")
-aggiungiNome(nomi, "nome2")
-aggiungiNome(nomi, "nome3")
-aggiungiNome(nomi, "nome4")
-aggiungiNome(nomi, "nome5")
-aggiungiNome(nomi, "nome6")
+aggiungiNome("Nome1")
+aggiungiNome("Nome2")
+aggiungiNome("Nome3")
+aggiungiNome("Nome4")
+aggiungiNome("Nome5")
+aggiungiNome("Nome6")
 
 console.log(nomi)
