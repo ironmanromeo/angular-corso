@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Componente,SuperPagina, Logger, ComponenteDecoratore } from './mia-libreria'
 
 @ComponenteDecoratore({
@@ -8,3 +9,5 @@ class Pagina extends SuperPagina{
 
 }
 
+=======
+>>>>>>> origin/main
