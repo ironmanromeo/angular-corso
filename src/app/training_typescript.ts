@@ -1,22 +1,39 @@
-const person:any=[];
-
-
-function creaPersona(nome:string,cognome:string,eta:number)
-{
-    const persona={
-        nome:nome,
-        cognome:cognome,
-        eta:eta
-    };
-    return persona;
+type Persona ={
+    nome:string,
+    cognome:string,
+    eta:number,
+    nomeCognome:Function
 }
 
-person.push(creaPersona("Renzo","Tramaglino",20));
-person.push(creaPersona("Lucia","Mondella",19));
-person.push(creaPersona("Don","Abbondio",50));
+// const persona1:{nome:string,cognome:string,eta?:number}= {
+//     nome:"Renzo",
+//     cognome:"Tramaglino",
+// }
+// const persona2:{nome:string,cognome:string,eta?:number}= {
+//     nome:"Lucia",
+//     cognome:"Mondella",
+//     eta:19
+// }
 
-for (let i = 0; i < person.length; i++) {
-    console.log(person[i]);
+const persona1:Persona= {
+    nome:"Renzo",
+    cognome:"Tramaglino",
+    eta:20,
+    nomeCognome(){
+        return this.nome+" "+this.cognome
+    }
+}
 
-    
-  }
+const persona2:Persona= {
+    nome:"Lucia",
+    cognome:"Mondella",
+    eta:19,
+    nomeCognome()
+    {
+        return this.nome+" "+this.cognome
+    }
+}
+
+console.log(persona1.nomeCognome());
+console.log(persona2.nomeCognome());
+
