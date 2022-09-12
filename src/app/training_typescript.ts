@@ -1,18 +1,14 @@
-const nomi:string[] = []
+const arr:any[]=[]
 
-function aggiungiNome(nome:string){
-    if(nomi.length < 5){
-        nomi.push(nome)
-    } else {
-        console.log("Errore...")
-    }
+function aggiungiPersona (nome:string, cognome:string, eta:number):object{
+    return {nome,cognome,eta}
 }
 
-aggiungiNome("Nome1")
-aggiungiNome("Nome2")
-aggiungiNome("Nome3")
-aggiungiNome("Nome4")
-aggiungiNome("Nome5")
-aggiungiNome("Nome6")
+arr.push(aggiungiPersona("Renzo","Tramaglino",20))
+arr.push(aggiungiPersona("Lucia","Mondella",19))
+arr.push(aggiungiPersona("Don","Abbondio",50))
 
-console.log(nomi)
+
+for(let i=0; i<3; i++){
+    console.log(arr[i])
+}
