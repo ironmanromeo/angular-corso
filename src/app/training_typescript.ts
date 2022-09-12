@@ -1,20 +1,27 @@
-const persona:any[] = []
-
-function crea(nome:string, cognome:string, eta:Number){
-    const persona={
-        nome: nome,
-        cognome: cognome,
-        eta: eta
-    }
-    return persona
+type Persona = {
+    nome:string
+    cognome:string
+    eta:number
+    nomecognome:Function
 }
 
-const persona1=crea("Renzo","Tramaglino",20)
-const persona2=crea("Lucia","Mondella",19)
-const persona3=crea("Don","Abbondio",50)
+const persona1:Persona={
+    nome: "Renzo",
+    cognome: "Tramaglini",
+    eta:20,
+    nomecognome(){
+        return this.nome + " " + this.cognome
+    }
+}
 
-persona.push(persona1)
-persona.push(persona2)
-persona.push(persona3)
+const persona2:Persona={
+    nome: "Lucia",
+    cognome: "Mondella",
+    eta: 19,
+    nomecognome(){
+        return this.nome + " " + this.cognome
+    }
+}
 
-persona.forEach(persona =>console.log(persona))
+console.log(persona1)
+console.log(persona1.nomecognome())
