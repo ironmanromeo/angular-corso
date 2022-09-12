@@ -1,15 +1,18 @@
 const nomi:string[] = []
-function aggiunginome(nome:string){
-    if (nomi.length<5){
-    nomi.push(nome)
-    }
-    else{
-        console.log("non possono essere aggiunti più di 5 nomi")
+
+function aggiungiNome(nome:string){
+    if(nomi.length < 5){
+        nomi.push(nome)
+    } else {
+        console.log("Errore...")
     }
 }
-aggiunginome("fabia")
-aggiunginome("fabie")
-aggiunginome("fabii")
-aggiunginome("fabio")
-aggiunginome("fabiu")
+
+aggiungiNome("Nome1")
+aggiungiNome("Nome2")
+aggiungiNome("Nome3")
+aggiungiNome("Nome4")
+aggiungiNome("Nome5")
+aggiungiNome("Nome6")
+
 console.log(nomi)
