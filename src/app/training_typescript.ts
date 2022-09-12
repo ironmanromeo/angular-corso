@@ -1,18 +1,18 @@
-const nomi:string[] = []
+const persone:any=[]
 
-function aggiungiNome(nome:string){
-    if(nomi.length < 5){
-        nomi.push(nome)
-    } else {
-        console.log("Errore...")
-    }
+function peopleCreator(nome:string, cognome:string, eta:number){
+    const persona={
+        nome: nome,
+        cognome: cognome,
+        eta: eta
+    };
+    return persona
 }
 
-aggiungiNome("Nome1")
-aggiungiNome("Nome2")
-aggiungiNome("Nome3")
-aggiungiNome("Nome4")
-aggiungiNome("Nome5")
-aggiungiNome("Nome6")
+persone.push(peopleCreator("pippo", "inzaghi", 41))
+persone.push(peopleCreator("andry", "shevchenko", 41))
+persone.push(peopleCreator("paolo", "maldini", 41))
 
-console.log(nomi)
+for(let i=0; i<persone.lenght; i++){
+    console.log(persone[i])
+}
