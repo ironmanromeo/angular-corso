@@ -1,10 +1,6 @@
-let nomi : string []=[]
-const nome = "Mario"
+aggiungiNome("Nome3")
+aggiungiNome("Nome4")
+aggiungiNome("Nome5")
+aggiungiNome("Nome6")
 
-function aggiungiNome(nome:string){
-    if(nomi.length<5){
-        nomi.push(nome)
-  
-  }
-}
-
+console.log(nomi)
