@@ -1,11 +1,10 @@
-import {Component} from "@angular/core"
+import { Component } from "@angular/core"
 
-@Component ({
+@Component({
     selector:"persone",
-    templateURL:"./persone.component.html",
+    templateUrl:"./persone.component.html",
     styleUrls:["./persone.component.css"]
 })
-
 export class PersoneComponent {
-    nomepagina = "Persone Component"
+    nomePagina = "Persone Component"
 }
