@@ -5,6 +5,21 @@ import { Component } from "@angular/core";
     templateUrl:"./persone.component.html",
     styleUrls:["./persone.component.css"]
 })
-export class PersoneComponent {
+export class PersoneComponent
+{
     nomePagina = "Persone Component"
+    disabilitato = true
+    contatore = 0
+
+    constructor() {
+        setTimeout(() => {
+            this.disabilitato = false
+        }, 1000)
+    }
+
+    incContatore() {
+        //alert("Azione Botton")
+        this.contatore = this.contatore + 10
+    }
+
 }
