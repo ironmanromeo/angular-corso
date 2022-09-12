@@ -1,26 +1,11 @@
+import { Componente, SuperPagina, Logger, ComponenteDecoratore } from './mia-libreria'
 
-class Bipede {
-    piedi = 2
-}
-
-class Persona extends Bipede {
-
-    nome:string
-    cognome:string
-    eta:number
-
-    constructor(nome:string, cognome:string, eta:number) {
-        super()
-        this.nome = nome
-        this.cognome = cognome
-        this.eta = eta
-    }
-
-    nomeCognome() {
-        return `Nome: ${this.nome}, Cognome: ${this.cognome} di anni ${this.eta}`
-    }
+@ComponenteDecoratore({
+    selettore:"componente",
+    template:"<h5>compoentdwgdsuj dse nuovo</h5>"
+})
+class Pagina extends SuperPagina {
 
 }
 
-const persona1 = new Persona("Renzo","Tramaglino",20)
-const persona2 = new Persona("Lucia","Mondella",19)
+const pagina = new Pagina()
