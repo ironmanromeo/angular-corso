@@ -1,3 +1,4 @@
+
 //Esercizio 2
 
 const nomi: string[] = [] ;
