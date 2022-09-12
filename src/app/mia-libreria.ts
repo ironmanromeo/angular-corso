@@ -1,59 +1,62 @@
-export class Bipede{
+
+export class Bipede {
+
     piedi = 2
 }
 
 export class Persona extends Bipede {
+
     nome:string
-    congome:string
+    cognome:string
     eta:number
 
-    constructor(nome:string, cognome:string, eta:number){
+    constructor(nome:string, cognome:string, eta:number) {
         super()
-        this.nome=nome
-        this.congome=cognome
-        this.eta=eta
+        this.nome = nome
+        this.cognome = cognome
+        this.eta = eta
     }
 
-    nomeCognome():string{
-        return `${this.nome}  ${this.congome} di anni ${this.eta}`
+    nomeCognome() {
+        return `Nome: ${this.nome}, Cognome: ${this.cognome} di anni ${this.eta}`
     }
+
 }
-//Presa da libreria
-export class Componente{
 
+// presa da libreia
+export class Componente {
     constructor(){
         const ref = document.getElementById("componente")
-        if(ref){
-            ref.innerHTML="<h5>Hello from Componente</h5>"
-        } 
+        if (ref){
+            ref.innerHTML = "<h5>Hello from Componente</h5>"
+        }
     }
 }
-//fatta da me
-export class Superpagina {
-    constructor(){
-        console.log("Hello from the superpagina")
-    }
 
-    superMetodo():string{
+// fatta da me
+export class SuperPagina {
+    constructor() {
+        console.log("Hello from super pagina")
+    }
+    superMetodo() {
         return "Cose meravigliose"
     }
-
 }
 
-export function Logger(constructor:Function){
-    console.log("Decoratore")
+export function Logger(constructor:Function) {
+    console.log("Decoratore logger")
 }
 
-type ParametriDecoratore = {
-    selettore : string
-    template : string
+type ParametriDecorator = {
+    selettore:string
+    template:string
 }
 
-export function ComponenteDecoratore(parametri:ParametriDecoratore){
-    return function(costruttore:Function){
+export function ComponenteDecoratore(parametri:ParametriDecorator) {
+    return function (costruttore:Function) {
         const ref = document.getElementById(parametri.selettore)
-        if(ref){
-            ref.innerHTML=parametri.template
+        if (ref){
+            ref.innerHTML = parametri.template
         }
     }
 }

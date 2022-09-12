@@ -1,11 +1,11 @@
-import {ComponenteDecoratore, Logger, Superpagina } from './mia-libreria'
+import { Componente, SuperPagina, Logger, ComponenteDecoratore } from './mia-libreria'
 
 @ComponenteDecoratore({
     selettore:"componente",
-    template:"<h1>Ciao mondo</h1>"
+    template:"<h5>compoentdwgdsuj dse nuovo</h5>"
 })
-class Pagina extends Superpagina{
+class Pagina extends SuperPagina {
 
 }
 
-const page=new Pagina()
+const pagina = new Pagina()
