@@ -1,30 +1,27 @@
-type Persona = {
-    nome: string,
-    cognome: string,
-    eta: number,
-    nomeCognome: any
+class Bipede{
+    piedi = 2
 }
 
-const persona1:Persona = {
-    nome: "Renzo",
-    cognome: "Tramaglino",
-    eta: 20,
-    nomeCognome(){
-        return this.nome + " " + this.cognome
+
+
+class Persona extends Bipede {
+    nome: string
+    cognome: string
+    eta: number
+
+    constructor(nome: string, cognome: string, eta: number){
+        super()
+        this.nome = nome
+        this.cognome = cognome
+        this.eta = eta
     }
+
+    nomeCognome(){
+        return `Nome: ${this.nome}, Cognome: ${this.cognome} di anni ${this.eta}`
+    }
+
 }
+
+const persona1 = new Persona("Renzo", "Tramaglino", 20)
 
 console.log(persona1.nomeCognome())
-
-const persona2:Persona = {
-    nome: "Lucia",
-    cognome: "Mondella",
-    eta: 19,
-    nomeCognome(){
-        return this.nome + " " + this.cognome
-    }
-}
-
-
-console.log(persona2.nomeCognome())
-
