@@ -22,5 +22,24 @@ export class Persona extends Bipede{
     }
 }
 
-const persona1=new Persona("Renzo","Tramaglino",20);
-const persona2=new Persona("Lucia","Mondella",19);
+
+export class Componente{
+
+    constructor(){
+        const ref=document.getElementById("componente")
+        if(ref){
+            ref.innerHTML="<h5>Hello from Componente</h5>"
+        }
+
+    }
+}
+export class SuperPagina{
+
+    constructor(){
+        console.log("Hello form super pagina")
+    }
+    
+    superMetodo(){
+        return "Cose meravigliose"
+    }
+}
