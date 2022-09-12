@@ -1,8 +1,6 @@
-const nome = "renzo"
+const nome = "Renzo"
 const cognome = "Tramaglino"
-const nomecognome = nome+cognome
-console.log("normale:")
-console.log(nomecognome)
-const nomecognome2 = `${nomecognome}`
-console.log("Literals:")
-console.log(nomecognome2)
+const nomeCognome = nome + " " + cognome
+console.log(nomeCognome)
+const nomeCognome2 = `${nome} ${cognome}`
+console.log(nomeCognome2)
