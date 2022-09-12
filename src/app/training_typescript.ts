@@ -1,30 +1,18 @@
-let nomi: string[] = []
+const nomi:string[] = []
 
-function aggiungiNome(nomi:Array<string>, nome:string) {
-    if(nomi.length < 5) {
+function aggiungiNome(nome:string){
+    if(nomi.length < 5){
         nomi.push(nome)
     } else {
-        console.log("Limite 5 superato!");
+        console.log("Errore...")
     }
 }
 
-aggiungiNome(nomi,"Bea")
-console.log(nomi);
+aggiungiNome("Nome1")
+aggiungiNome("Nome2")
+aggiungiNome("Nome3")
+aggiungiNome("Nome4")
+aggiungiNome("Nome5")
+aggiungiNome("Nome6")
 
-aggiungiNome(nomi,"Luffy")
-console.log(nomi);
-
-aggiungiNome(nomi,"Zoro")
-console.log(nomi);
-
-aggiungiNome(nomi,"Sanji")
-console.log(nomi);
-
-aggiungiNome(nomi,"Robin")
-console.log(nomi);
-
-aggiungiNome(nomi,"Nami")
-console.log(nomi);
-
-aggiungiNome(nomi,"Jimbei")
-console.log(nomi);
+console.log(nomi)
