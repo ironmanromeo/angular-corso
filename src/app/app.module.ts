@@ -5,8 +5,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PersoneComponent } from '../persone/persone.component'
 
-import { PersoneComponent } from "../persone/persone.component"
-
 import './training_javascript'  //esercizi
 import './training_typescript'  //esercizi
 
