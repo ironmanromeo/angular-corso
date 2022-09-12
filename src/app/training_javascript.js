@@ -7,5 +7,3 @@ console.log(nomeCognome)
 const nomeCognome2 = `${nomeCognome}`
 
 console.log(nomeCognome2)
-
-
