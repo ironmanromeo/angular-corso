@@ -1,19 +1,19 @@
 const nomi: string[]= [];
-aggiungiNome();
 
 
 
 
-function aggiungiNome(){
-    if(nomi.length==0)
+function aggiungiNome(nome:string){
+    if(nomi.length<5)
     {
-        nomi.push("a");
-        nomi.push("a");    
-        nomi.push("a");
-        nomi.push("a");
-        nomi.push("a");
-
+            nomi.push(nome);
     }
     else
     console.log("errore!!");
 }
+aggiungiNome("aaa");
+
+
+
+
+
