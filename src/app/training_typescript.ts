@@ -1,3 +1,4 @@
+
 import { componente, SuperPagina, Logger, ComponenteDecoratore } from "./mia-libreria"
 @ComponenteDecoratore ({
     selettore: "componente",
@@ -9,3 +10,4 @@ class Pagina extends SuperPagina{
 }
 
 const pagina = new Pagina()
+
