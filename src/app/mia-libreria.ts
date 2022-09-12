@@ -41,11 +41,11 @@ export class SuperPagina extends Componente{
 export function Logger(constructor:Function){
 console.log("Decoratore logger")
 }
-type ParametriDecorator={
+type ParametriDecoratore={
     selettore:string
     template:string
 }
-export function ComponenteDecoratore(parametri:ParametriDecorator){
+export function ComponenteDecoratore(parametri:ParametriDecoratore){
     return function (costruttore:Function){
         const ref = document.getElementById(parametri.selettore)
         if (!!ref){
