@@ -1,4 +1,13 @@
-import { Componente,SuperPagina } from "./mia-libreria"; 
+import { Componente,SuperPagina,Logger, ComponenteDecoratore } from "./mia-libreria"; 
 
-const pagina=new SuperPagina()
-console.log(pagina.superMetodo())
+@ComponenteDecoratore({
+    selettore:"componente",
+    template:"<h1>componente nuovo</h1>"
+})
+
+class Pagina extends SuperPagina{   
+    
+}
+
+
+const pagina=new Pagina();

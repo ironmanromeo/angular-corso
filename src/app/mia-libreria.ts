@@ -36,10 +36,27 @@ export class Componente{
 export class SuperPagina{
 
     constructor(){
-        console.log("Hello form super pagina")
+        console.log("Hello from super pagina")
     }
     
     superMetodo(){
         return "Cose meravigliose"
     }
+}
+export function Logger(constructor: Function){
+    console.log("Decoratore logger")
+}
+
+type ParametriDecorator={
+    selettore:string,
+    template:string
+
+}
+export function ComponenteDecoratore(parametri:ParametriDecorator){
+    return function (costruttore:Function){
+        const ref=document.getElementById(parametri.selettore)
+        if(ref){
+            ref.innerHTML=parametri.template
+    }
+}
 }
