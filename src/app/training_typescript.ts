@@ -1,9 +1,10 @@
-const numerouno=28.5
-const numerodue= 5
+let nomi : string []=[]
+const nome = "Mario"
 
-function somma(v1:number,v2:number){
-    return v1+v2
+function aggiungiNome(nome:string){
+    if(nomi.length<5){
+        nomi.push(nome)
+  
+  }
 }
-const risultato= somma(numerouno,numerodue)
 
-console.log(risultato)
