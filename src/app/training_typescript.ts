@@ -1,10 +1,18 @@
-const nomi:string[]=[]
+const nomi:string[] = []
+
 function aggiungiNome(nome:string){
-    if(nomi.length<5)nomi.push(nome)
-    else console.log("errore! aggiunti già 5 elementi")
+    if(nomi.length < 5){
+        nomi.push(nome)
+    } else {
+        console.log("Errore...")
+    }
 }
 
-for(let i=0; i<8; i++){
-    aggiungiNome(i.toString())
-    console.log(nomi)
-}
+aggiungiNome("Nome1")
+aggiungiNome("Nome2")
+aggiungiNome("Nome3")
+aggiungiNome("Nome4")
+aggiungiNome("Nome5")
+aggiungiNome("Nome6")
+
+console.log(nomi)
