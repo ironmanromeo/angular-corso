@@ -6,3 +6,6 @@ console.log(nomeCognome)
 const nomeCognome2 = `${nome} ${cognome}`
 console.log(nomeCognome2)
 
+
+
+
