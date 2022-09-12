@@ -1,17 +1,18 @@
-let nomi: string[] = []
-let nome: string[] = ["Mario", "Luca", "Marco", "Luigi", "Giuseppe", "Cristian", "Omar"]
+const nomi:string[] = []
 
-function aggiungiNome() {
-    for(let i=0; i<nome.length; i++) {
-        nomi.push(nome[i]);
-        console.log(nomi[i]);
-
-        if(i===4) {
-            console.log("errore...");
-            break;
-        }
+function aggiungiNome(nome:string){
+    if(nomi.length < 5){
+        nomi.push(nome)
+    } else {
+        console.log("Errore...")
     }
 }
 
-console.log("---------------------------------------------------------------------");
-aggiungiNome();
+aggiungiNome("Nome1")
+aggiungiNome("Nome2")
+aggiungiNome("Nome3")
+aggiungiNome("Nome4")
+aggiungiNome("Nome5")
+aggiungiNome("Nome6")
+
+console.log(nomi)
