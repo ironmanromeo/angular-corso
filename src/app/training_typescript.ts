@@ -1,4 +1,4 @@
-const numero1 = 28.5
+/*const numero1 = 28.5
 const numero2 = "5"
 
 function somma(v1:number|string, v2:number|string){
@@ -11,4 +11,11 @@ function somma(v1:number|string, v2:number|string){
 
 const risultato = somma(numero1, numero2)
 
-console.log(risultato)
+console.log(risultato)*/
+
+const nomi: string[] = []
+function aggiunginome(nomi2:string[]){
+    if(nomi2.length<5)
+    else
+    return nomi.push
+}
