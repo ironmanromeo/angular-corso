@@ -1,17 +1,6 @@
-const datiAnagrafici = {
-    nome: "Renzo",
-    cognome: "Tramaglino",
-    eta: 20
-}
+const nomi1 = ["Renzo", "Lucia"]
+const nomi2 = ["Griso", "Don Abbondio"]
 
-const datiBiometrici = {
-  pupilla: "chiara",
-  altezza: 1.74
-}
+const tuttiNomi = [...nomi1, ...nomi2]
 
-const persona1 = { 
-  ...datiAnagrafici,
-  ...datiBiometrici
- }
-
- console.log("Qui persona1:", persona1)
+console.log(tuttiNomi)
