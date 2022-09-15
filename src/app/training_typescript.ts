@@ -1,9 +1,13 @@
-const nomi1 = ["Renzo", "Lucia"]
-const nomi2 = ["Griso", "Don Abbondio"]
+type StringNumero = string | number
+function unisci(val1: string|number, val2: StringNumero) {
+    if(typeof val1 === "number" && typeof val2 === "number" ) {
+        const somma = val1 + val2
+        return "Somma: " + somma
+    } else {
+        return "Unione di caratteri: " + val1 + val2
+    }
+}
 
-const insiemeNomi1 = [nomi1, nomi2]
-console.log("Senza Spread: ", insiemeNomi1);
-
-const insiemeNomi2 = [...nomi1, ...nomi2]
-console.log("Con Spread: ", ...nomi1, ...nomi2);
+const risultato = unisci(2,"3")
+console.log(risultato);
 
