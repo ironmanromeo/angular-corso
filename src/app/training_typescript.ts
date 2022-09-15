@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 
 
 const persona1 = {
@@ -26,4 +24,3 @@ const nuovoOggetto = { nome, cognome, eta }
 
 console.log("Qui oggetto persona1: ", persona1)
 console.log("Qui oggetto rest: ", rest)
->>>>>>> origin/main
