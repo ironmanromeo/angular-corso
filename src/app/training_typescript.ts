@@ -1,5 +1,6 @@
-const nomi1=["Renzo","Lucia"]
-const nomi2=["Griso","Mario"]
+const nomi1 = ["Renzo", "Lucia"];
+const nomi2 = ["Griso", "Don Abbondio", 34];
 
-const tutti : string[]= [...nomi1,...nomi2]
-console.log(tutti)
+const tuttiNomi = [...nomi1, ...nomi2];
+
+console.log("Qui tutti i nomi:", tuttiNomi);
