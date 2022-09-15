@@ -1,15 +1,24 @@
-const persona1 = {
-    nome: "Renzo",
-    cognome: "Tramaglimo",
-    eta: 20,
-    indirizzo: "Via B.Crespi",
-    citta: "Milano",
-    nazione: "Italia"
+import { type } from "os"
+
+type Tipo1 = {
+    nome: string;
+    cognome: string;
+    eta: number
 }
 
-const { nome, cognome, eta, ...rest } = persona1
+type Tipo2 = {
+    altezza: number;
+    occhiali: boolean
+}
 
-const nuovoOggetto = { nome, cognome, eta }
+type PersonaTipo = Tipo1 & Tipo2
 
-console.log("Qui oggetto persona1:", persona1)
-console.log("Qui oggetto rest:", rest)
+const persona: PersonaTipo = {
+    nome: "Francesco",
+    cognome: "Gianni",
+    eta: 30,
+    altezza: 1.74,
+    occhiali: true
+}
+
+console.log(persona)
