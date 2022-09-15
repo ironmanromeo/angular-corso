@@ -1,18 +1,17 @@
-const persona1 = {
-    nome:"Renzo",
-    cognome:"Tramaglino",
-    eta:20,
-    indirizzo:"Via B.Crespi",
-    citta:"Milano",
-    Nazione:"IT"
-
+const datiAnagrafici = {
+    nome: "Renzo",
+    cognome: "Tramaglino",
+    eta: 20
 }
 
-//...
-//ultimo parametro
-//il nome per convenzione è rest
-const { nome,cognome,eta, ...rest } = persona1
+const datiBiometrici = {
+  pupilla: "chiara",
+  altezza: 1.74
+}
 
-console.log("qui oggetto persona1: ", persona1);
-console.log("qui oggetto rest: ", rest);
+const persona1 = { 
+  ...datiAnagrafici,
+  ...datiBiometrici
+ }
 
+ console.log("Qui persona1:", persona1)
