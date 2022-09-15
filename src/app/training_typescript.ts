@@ -1,6 +1,3 @@
-const nomi1 = ["Renzo", "Lucia"];
-const nomi2 = ["Griso", "Don Abbondio", 34];
+function unione(val1:number,val2:number){
 
-const tuttiNomi = [...nomi1, ...nomi2];
-
-console.log("Qui tutti i nomi:", tuttiNomi);
+}
