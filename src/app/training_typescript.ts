@@ -1,23 +1,17 @@
-
-
-const persona1= {
+const datiAnagrafici = {
     nome: "Renzo",
     cognome: "Tramaglino",
-    eta: 20,
-    indirizzo: "via B.crespi",
-    città: "Milano",
-    nazione: "Italia"
+    eta: 20
 }
 
-//...
-//ultimo parametro
-//il nome per convinzione è rest
+const datiBiometrici = {
+  pupilla: "chiara",
+  altezza: 1.74
+}
 
-const {
-    nome, 
-    cognome, 
-    eta,
-    ...rest} =persona1
+const persona1 = { 
+  ...datiAnagrafici,
+  ...datiBiometrici
+ }
 
-console.log(persona1)
-console.log(rest)
+ console.log("Qui persona1:", persona1)
