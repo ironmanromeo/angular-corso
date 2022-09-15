@@ -1,9 +1,17 @@
+const datiAnagrafici = {
+    nome: "Renzo",
+    cognome: "Tramaglino",
+    eta: 20
+}
 
-const persone = ["Renzo", "Lucia", "Don abbondio"];
+const datiBiometrici = {
+    pupilla: "chiara",
+    altezza: 1.74
+}
 
-const [persona1, persona2] = persone;
+const persona = {
+    ...datiAnagrafici,
+    ...datiBiometrici
+}
 
-const nuovePersone = [persona1, persona2, "Griso"];
-
-console.log(nuovePersone);
-
+console.log(persona)
