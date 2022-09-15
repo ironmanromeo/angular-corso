@@ -1,17 +1,16 @@
-const datiAnagrafici = {
-    nome: "Renzo",
-    cognome: "Tramaglino",
-    eta: 20
-}
+const nomi: string[] = [];
+const nomi2 = new Array<string>();
 
-const datiBiometrici = {
-  pupilla: "chiara",
-  altezza: 1.74
-}
+nomi2.push("12");
 
-const persona1 = { 
-  ...datiAnagrafici,
-  ...datiBiometrici
- }
+const pr = new Promise<string>((resolve, reject) => {
+  setTimeout(() => {
+    resolve("Finito");
+  }, 10000);
+});
 
- console.log("Qui persona1:", persona1)
+console.log("Iniziato");
+pr.then((risposta) => {
+  const lunghezzaStringa = risposta.length;
+  console.log("Risposta: ", risposta);
+});
