@@ -1,19 +1,26 @@
 
 
-const persona1={
-    nome:"Renzo",
-    cognome: "Tramaglino",
+const persona1 = {
+    nome: "Renzo",
+    cognome: "Tramaglimo",
     eta: 20,
-    indirizzo: "Via b Crespi",
-    citta :"milano",
-    nazione: "italia"
+    indirizzo: "Via B.Crespi",
+    citta: "Milano",
+    nazione: "Italia"
 }
 
-//...
-//ultimo parametro
-//il nome per convenzione è rest
-const {nome:nome1,cognome:cognome1,eta:eta1, ...rest } = persona1
+const persona2 = {
+    nome: 67,
+    cognome: "Tramaglimo",
+}
 
-console.log("Qui oggetto persona:", persona1)
-console.log("Qui oggetto rest ", rest)
+// ...
+// ultimo parametro
+// il nome per convesioen è rest
 
+const { nome, cognome, eta, ...rest } = persona1
+const nuovoOggetto = { nome, cognome, eta }
+
+
+console.log("Qui oggetto persona1: ", persona1)
+console.log("Qui oggetto rest: ", rest)
