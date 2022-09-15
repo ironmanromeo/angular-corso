@@ -1,24 +1,16 @@
-import { type } from "os"
+const nomi: string[] = [];
+const nomi2 = new Array<string>();
 
-type Tipo1 = {
-    nome: string;
-    cognome: string;
-    eta: number
-}
+nomi2.push("12");
 
-type Tipo2 = {
-    altezza: number;
-    occhiali: boolean
-}
+const pr = new Promise<string>((resolve, reject) => {
+  setTimeout(() => {
+    resolve("Finito");
+  }, 10000);
+});
 
-type PersonaTipo = Tipo1 & Tipo2
-
-const persona: PersonaTipo = {
-    nome: "Francesco",
-    cognome: "Gianni",
-    eta: 30,
-    altezza: 1.74,
-    occhiali: true
-}
-
-console.log(persona)
+console.log("Iniziato");
+pr.then((risposta) => {
+  const lunghezzaStringa = risposta.length;
+  console.log("Risposta: ", risposta);
+});
