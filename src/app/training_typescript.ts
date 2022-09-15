@@ -1,17 +1,9 @@
-const datiAnagrafici = {
-    nome: "Renzo",
-    cognome: "Tramaglino",
-    eta: 20,
-}
+const nomi1 = ["Renzo", "Lucia"]
+const nomi2 = ["Griso", "Don Abbondio"]
 
-const datiBiometrici = {
-    pupilla: "Chiara",
-    altezza: 1.74
-}
+const insiemeNomi1 = [nomi1, nomi2]
+console.log("Senza Spread: ", insiemeNomi1);
 
-const persona1 = {
-    ...datiAnagrafici,
-    ...datiBiometrici
-}
+const insiemeNomi2 = [...nomi1, ...nomi2]
+console.log("Con Spread: ", ...nomi1, ...nomi2);
 
-console.log("Persona 1: ", persona1);
