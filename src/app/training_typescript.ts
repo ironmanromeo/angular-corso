@@ -1,13 +1,17 @@
-
 const datiAnagrafici = {
-  nome:"Renzo",
-  cognome:"Travaglino",
-  eta:32
+    nome: "Renzo",
+    cognome: "Tramaglino",
+    eta: 20
 }
 
 const datiBiometrici = {
-  pupilla:"marrone",
-  altezza: 183
+  pupilla: "chiara",
+  altezza: 1.74
 }
-const persona1={...datiAnagrafici,...datiBiometrici}
-console.log(persona1)
+
+const persona1 = {
+  ...datiAnagrafici,
+  ...datiBiometrici
+ }
+
+ console.log("Qui persona1:", persona1)
