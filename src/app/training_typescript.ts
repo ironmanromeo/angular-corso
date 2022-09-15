@@ -1,20 +1,16 @@
-type Type1 = {
-    nome: string
-    cognome: string
-    eta: number
-}
+const nomi: string[] = [];
+const nomi2 = new Array<string>();
 
-type Type2 = {
-    altezza: number
-    occhiali: boolean
-}
+nomi2.push("12");
 
-type TypePerson = Type1 & Type2
+const pr = new Promise<string>((resolve, reject) => {
+  setTimeout(() => {
+    resolve("Finito");
+  }, 10000);
+});
 
-const persona: TypePerson = {
-    nome: "Renzo",
-    cognome: "Tramaglino",
-    eta: 20,
-    altezza: 1.75,
-    occhiali: false
-}
+console.log("Iniziato");
+pr.then((risposta) => {
+  const lunghezzaStringa = risposta.length;
+  console.log("Risposta: ", risposta);
+});
