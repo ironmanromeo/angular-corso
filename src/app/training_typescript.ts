@@ -1,13 +1,20 @@
-type StringNumero = string | number
-function unisci(val1: string|number, val2: StringNumero) {
-    if(typeof val1 === "number" && typeof val2 === "number" ) {
-        const somma = val1 + val2
-        return "Somma: " + somma
-    } else {
-        return "Unione di caratteri: " + val1 + val2
-    }
+type Type1 = {
+    nome: string
+    cognome: string
+    eta: number
 }
 
-const risultato = unisci(2,"3")
-console.log(risultato);
+type Type2 = {
+    altezza: number
+    occhiali: boolean
+}
 
+type TypePerson = Type1 & Type2
+
+const persona: TypePerson = {
+    nome: "Renzo",
+    cognome: "Tramaglino",
+    eta: 20,
+    altezza: 1.75,
+    occhiali: false
+}
