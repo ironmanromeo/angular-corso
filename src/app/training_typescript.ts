@@ -5,13 +5,13 @@ const datiAnagrafici = {
 }
 
 const datiBiometrici = {
-    pupilla: "chiara",
-    altezza: 1.74
+  pupilla: "chiara",
+  altezza: 1.74
 }
 
-const persona = {
-    ...datiAnagrafici,
-    ...datiBiometrici
-}
+const persona1 = { 
+  ...datiAnagrafici,
+  ...datiBiometrici
+ }
 
-console.log(persona)
+ console.log("Qui persona1:", persona1)
