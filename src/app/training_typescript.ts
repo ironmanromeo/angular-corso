@@ -1,9 +1,5 @@
 //import { type } from "os"
 
-type Tipo2 = {
-    altezza : number,
-    occhiali : boolean
-}
 
 type Tipo1 = {
     nome: string;
