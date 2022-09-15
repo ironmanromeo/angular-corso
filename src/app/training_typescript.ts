@@ -1,26 +1,17 @@
-
-
-const persona1 = {
+const datiAnagrafici = {
     nome: "Renzo",
-    cognome: "Tramaglimo",
-    eta: 20,
-    indirizzo: "Via B.Crespi",
-    citta: "Milano",
-    nazione: "Italia"
+    cognome: "Tramaglino",
+    eta: 20
 }
 
-const persona2 = {
-    nome: 67,
-    cognome: "Tramaglimo",
+const datiBiometrici = {
+  pupilla: "chiara",
+  altezza: 1.74
 }
 
-// ...
-// ultimo parametro
-// il nome per convesioen è rest
+const persona1 = { 
+  ...datiAnagrafici,
+  ...datiBiometrici
+ }
 
-const { nome, cognome, eta, ...rest } = persona1
-const nuovoOggetto = { nome, cognome, eta }
-
-
-console.log("Qui oggetto persona1: ", persona1)
-console.log("Qui oggetto rest: ", rest)
+ console.log("Qui persona1:", persona1)
