@@ -1,5 +1,7 @@
 //import { type } from "os"
 
+import { NgModel } from "@angular/forms";
+
 
 type Tipo1 = {
     nome: string;
@@ -23,3 +25,4 @@ type Tipo1 = {
   }
   
   console.log(persona)
+  
