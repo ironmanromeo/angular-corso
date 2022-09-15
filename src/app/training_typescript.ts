@@ -1,15 +1,9 @@
-const persona1 = {
-    nome: "Renzo",
-    cognome: "Tramaglino",
-    eta: 20,
-    indirizzo: "Via B. Crespi",
-    città: "Milano",
-    nazione: "Italia"
-}
 
+const persone = ["Renzo", "Lucia", "Don abbondio"];
 
-const { nome, cognome, eta, ...rest } = persona1
-const nuovoOggetto = { nome, cognome, eta }
+const [persona1, persona2] = persone;
 
-console.log("Qui oggetto persona1: ", persona1)
-console.log("Qui oggetto rest: ", rest)
+const nuovePersone = [persona1, persona2, "Griso"];
+
+console.log(nuovePersone);
+
