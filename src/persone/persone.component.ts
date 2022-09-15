@@ -1,11 +1,12 @@
-import {Component} from "@angular/core"
+import { Component } from "@angular/core"
 
 @Component({
-    selector: "persone",
-    templateUrl: "./persone.component.html",
-    styleUrls: ["./persone.component.css"]
+    selector:"persone",
+    templateUrl:"./persone.component.html",
+    styleUrls:["./persone.component.css"]
 })
 export class PersoneComponent {
+
     nomePagina = "Persone Component"
     disabilitato = true
     contatore = 0
@@ -18,7 +19,6 @@ export class PersoneComponent {
 
     incContatore() {
         this.contatore++
-        //alert("azione bottone")
-        
     }
+
 }
