@@ -8,10 +8,11 @@ import './training_typescript';
 
 import './training_javascript'
 import './training_typescript'
-
+import {PersoneComponent} from '../persone/persone.component'
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    PersoneComponent
   ],
   imports: [
     BrowserModule,
