@@ -1,6 +1,18 @@
-const nomi1 = ["Renzo", "Lucia"];
-const nomi2 = ["Griso", "Don Abbondio", 34];
 
-const tuttiNomi = [...nomi1, ...nomi2];
 
-console.log("Qui tutti i nomi:", tuttiNomi);
+
+// union type
+type StringheNumeri = string | number
+
+function unisci(val1:StringheNumeri, val2:StringheNumeri) {
+    if (typeof val1 === "number" && typeof val2 === "number") {
+      return "Valore ritornato numero: " + (val1 + val2);
+    } else {
+      return "Valore ritornato stringa: " + val1 + val2;
+    }
+  }
+  
+  const risultato = unisci(12, 14);
+  
+  console.log(risultato);
+  
