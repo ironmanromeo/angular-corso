@@ -1,17 +1,18 @@
-const datiAnagrafici={
-    nome:"Renzo",
-    cognome:"Tramaglino",
-    eta:20
-}
 
-const datiBiometrici = {
-    pupilla: "chiara",
-    altezza: 1.74
+
+
+// union type
+type StringheNumeri = string | number
+
+function unisci(val1:StringheNumeri, val2:StringheNumeri) {
+    if (typeof val1 === "number" && typeof val2 === "number") {
+      return "Valore ritornato numero: " + (val1 + val2);
+    } else {
+      return "Valore ritornato stringa: " + val1 + val2;
+    }
   }
-
-  const persona1 = { 
-    ...datiAnagrafici,
-    ...datiBiometrici
-   }
   
-   console.log("persona1:",persona1)
+  const risultato = unisci(12, 14);
+  
+  console.log(risultato);
+  
