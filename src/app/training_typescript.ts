@@ -1,22 +1,29 @@
-type Tipo1 = {
-    nome : string,
-    cognome : string,
-    eta : number
-}
+//import { type } from "os"
 
 type Tipo2 = {
     altezza : number,
     occhiali : boolean
 }
 
-type PersonaTipo = Tipo1 & Tipo2
+type Tipo1 = {
+    nome: string;
+    cognome: string;
+    eta: number
+  }
 
-const persona : PersonaTipo = {
-    nome:"Renzo",
-    cognome:"Tramaglino",
-    eta:20,
-    altezza:180,
-    occhiali:true
-}
+  type Tipo2 = {
+    altezza: number;
+    occhiali: boolean
+  }
 
-console.log(persona)
+  type PersonaTipo = Tipo1 & Tipo2
+
+  const persona: PersonaTipo = {
+    nome: "Renzo",
+    cognome: "Tramaglino",
+    eta: 40,
+    altezza: 1.70,
+    occhiali: false
+  }
+
+  console.log(persona)
