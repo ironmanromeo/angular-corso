@@ -9,11 +9,10 @@ export class PostsComponent implements OnInit {
 
   titolo = "Mio titolo"
   disabilitato = false
-<<<<<<< HEAD
+
+
   nomeBottone = ""
-=======
-  testoStatoBottone = ""
->>>>>>> origin/main
+
 
   constructor() { }
 
@@ -33,7 +32,6 @@ export class PostsComponent implements OnInit {
 
   }
 
-<<<<<<< HEAD
   onLoading(){
     this.disabilitato = true
     this.nomeBottone = "Accendi"
@@ -44,7 +42,6 @@ export class PostsComponent implements OnInit {
   }
 
   }
-=======
   onLoading() {
     this.disabilitato = true
     this.testoStatoBottone = "loading..."
@@ -63,4 +60,4 @@ export class PostsComponent implements OnInit {
 
 
 }
->>>>>>> origin/main
+
