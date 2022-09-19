@@ -6,5 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'angular-corso';
+  titolo="Berserk"
+  altezza = 24
+  disabilitato = false
+  constructor(){
+    setInterval(()=>{
+      this.disabilitato= false;
+    },1000)
+  }
 }
