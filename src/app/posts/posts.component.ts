@@ -1,5 +1,6 @@
 
 import { Component, OnInit } from '@angular/core';
+import {Post} from '../dati/posts.data';
 
 @Component({
   selector: 'app-posts',
@@ -11,6 +12,7 @@ export class PostsComponent implements OnInit {
   titolo = "Mio titolo"
   disabilitato = false
   bottone = "Accendi"
+  posts:Post[]=[]
 
   constructor() { }
 
