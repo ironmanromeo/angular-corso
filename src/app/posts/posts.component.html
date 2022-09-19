@@ -1,4 +1,7 @@
 <p>posts works!</p>
 <div>qui titolo: {{ titolo }}</div>
-<button (click)="onPremuto()" [disabled]="disabilitato">Cambia titolo</button>
-<button (click)="onLoading()" [disabled]="disabilitato">Accendi {{ testoStatoBottone }}</button>
+<button (click)="onPremuto()" [disabled]="disabilitato"  >aggiungi post</button>
+<div *ngFor="let post of posts">
+    <h5>{{ post.titolo }}</h5>
+    <p *ngIf="post.titolo === 'ciao'"> hai sautato</p>
+</div>

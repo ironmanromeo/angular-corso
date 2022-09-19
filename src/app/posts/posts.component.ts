@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Post } from '../dati/posts.data';
+
 
 @Component({
   selector: 'app-posts',
@@ -7,37 +9,27 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PostsComponent implements OnInit {
 
+  posts:Post[]=[]
+
   titolo = "Mio titolo"
   disabilitato = false
-  testoStatoBottone = ""
-
   constructor() { }
 
   ngOnInit(): void {
   }
 
   onPremuto() {
-    const t = prompt("Inserisci titolo", this.titolo)
-    if (t){
-      this.titolo = t
-    } else {
-      this.titolo = ""
-    }
-  }
-  onAcceso(){
-    setTimeout(() => {
-      this.disabilitato = true
-    }, 2000);
+    const nomePost = prompt("Inserisci nuovo post")
+    if (nomePost){
+      const newPost:Post = {
+        titolo:nomePost,
+        testo:"Testo",
+        commenti:[]
+      }
+        this.posts.push(newPost)
+      }
   }
 
-  onLoading() {
-    this.disabilitato = true
-    this.testoStatoBottone = "loading..."
-
-    setTimeout(()=> {
-      this.disabilitato = false
-      this.testoStatoBottone = ""
-    },2000)
   }
 
 
@@ -47,4 +39,3 @@ export class PostsComponent implements OnInit {
   // 3) dopo 2 secondi deve tornare nella condizione precedente (solo Accendi)
 
 
-}
