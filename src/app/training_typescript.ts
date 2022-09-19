@@ -1,30 +1,30 @@
-class MyStorage<T> {
-    items: T[] = [];
+// class MyStorage<T> {
+//     items: T[] = [];
   
-    constructor(item:T) {
-      this.addItem(item)
-    }
+//     constructor(item:T) {
+//       this.addItem(item)
+//     }
   
-    addItem(item: T) {
-      this.items.push(item);
-    }
+//     addItem(item: T) {
+//       this.items.push(item);
+//     }
   
-    removeItem() {
-      this.items.pop();
-    }
+//     removeItem() {
+//       this.items.pop();
+//     }
   
-    getItems() {
-      return [...this.items];
-    }
-  }
+//     getItems() {
+//       return [...this.items];
+//     }
+//   }
   
-  const myStorage = new MyStorage(2);
+//   const myStorage = new MyStorage(2);
   
-  myStorage.addItem(4);
+//   myStorage.addItem(4);
   
-  const lista1 = myStorage.getItems();
-  const nome1 = lista1[0]
-  const lunghezzaNome1 = nome1
+//   const lista1 = myStorage.getItems();
+//   const nome1 = lista1[0]
+//   const lunghezzaNome1 = nome1
   
-  console.log(lunghezzaNome1);
+//   console.log(lunghezzaNome1);
   
