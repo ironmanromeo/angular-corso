@@ -2,12 +2,14 @@
 <div> {{ title }} </div>
 
 <button (click)="createPost()"> Create Post </button>
-<div> {{ getPostsString() }} </div>
 
-<div ></div>
+<input name="title" (input)="onEditedInput($event)" [value]="inputTxt"/>
+
+<div> {{ getPostsString() }} </div>
 
 <div *ngFor="let post of posts">
     <h3> {{ post.title }} </h3>
     <div *ngIf="posts.length > 3"> Stop </div>
     <div *ngIf="post.title === 'ciao' "> Bonjour </div>
 </div>
+

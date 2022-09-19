@@ -12,6 +12,7 @@ export class PostsComponent implements OnInit {
   
   title = "Posts"
   disabled = false
+  inputTxt = ""
 
   constructor() { }
 
@@ -19,9 +20,9 @@ export class PostsComponent implements OnInit {
   }
 
   createPost() {
-    const postTitle = prompt("Insert post title")
+    const postTitle = this.title
 
-    if(postTitle) {
+    if(postTitle) { 
 
       const newPost:Post = {
         title: postTitle,
@@ -30,7 +31,14 @@ export class PostsComponent implements OnInit {
       }
 
       this.posts.push(newPost)
+      this.inputTxt = " "
     }
+  }
+
+  onEditedInput(e: Event) {
+    const myInput = <HTMLInputElement>e.target
+    this.title = myInput.value
+    
   }
 
   getPostsString() {
