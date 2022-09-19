@@ -16,13 +16,19 @@ export class PostsComponent implements OnInit {
   }
 
   onPremuto(){
-    if(this.disabilitato=false){
-      setTimeout(() => {
-        alert("Accendi Loading")
-      }, 2000);
+    const t =prompt("inserisci titolo", this.titolo)
+    if(t){
+      this.titolo = t
     }else{
-      this.disabilitato=true
+      this.titolo = ""
     }
+  }
+
+  onLoading(){
+    this.disabilitato = true
+    setTimeout(() => {
+      this.disabilitato = false
+    }, 2000);
   }
 
   //Bottone accendi: Premendo si deve disabilitare
