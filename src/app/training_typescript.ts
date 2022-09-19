@@ -1,33 +1,16 @@
-class MyStorage<T> {
-    items: T[] = []
-
-    constructor(item: T) {
-        this.addItem(item)
-    }
-
-    addItem(item: T) {
-        this.items.push(item)
-    }
-
-    removeItem() {
-        this.items.pop()
-    }
-
-    getItems(){
-        return [...this.items]
-    }
+function combina<T,U>(obj1:T, obj2:U) {
+    return {...obj1,...obj2}
 }
 
-const stringStorage = new MyStorage("Luffy",)
-const numberStorage = new MyStorage(3)
+const persona1_parte1= {
+    nome: "Nome",
+    cognome: "Cognome",
+}
 
-stringStorage.addItem("AAAAAAAAAAAAAAAAAAAAAAAAAAAA")
-numberStorage.addItem(32)
-numberStorage.addItem(12)
+const persona1_parte2 = {
+    eta: 33,
+    altezza: 1.70
+}
 
-const lista1 = stringStorage.getItems()
-const nome1 = lista1[0]
-const lunghezzaNome1 = nome1.length
-
-console.log(nome1)
-console.log(lunghezzaNome1)
+const persona1 = combina(persona1_parte1, persona1_parte2)
+console.log(persona1.altezza);
