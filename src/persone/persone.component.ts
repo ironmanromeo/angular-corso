@@ -6,15 +6,19 @@ import { Component } from "@angular/core"
     styleUrls:["./persone.component.css"]
 })
 export class PersoneComponent {
+
     nomePagina = "Persone Component"
     disabilitato = true
     contatore = 0
-    constructor(){
+
+    constructor() {
         setTimeout(() => {
             this.disabilitato = false
-        }, 1000
-        )}
-        incContatore(){
-            console.log(this.contatore++)
-        }
+        }, 1000)
     }
+
+    incContatore() {
+        this.contatore++
+    }
+
+}
