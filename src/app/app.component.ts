@@ -6,12 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  titolo = 'Pippo'
-  altezza = 24
-  disabilitato = true
-  constructor() {
-    setInterval(() => {
-      this.disabilitato = !this.disabilitato
-    }, 1000)
-  }
+  title = "angular-corso"
 }
