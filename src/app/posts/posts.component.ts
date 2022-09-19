@@ -20,7 +20,7 @@ export class PostsComponent implements OnInit {
   }
 
   onPremuto() {
-    const nomePost = prompt("Inserisci nuovo post")
+    const nomePost = this.titolo
     if (nomePost) {
       const newPost:Post = {
         titolo:nomePost,
@@ -29,6 +29,13 @@ export class PostsComponent implements OnInit {
       }
       this.posts.push(newPost)
     }
+    const t = <HTMLInputElement>document.getElementById('titolo_input')
+    t.value = ""
+  }
+
+  onModificaInput(e:Event){
+    const mioInput = <HTMLInputElement>e.target
+    this.titolo = mioInput.value
   }
 
   getPostsString() {
