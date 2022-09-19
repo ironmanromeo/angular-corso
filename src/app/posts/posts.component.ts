@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Post } from '../dati/posts.data'
 
 
@@ -22,7 +22,7 @@ export class PostsComponent implements OnInit {
   }
 
   onPremuto() {
-    const nomePost = prompt("Inserisci nuovo post")
+    const nomePost = this.titolo
     if (nomePost) {
       const newPost:Post = {
         titolo:nomePost,
@@ -32,6 +32,17 @@ export class PostsComponent implements OnInit {
       this.posts.push(newPost)
     }
     
+    if(this.titolo === '') {
+      for (let i = 0; i < 100; i++) {
+        this.posts.pop()
+      }
+    }
+    
+  }
+
+  onModificatoInput(e:Event) {
+    const mioInput = <HTMLInputElement>e.target
+    this.titolo = mioInput.value
   }
 
   getPostsString() {
