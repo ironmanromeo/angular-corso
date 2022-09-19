@@ -23,5 +23,10 @@ export class PostsComponent implements OnInit {
       this.titolo = ""
     }
   }
+  onAcceso(){
+    setTimeout(() => {
+      this.disabilitato = true
+    }, 2000);
+  }
 
 }
