@@ -1,15 +1,25 @@
-const nomi:string[]=[]
-const nomi2=new Array<string>()
+class MyStorage<T extends string | number> {
+  items: T[] = [];
 
-nomi.push("12")
-const pr=new Promise<string>((resolve,reject) => {
-  setTimeout(()=>{
-    resolve("Finito")
-  },1000);
-});
+  addItem(item: T) {
+    this.items.push(item);
+  }
 
-console.log("Iniziato")
-pr.then(risposta=>{
-    const lunghezzaStringa=risposta.length
-    console.log("Risposta",risposta)
-  })
+  removeItem() {
+    this.items.pop();
+  }
+
+  getItems() {
+    return [...this.items];
+  }
+}
+
+const myStorage = new MyStorage<string>();
+
+myStorage.addItem("Pollo");
+
+const lista1 = myStorage.getItems();
+const nome1 = lista1[0];
+const lunghezzaNome1 = nome1.length;
+
+console.log(lunghezzaNome1);
