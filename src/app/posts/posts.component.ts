@@ -1,3 +1,4 @@
+
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -6,10 +7,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./posts.component.css']
 })
 export class PostsComponent implements OnInit {
-
+  titolo = "mio titolo"
+  disabilitato = false
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  onPremuto(){
+    alert("Ci sono!")
   }
 
 }
