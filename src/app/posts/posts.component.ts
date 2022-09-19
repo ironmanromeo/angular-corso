@@ -9,7 +9,7 @@ export class PostsComponent implements OnInit {
 
   titolo = "Mio titolo"
   disabilitato = false
-  desc="Accendi"
+  desc = "Accendi"
   constructor() {
 
    }
@@ -18,9 +18,18 @@ export class PostsComponent implements OnInit {
   }
 
   onPremuto() {
-    this.disabilitato=true
-    this.desc="loading"
+   
+   
     
+  }
+
+  onLoading(){
+    this.disabilitato=true
+    this.desc="Loading"
+    setTimeout(()=>{
+      this.disabilitato=false
+      this.desc="Accendi"
+    },2000)
   }
 
 }
