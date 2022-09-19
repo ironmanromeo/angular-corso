@@ -1,3 +1,4 @@
+import { HtmlTagDefinition } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
 import { Post } from '../dati/posts.data'
 
@@ -11,8 +12,7 @@ export class PostsComponent implements OnInit {
 
   posts:Post[] = []
 
-  titolo = "Mio Titolo"
- 
+  titolo = "Mio titolo"
 
   constructor() { }
 
@@ -28,16 +28,14 @@ export class PostsComponent implements OnInit {
         commenti:[]
       }
       this.posts.push(newPost)
-      this.titolo=""
-     
+      this.titolo = ""
     }
   }
 
-  onModificatoinput(e:Event){
-    
-    const mioinput =<HTMLInputElement>e.target 
-    this.titolo= mioinput.value
-
+  onModificatoInput(e:Event){
+    //const mioInput = e.target as HTMLInputElement
+    const mioInput = <HTMLInputElement>e.target
+    this.titolo = mioInput.value
   }
 
   getPostsString() {
