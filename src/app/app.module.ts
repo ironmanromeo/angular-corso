@@ -7,12 +7,14 @@ import { AppComponent } from './app.component';
 import { PersoneComponent } from '../persone/persone.component'
 
 import './training_javascript'
-import './training_typescript'
+import './training_typescript';
+import { PostsComponent } from './posts/posts.component'
 
 @NgModule({
   declarations: [
     AppComponent,
-    PersoneComponent
+    PersoneComponent,
+    PostsComponent
   ],
   imports: [
     BrowserModule,
