@@ -1,8 +1,20 @@
 <p>posts works!</p>
+
 <div>qui titolo: {{ titolo }}</div>
-<button (click)="onPremuto()" [disabled]="disabilitato">Aggiungi post</button>
-<div>{{ getPostsString() }}</div>
-<input name="titolo" (input)="onModificaInput($event)"  id="titolo_input">
+
+<div [innerText]="titolo"></div>
+
+<button 
+(click)="onPremuto()" 
+[disabled]="!titolo">
+    Aggiungi post
+</button>
+
+<input
+ name="titolo" 
+ [value]="titolo"
+ (input)="onModificatoInput($event)" 
+ >
 
 <div *ngFor="let post of posts">
     <h5>{{ post.titolo }}</h5>
