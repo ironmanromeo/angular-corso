@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Post } from '../dati/posts.data';
+import { Post } from '../dati/posts.data'
 
 
 @Component({
@@ -8,7 +8,6 @@ import { Post } from '../dati/posts.data';
   styleUrls: ['./posts.component.css']
 })
 export class PostsComponent implements OnInit {
-
 
   posts:Post[] = []
 
@@ -22,14 +21,13 @@ export class PostsComponent implements OnInit {
   }
 
   onPremuto() {
-    const nomePost = prompt("Inserisci titolo post")
-    if (nomePost){
+    const nomePost = prompt("Inserisci nuovo post")
+    if (nomePost) {
       const newPost:Post = {
         titolo:nomePost,
         testo:"Test",
         commenti:[]
       }
-
       this.posts.push(newPost)
     }
   }
