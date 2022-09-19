@@ -1,3 +1,4 @@
 <p>posts works!</p>
-<div>titolo:{{titolo}}</div>
-<button onclick="onPremuto()" [disabled]="disabilitato">Cambia Titolo</button>
+<div>qui titolo: {{ titolo }}</div>
+<button (click)="onPremuto()" [disabled]="disabilitato">Cambia titolo</button>
+<button (click)="onAct()" [disabled]="disabilitato">{{bottone}}</button>
