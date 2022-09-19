@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Post } from '../dati/posts.data'
 
 @Component({
   selector: 'app-posts',
@@ -6,6 +7,8 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./posts.component.css']
 })
 export class PostsComponent implements OnInit {
+
+  posts:Post[] = []
 
   titolo = "Mio titolo"
   disabilitato = false
@@ -16,23 +19,19 @@ export class PostsComponent implements OnInit {
   }
 
   onPremuto(){
-    const t =prompt("inserisci titolo", this.titolo)
-    if(t){
-      this.titolo = t
-    }else{
-      this.titolo = ""
+    const nomePost = prompt("inserisci titolo post")
+    if(nomePost){
+      const newPost:Post = {
+        titolo:nomePost,
+        testo:"test",
+        commenti:[]
+      } 
+
+      this.posts.push(newPost)
     }
   }
 
-  onLoading(){
-    this.disabilitato = true
-    setTimeout(() => {
-      this.disabilitato = false
-    }, 2000);
+  getPostsString(){
+    return JSON.stringify(this.posts)
   }
-
-  //Bottone accendi: Premendo si deve disabilitare
-  //quando disabilitato deve apparire la scritta accendi loading
-  //dopo due secondi normale
-
 }
