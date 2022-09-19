@@ -13,6 +13,7 @@ export class PostsComponent implements OnInit {
   posts:Post[] = []
 
   titolo = "Mio titolo"
+  testo = "Mio testo"
 
   constructor() { }
 
@@ -21,18 +22,26 @@ export class PostsComponent implements OnInit {
 
   onPremuto() {
     const nomePost = this.titolo
+    const testoPost = this.testo
     if (nomePost) {
-      const newPost:Post = {
-        titolo:this.titolo,
-        testo:"",
-        commenti:[]
+      if (testoPost) {
+        const newPost:Post = {
+          titolo:this.titolo,
+          testo:this.testo,
+          commenti:[]
+        }
+        this.posts.push(newPost)
+        this.titolo = ""
+        this.testo = ""
       }
-      this.posts.push(newPost)
-      this.titolo = ""
     }
   }
 
-  onModificatoInput(e:Event){
+  bottoneDisabilitato() {
+    return !this.titolo || !this.testo
+  }
+
+  onModificatoInput(e:Event) {
     //const mioInput = e.target as HTMLInputElement
     const mioInput = <HTMLInputElement>e.target
     this.titolo = mioInput.value
