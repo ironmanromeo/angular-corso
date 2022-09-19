@@ -9,7 +9,7 @@ export class PostsComponent implements OnInit {
 
   titolo = "Mio titolo"
   disabilitato = false
-  bottoneAccendiTesto = "Accendi"
+  testoStatoBottone = ""
 
   constructor() { }
 
@@ -25,12 +25,21 @@ export class PostsComponent implements OnInit {
     }
   }
 
-  onAccendi() {
+  onLoading() {
     this.disabilitato = true
-    this.bottoneAccendiTesto = 'Loading'
-    setTimeout(() => {
-      this.bottoneAccendiTesto = 'Accendi'
+    this.testoStatoBottone = "loading..."
+
+    setTimeout(()=> {
       this.disabilitato = false
-    }, 2000)
+      this.testoStatoBottone = ""
+    },2000)
   }
+
+
+
+  // 1) bottone Accendi: premendo si deve disabilitare
+  // 2) quando è disabilitato deve apparire la scritta Loading (Accendi loading...)
+  // 3) dopo 2 secondi deve tornare nella condizione precedente (solo Accendi)
+
+
 }
