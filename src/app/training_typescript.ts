@@ -1,25 +1,25 @@
-//import { type } from "os"
+class MyStorage<T extends string | number> {
+  items: T[] = [];
 
+  addItem(item: T) {
+    this.items.push(item);
+  }
 
-type Tipo1 = {
-    nome: string;
-    cognome: string;
-    eta: number
+  removeItem() {
+    this.items.pop();
   }
-  
-  type Tipo2 = {
-    altezza: number;
-    occhiali: boolean
+
+  getItems() {
+    return [...this.items];
   }
-  
-  type PersonaTipo = Tipo1 & Tipo2
-  
-  const persona: PersonaTipo = {
-    nome: "Renzo",
-    cognome: "Tramaglino",
-    eta: 40,
-    altezza: 1.70,
-    occhiali: false
-  }
-  
-  console.log(persona)
+}
+
+const myStorage = new MyStorage<string>();
+
+myStorage.addItem("Pollo");
+
+const lista1 = myStorage.getItems();
+const nome1 = lista1[0];
+const lunghezzaNome1 = nome1.length;
+
+console.log(lunghezzaNome1);
