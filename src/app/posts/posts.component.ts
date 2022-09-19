@@ -1,5 +1,11 @@
+<<<<<<< HEAD
 import { Component, forwardRef, OnInit } from '@angular/core';
 import { Post } from '../dati/posts.data';
+=======
+import { Component, OnInit } from '@angular/core';
+import { Post } from '../dati/posts.data'
+
+>>>>>>> origin/main
 
 @Component({
   selector: 'app-posts',
@@ -22,6 +28,7 @@ export class PostsComponent implements OnInit {
 
   onPremuto() {
     const nomePost = prompt("Inserisci nuovo post")
+<<<<<<< HEAD
     if(nomePost) {
 
       const newPost:Post = {
@@ -30,9 +37,21 @@ export class PostsComponent implements OnInit {
         commenti: []
       }
 
+=======
+    if (nomePost) {
+      const newPost:Post = {
+        titolo:nomePost,
+        testo:"Test",
+        commenti:[]
+      }
+>>>>>>> origin/main
       this.posts.push(newPost)
     }
     
+  }
+
+  getPostsString() {
+    return JSON.stringify(this.posts)
   }
 
   getPostsString() {
