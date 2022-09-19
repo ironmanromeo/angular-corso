@@ -1,4 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { HtmlTagDefinition } from '@angular/compiler';
+import { Component, OnInit } from '@angular/core';
 import { Post } from '../dati/posts.data'
 
 
@@ -12,9 +13,6 @@ export class PostsComponent implements OnInit {
   posts:Post[] = []
 
   titolo = "Mio titolo"
-  disabilitato = false
-  disabilita = false
-  bottone = "Accendi"
 
   constructor() { }
 
@@ -30,6 +28,7 @@ export class PostsComponent implements OnInit {
         commenti:[]
       }
       this.posts.push(newPost)
+      this.titolo = ""
     }
     
     if(this.titolo === '') {
