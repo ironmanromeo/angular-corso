@@ -1,16 +1,18 @@
-const nomi: string[] = [];
-const nomi2 = new Array<string>();
+const obj1 = {
+    nome : "R",
+    cognome : "L"
+}
 
-nomi2.push("12");
+const obj2= {
+    eta : 20
+}
 
-const pr = new Promise<string>((resolve, reject) => {
-  setTimeout(() => {
-    resolve("Finito");
-  }, 10000);
-});
+function merge<T,U> (v1:T,v2:U){
+    const union = Object.assign(v1,v2)
+    return union
+}
 
-console.log("Iniziato");
-pr.then((risposta) => {
-  const lunghezzaStringa = risposta.length;
-  console.log("Risposta: ", risposta);
-});
+const merged = merge(obj1,obj2)
+console.log("merged",merged)
+
+console.log(merged.eta)
