@@ -1,19 +1,30 @@
-
-const persona1_parte1 = {
-    nome : "L",
-    cognome : "M",
+class MyStorage<T> {
+    items: T[] = [];
+  
+    constructor(item:T) {
+      this.addItem(item)
+    }
+  
+    addItem(item: T) {
+      this.items.push(item);
+    }
+  
+    removeItem() {
+      this.items.pop();
+    }
+  
+    getItems() {
+      return [...this.items];
+    }
   }
   
-  const persona1_parte2 = {
-    eta:30,
-    altezza:140
-  }
+  const myStorage = new MyStorage(2);
   
-  function combina<T,U>(obj1:T,obj2:U){
-    return {...obj1,...obj2}
-  }
+  myStorage.addItem(4);
   
-  const persona1 = combina(persona1_parte1,persona1_parte2)
+  const lista1 = myStorage.getItems();
+  const nome1 = lista1[0]
+  const lunghezzaNome1 = nome1
   
-  console.log(persona1.eta)
+  console.log(lunghezzaNome1);
   
