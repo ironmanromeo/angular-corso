@@ -15,7 +15,10 @@ export class PostsComponent implements OnInit {
   }
 
   onPremuto(){
-    alert("Ci sono!")
+    const t = prompt("Inserisci il Titolo")
+    if(t){
+      this.titolo=t
+    }
   }
 
 }
