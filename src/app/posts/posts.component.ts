@@ -7,9 +7,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PostsComponent implements OnInit {
 
+  title = "Mio Titolo"
+  disabled = false
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  onPressed() {
+    const message:any = prompt()
+    this.title = message
   }
 
 }
