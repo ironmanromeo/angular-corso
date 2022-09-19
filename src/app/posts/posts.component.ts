@@ -9,6 +9,7 @@ export class PostsComponent implements OnInit {
 
   titolo = "Mio titolo"
   disabilitato = false
+  disabilitato_accendi = false
   textButton = "Accendi"
 
   constructor() { }
@@ -25,11 +26,11 @@ export class PostsComponent implements OnInit {
 
   loading(){
 
-    this.disabilitato = true
+    this.disabilitato_accendi = true
     this.textButton = "Loading"
 
     setTimeout(() => {
-      this.disabilitato = false
+      this.disabilitato_accendi = false
       this.textButton = "Accendi"
     }, 2000)
 
