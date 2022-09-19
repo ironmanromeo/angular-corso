@@ -11,29 +11,28 @@ export class PostsComponent implements OnInit {
 
   posts: Post[] = []
 
-  titolo = "Mio titolo"
-  disabilitato = false
-  disabilitato_accendi = false
+  titolo = ""
 
   constructor() { }
 
-  aggiungiPost(){
-    const titolo_post = prompt("Inserisci un titolo al post")
-    const testo_post = prompt("Inserisci un testo al post")
-    const commento_post = prompt("Inserisci un commento al post")
+  onModificatoInput(e: Event){
+    const mioInput = <HTMLInputElement>e.target
+    this.titolo = mioInput.value
+  }
 
-    if(titolo_post != null && testo_post != null && commento_post != null){
+ 
 
+   aggiungiPost(){
+      const titolo_post = this.titolo
       const newPost: Post = {
         titolo: titolo_post,
-        testo: testo_post,
-        commenti: [commento_post] 
+        testo: "testo",
+        commenti: [] 
       }
-
       this.posts.push(newPost)
-
+      this.titolo = ""
     }
-  }
+  
 
   ngOnInit(): void {
   }

@@ -1,6 +1,9 @@
 <p>posts works!</p>
 <div>Qui titolo: {{ titolo }}</div>
-<button (click)="aggiungiPost()">Aggiungi un nuovo post</button>
+<button (click)="aggiungiPost()" [disabled]="!titolo">Aggiungi un nuovo post</button>
+
+<input [value]="titolo" name="titolo" type="text" (input)="onModificatoInput($event)">
+
 <div *ngFor="let post of posts">
     <h2> {{ post.titolo }} </h2>
     <h5> {{ post.testo }} </h5>
