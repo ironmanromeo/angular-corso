@@ -9,6 +9,7 @@ export class PostsComponent implements OnInit {
 
   title = "Mio Titolo"
   disabled = false
+  loading = "Accendi"
 
   constructor() { }
 
@@ -24,4 +25,17 @@ export class PostsComponent implements OnInit {
       this.title = ""
     }
   }
+
+  onAccensione() {
+    this.disabled = true
+    this.loading = "Loading"
+
+    if(this.disabled == true) {
+      setInterval(() => {
+        this.loading = "Accendi"
+        this.disabled = false
+      }, 2000)
+    }
+  }
+  
 }
