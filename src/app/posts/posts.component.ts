@@ -11,8 +11,8 @@ export class PostsComponent implements OnInit {
 
   posts:Post[] = []
 
-  titolo = "Mio titolo"
-  disabilitato = false
+  titolo = ""
+  disabilitato = true
 
   constructor() { }
 
@@ -20,14 +20,25 @@ export class PostsComponent implements OnInit {
   }
 
   onPremuto() {
-    const nomePost = prompt("Inserisci nuovo post")
-    if (nomePost) {
+    if (this.titolo) {
       const newPost:Post = {
-        titolo:nomePost,
-        testo:"Test",
+        titolo:this.titolo,
+        testo:"",
         commenti:[]
       }
       this.posts.push(newPost)
+      this.titolo = ""
+    }
+  }
+
+  onModificatoInput(e:Event) {
+    // const mioInput = e.target as HTMLFormElement
+    const mioInput = <HTMLInputElement>e.target
+    this.titolo = mioInput.value
+    if (this.titolo) {
+      this.disabilitato = false
+    } else {
+      this.disabilitato = true
     }
   }
 
