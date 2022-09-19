@@ -7,9 +7,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PostsComponent implements OnInit {
 
+titolo = "Mio titolo"
+disabilitato = false
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  onPremuto() {
+    alert("Ci sono")
+  }
+
+  function inserimento() {
+    let title = prompt("") 
+    
   }
 
 }
