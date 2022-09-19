@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import { Post } from '../dati/posts.data'
+
 @Component({
   selector: 'app-posts',
   templateUrl: './posts.component.html',
@@ -7,36 +9,37 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PostsComponent implements OnInit {
 
+  posts: Post[] = []
+
   titolo = "Mio titolo"
   disabilitato = false
   disabilitato_accendi = false
-  textButton = "Accendi"
 
   constructor() { }
 
-  cambiaTitolo(){
-    const nuovoTitolo = prompt("Inserisci nuovo titolo", this.titolo)
-    if(nuovoTitolo){
-      this.titolo = nuovoTitolo
+  aggiungiPost(){
+    const titolo_post = prompt("Inserisci un titolo al post")
+    const testo_post = prompt("Inserisci un testo al post")
+    const commento_post = prompt("Inserisci un commento al post")
+
+    if(titolo_post != null && testo_post != null && commento_post != null){
+
+      const newPost: Post = {
+        titolo: titolo_post,
+        testo: testo_post,
+        commenti: [commento_post] 
+      }
+
+      this.posts.push(newPost)
+
     }
-    else{
-      this.titolo = ""
-    }
-  }
-
-  loading(){
-
-    this.disabilitato_accendi = true
-    this.textButton = "Loading"
-
-    setTimeout(() => {
-      this.disabilitato_accendi = false
-      this.textButton = "Accendi"
-    }, 2000)
-
   }
 
   ngOnInit(): void {
   }
 
 }
+
+
+
+
