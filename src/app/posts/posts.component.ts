@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Post } from '../dati/posts.data';
+
 
 @Component({
   selector: 'app-posts',
@@ -7,7 +9,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PostsComponent implements OnInit {
 
-  titolo = "Mio titolo"
+  posts:Post[]=[]
+
+  titolo:string = "Mio titolo"
   disabilitato = false
   testoStatoBottone = ""
 
@@ -16,22 +20,21 @@ export class PostsComponent implements OnInit {
   ngOnInit(): void {
   }
 
-
-  onLoading() {
-    this.disabilitato = true
-    this.testoStatoBottone = "loading..."
-
-    setTimeout(()=> {
-      this.disabilitato = false
-      this.testoStatoBottone = ""
-    },2000)
+  aggiungiPost(){
+    const title=prompt("Titolo")
+    const scritta = prompt("aggiungi post")
+    if(scritta && title){
+      const addPost:Post={
+        titolo:title,
+        testo:scritta,
+        commenti:[]
+      }
+      this.posts.push(addPost)
+    }
   }
 
-
-
-  // 1) bottone Accendi: premendo si deve disabilitare
-  // 2) quando è disabilitato deve apparire la scritta Loading (Accendi loading...)
-  // 3) dopo 2 secondi deve tornare nella condizione precedente (solo Accendi)
-
+  getPostsString(){
+    return JSON.stringify(this.posts)
+  }
 
 }
