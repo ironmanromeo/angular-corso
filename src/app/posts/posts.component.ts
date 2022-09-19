@@ -13,24 +13,25 @@ export class PostsComponent implements OnInit {
 
   titolo = "Mio titolo"
   disabilitato = false
-
+  mioInput = "";
   constructor() { }
 
   ngOnInit(): void {
   }
 
   onPremuto() {
-    const nomePost = prompt("Inserisci nuovo post")
-    if (nomePost) {
+    if (this.mioInput) {
       const newPost:Post = {
-        titolo:nomePost,
+        titolo:this.mioInput,
         testo:"Test",
         commenti:[]
       }
       this.posts.push(newPost)
     }
   }
-
+  onModificatoInput(e:Event){
+    this.mioInput=String((<HTMLInputElement>e.target).value)
+  }
   getPostsString() {
     return JSON.stringify(this.posts)
   }
