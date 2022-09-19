@@ -1,3 +1,4 @@
+import { HtmlTagDefinition } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
 import { Post } from '../dati/posts.data'
 
@@ -12,26 +13,43 @@ export class PostsComponent implements OnInit {
   posts:Post[] = []
 
   titolo = "Mio titolo"
-  disabilitato = false
-  mioInput = "";
+
   constructor() { }
 
   ngOnInit(): void {
   }
 
   onPremuto() {
-    if (this.mioInput) {
+    const nomePost = this.titolo
+    if (nomePost) {
       const newPost:Post = {
-        titolo:this.mioInput,
+        titolo:nomePost,
         testo:"Test",
         commenti:[]
       }
       this.posts.push(newPost)
+      this.titolo = ""
     }
   }
+
+  onModificatoInput(e:Event){
+    //const mioInput = e.target as HTMLInputElement
+    const mioInput = <HTMLInputElement>e.target
+    this.titolo = mioInput.value
+  }
+<<<<<<< HEAD
   onModificatoInput(e:Event){
     this.mioInput=String((<HTMLInputElement>e.target).value)
   }
+=======
+
+  onModificatoInput(e:Event){
+    //const mioInput = e.target as HTMLInputElement
+    const mioInput = <HTMLInputElement>e.target
+    this.titolo = mioInput.value
+  }
+
+>>>>>>> origin/main
   getPostsString() {
     return JSON.stringify(this.posts)
   }
