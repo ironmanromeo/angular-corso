@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { timeInterval, timeout } from 'rxjs';
 
 @Component({
   selector: 'app-posts',
@@ -9,6 +10,8 @@ export class PostsComponent implements OnInit {
 
   titolo = "Mio titolo"
   disabilitato = false
+  disabilita = false
+  bottone = "Accendi"
 
   constructor() { }
 
@@ -22,6 +25,16 @@ export class PostsComponent implements OnInit {
     } else {
       this.titolo = ""
     }
+  }
+
+  onClick() {
+    this.bottone = "Loading..."
+    this.disabilita = true
+
+    setTimeout(() => {
+      this.bottone = "Accendi"
+      this.disabilita = false
+    }, 2000)
   }
 
 }
