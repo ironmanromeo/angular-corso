@@ -31,7 +31,11 @@ export class PostsComponent implements OnInit {
       this.posts.push(newPost)
     }
   }
+  onModificatoInput(e:Event){
+    const mioInput =<HTMLFormElement> e.target
+    console.log(mioInput.nodeValue)
 
+  }
   getPostsString() {
     return JSON.stringify(this.posts)
   }
