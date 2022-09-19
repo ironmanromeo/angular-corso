@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { timeInterval, timeout } from 'rxjs';
+import { Component, forwardRef, OnInit } from '@angular/core';
+import { Post } from '../dati/posts.data';
 
 @Component({
   selector: 'app-posts',
@@ -7,6 +7,8 @@ import { timeInterval, timeout } from 'rxjs';
   styleUrls: ['./posts.component.css']
 })
 export class PostsComponent implements OnInit {
+
+  posts:Post[] = []
 
   titolo = "Mio titolo"
   disabilitato = false
@@ -19,22 +21,22 @@ export class PostsComponent implements OnInit {
   }
 
   onPremuto() {
-    const t = prompt("Inserisci titolo", this.titolo)
-    if (t){
-      this.titolo = t
-    } else {
-      this.titolo = ""
+    const nomePost = prompt("Inserisci nuovo post")
+    if(nomePost) {
+
+      const newPost:Post = {
+        titolo: nomePost,
+        testo: "Test",
+        commenti: []
+      }
+
+      this.posts.push(newPost)
     }
+    
   }
 
-  onClick() {
-    this.bottone = "Loading..."
-    this.disabilita = true
-
-    setTimeout(() => {
-      this.bottone = "Accendi"
-      this.disabilita = false
-    }, 2000)
+  getPostsString() {
+    return JSON.stringify(this.posts)
   }
 
 }
