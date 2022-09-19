@@ -1,3 +1,4 @@
+import { HtmlTagDefinition } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
 import { Post } from '../dati/posts.data'
 
@@ -11,8 +12,7 @@ export class PostsComponent implements OnInit {
 
   posts:Post[] = []
 
-  titolo = ""
-  disabilitato = true
+  titolo = "Mio titolo"
 
   constructor() { }
 
@@ -20,7 +20,8 @@ export class PostsComponent implements OnInit {
   }
 
   onPremuto() {
-    if (this.titolo) {
+    const nomePost = this.titolo
+    if (nomePost) {
       const newPost:Post = {
         titolo:this.titolo,
         testo:"",
@@ -31,15 +32,10 @@ export class PostsComponent implements OnInit {
     }
   }
 
-  onModificatoInput(e:Event) {
-    // const mioInput = e.target as HTMLFormElement
+  onModificatoInput(e:Event){
+    //const mioInput = e.target as HTMLInputElement
     const mioInput = <HTMLInputElement>e.target
     this.titolo = mioInput.value
-    if (this.titolo) {
-      this.disabilitato = false
-    } else {
-      this.disabilitato = true
-    }
   }
 
   getPostsString() {
