@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { Post } from '../dati/posts.data'
 @Component({
   selector: 'app-posts',
   templateUrl: './posts.component.html',
@@ -7,20 +7,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PostsComponent implements OnInit {
 
-  status = false
-  current= ""
+  posts:Post[]=[]
+  
   constructor() { }
 
   ngOnInit(): void {
   }
 
   onPremuto() {
-    this.status=true
-    this.current = "loading.."
-    setTimeout(()=>{
-      this.status=false
-      this.current = "loading.."
-    }, 2000)
+    var titolo:string=String(prompt("Dimmi il titolo uaglioo"))
+    var testo:string=String(prompt("Dimmi il testo uaglioo"))
+    var commenti:string[]=[];
+    var n
+    while(!n){
+    var commento:string=String(prompt("Dimmi il commento uaglioo"))
+    if(commento!="")
+     commenti.push(commento)
+    else
+      break
+    }
+    this.posts.push({titolo, testo, commenti})
   }
 
 }
