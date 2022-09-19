@@ -6,10 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./posts.component.css']
 })
 export class PostsComponent implements OnInit {
-
+  titolo = "Mio Primo Titolo"
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  onClicked(){
+    this.titolo=String(prompt("Inserisci dato-->","ciao"))
   }
 
 }
