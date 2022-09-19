@@ -17,6 +17,11 @@ disabilitato = false
 
 
   onPremuto() {
-    prompt("Nuovo titolo")
+    const t = prompt("Nuovo titolo")
+    if(t){
+      this.titolo = t
+    } else {
+      this.titolo = ""
+    }
   }
 }
