@@ -13,8 +13,13 @@ export class PostsComponent implements OnInit {
   constructor() { }
 
   cambiaTitolo(){
-    const nuovoTitolo: any = prompt()
-    this.titolo = nuovoTitolo
+    const nuovoTitolo = prompt("Inserisci nuovo titolo", this.titolo)
+    if(nuovoTitolo){
+      this.titolo = nuovoTitolo
+    }
+    else{
+      this.titolo = ""
+    }
   }
 
   ngOnInit(): void {
