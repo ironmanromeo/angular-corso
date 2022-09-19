@@ -12,6 +12,7 @@ export class PostsComponent implements OnInit {
   posts: Post[] = []
 
   titolo = ""
+  testo = ""
 
   constructor() { }
 
@@ -20,17 +21,19 @@ export class PostsComponent implements OnInit {
     this.titolo = mioInput.value
   }
 
- 
+  bottoneDisabilitato(){
+    return !this.titolo || !this.testo
+  }
 
    aggiungiPost(){
-      const titolo_post = this.titolo
       const newPost: Post = {
-        titolo: titolo_post,
-        testo: "testo",
+        titolo: this.titolo,
+        testo: this.testo,
         commenti: [] 
       }
       this.posts.push(newPost)
       this.titolo = ""
+      this.testo = ""
     }
   
 
