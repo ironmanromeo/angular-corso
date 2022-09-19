@@ -9,8 +9,9 @@ export class PostsComponent implements OnInit {
 
   titolo = "Mio titolo"
   disabilitato = false
-
-  constructor() { }
+  status="accendi"
+  constructor() {
+   }
 
   ngOnInit(): void {
   }
@@ -23,5 +24,18 @@ export class PostsComponent implements OnInit {
       this.titolo = ""
     }
   }
+
+
+  accendi(){
+    this.disabilitato=true
+    this.status="Acceso Loading"
+    setTimeout(()=>{
+      this.disabilitato=!this.disabilitato
+      this.status="accendi"
+    },2000)
+
+
+  }
+  
 
 }
