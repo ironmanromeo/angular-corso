@@ -9,6 +9,7 @@ export class PostsComponent implements OnInit {
 
   titolo = "Mio titolo"
   disabilitato = false
+  textButton = "Accendi"
 
   constructor() { }
 
@@ -20,6 +21,18 @@ export class PostsComponent implements OnInit {
     else{
       this.titolo = ""
     }
+  }
+
+  loading(){
+
+    this.disabilitato = true
+    this.textButton = "Loading"
+
+    setTimeout(() => {
+      this.disabilitato = false
+      this.textButton = "Accendi"
+    }, 2000)
+
   }
 
   ngOnInit(): void {
