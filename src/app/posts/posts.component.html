@@ -1,5 +1,9 @@
 <p>posts works!</p>
 <div>Qui titolo: {{ titolo }}</div>
-<button (click)="cambiaTitolo()" [disabled] = "disabilitato" >Cambia titolo</button>
-
-<button (click)="loading()" [disabled] = "disabilitato_accendi">{{ textButton }}</button>
+<button (click)="aggiungiPost()">Aggiungi un nuovo post</button>
+<div *ngFor="let post of posts">
+    <h2> {{ post.titolo }} </h2>
+    <h5> {{ post.testo }} </h5>
+    <p> {{ post.commenti }} </p>
+    <h3 *ngIf="post.titolo === 'ciao'">Buongiorno</h3>
+</div>
