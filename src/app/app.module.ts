@@ -5,10 +5,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 import './training_javascript'
-import './training_typescript'
+import './training_typescript';
+import { PostsComponent } from './posts/posts.component'
+
 @NgModule({
   declarations: [
     AppComponent,
+    PostsComponent,
   ],
   imports: [
     BrowserModule,
