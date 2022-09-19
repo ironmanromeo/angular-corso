@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-posts',
@@ -7,9 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PostsComponent implements OnInit {
 
+  titolo = "Mio titolo"
+  disabilitato = false
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  onPremuto(){
+    prompt("nuovo titolo")
   }
 
 }
