@@ -17,12 +17,6 @@ export class PostsComponent implements OnInit {
 
   onPremuto() {
 
-    const t = prompt("Inserisci titolo")
-    if (t){
-      this.titolo = t
-      
-    }else{
-
     const t = prompt("Inserisci titolo", this.titolo)
     if (t){
       this.titolo = t
@@ -32,4 +26,4 @@ export class PostsComponent implements OnInit {
     }
   }
 
-}
+  }
