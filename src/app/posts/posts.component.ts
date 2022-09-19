@@ -8,15 +8,20 @@ import { Component, OnInit } from '@angular/core';
 export class PostsComponent implements OnInit {
 
   titolo = "Mio titolo"
-  disabilitato=false
+  disabilitato = false
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  onPremuto(){
-    this.titolo=String(prompt("Inserisci una stringa"))
+  onPremuto() {
+    const t = prompt("Inserisci titolo", this.titolo)
+    if (t){
+      this.titolo = t
+    } else {
+      this.titolo = ""
+    }
   }
 
 }
