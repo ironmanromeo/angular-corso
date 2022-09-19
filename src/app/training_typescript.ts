@@ -1,31 +1,17 @@
-class MyStorage<T> {
-    
-    items: T[] = []
-
-    constructor(item: T){
-        this.addItem(item)
-    }
-
-    addItem(item: T){
-        this.items.push(item)
-    }
-
-    removeItem(){
-        this.items.pop()
-    }
-
-    getItems(){
-        return [...this.items]
-    }
-
+const persona1_parte1 = {
+    nome: "Renzo",
+    cognome: "Tramaglino"
 }
 
-const myStorage = new MyStorage("helo")
+const persona1_parte2 = {
+    eta: 30,
+    altezza: 140
+}
 
-myStorage.addItem("ciao")
+function conbina<T,U>(obj1: T, obj2: U){
+    return {...obj1, ...obj2}
+}
 
-const lista1 = myStorage.getItems()
-const nome1 = lista1[0]
-const lunghezzaNome1 = nome1
+const persona1 = conbina(persona1_parte1, persona1_parte2)
 
-console.log(lunghezzaNome1)
+console.log(persona1)
