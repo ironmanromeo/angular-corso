@@ -14,7 +14,6 @@ export class PostsComponent implements OnInit {
 
   titolo = "Mio titolo"
   disabilitato = false
-  testoStatoBottone = ""
 
   constructor() { }
 
@@ -22,17 +21,20 @@ export class PostsComponent implements OnInit {
   }
 
   onPremuto() {
-    const nomePost = prompt("Inserisci un nuovo post")
-    if (nomePost){
+    const nomePost = prompt("Inserisci nuovo post")
+    if (nomePost) {
       const newPost:Post = {
         titolo:nomePost,
         testo:"Test",
         commenti:[]
       }
       this.posts.push(newPost)
-    } 
-}
-getPostsString(){
-  return JSON.stringify(this.posts)
-}
+    }
   }
+
+  getPostsString() {
+    return JSON.stringify(this.posts)
+  }
+
+}
+  
