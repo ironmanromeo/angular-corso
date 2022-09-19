@@ -1,4 +1,6 @@
+import { getSafePropertyAccessString } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
+import { Post } from '../dati/posts.dats';
 
 @Component({
   selector: 'app-posts',
@@ -6,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./posts.component.css']
 })
 export class PostsComponent implements OnInit {
+
+  posts: Post[] = []
 
   titolo = "Mio titolo"
   disabilitato = false
@@ -17,22 +21,20 @@ export class PostsComponent implements OnInit {
   }
 
   onPremuto() {
-    const t = prompt("Inserisci titolo", this.titolo)
-    if (t){
-      this.titolo = t
-    } else {
-      this.titolo = ""
-    }
-  }
+    const nomePost = prompt("Inserisci nuovo post", this.titolo)
+    if (nomePost){
+      const newPost:Post = {
+        titolo:nomePost,
+        testo:"Test",
+        commenti:[]
+      }
+      this.posts.push(newPost)
+    } 
+
   
-  onLoading(){
-    this.disabilitato=true
-    this.nomeBottone = "Accendi Loading..."
-    setTimeout(() => {
-      this.disabilitato=false
-      this.nomeBottone= "Accendi"
-    }, 2000);
-
+   }
+   getPostString(){
+    return JSON.stringify(this.posts)
+  
   }
-
 }
