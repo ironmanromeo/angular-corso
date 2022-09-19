@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-=======
+
 
 
 
@@ -27,4 +26,3 @@ const merged2 = merge(obj1,obj3)
 //const merged3 = merge(merged,23)
 
 //console.log(merged3)
->>>>>>> origin/main
