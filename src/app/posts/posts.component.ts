@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Post } from '../dati/posts.data'
+
 
 @Component({
   selector: 'app-posts',
@@ -6,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./posts.component.css']
 })
 export class PostsComponent implements OnInit {
+
+  posts:Post[] = []
 
   titolo = "Mio titolo"
   disabilitato = false
