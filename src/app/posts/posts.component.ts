@@ -19,6 +19,9 @@ export class PostsComponent implements OnInit {
     if(t){
       this.titolo=t
     }
+    else{
+      this.titolo=""
+    }
   }
 
 }
