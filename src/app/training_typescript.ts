@@ -27,5 +27,4 @@ class MyStorage<T> {
   const lunghezzaNome1 = nome1
   
   console.log(lunghezzaNome1);
-
-
+  
