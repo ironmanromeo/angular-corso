@@ -1,6 +1,5 @@
 export type Post = {
-    titolo: string
+    titolo:string
     testo:string
-    commenti: string[]
-
+    commenti:string[]
 }
