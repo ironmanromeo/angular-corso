@@ -1,4 +1,3 @@
-import { getSafePropertyAccessString } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
 import { Post } from '../data/posts.data'
 @Component({
@@ -11,8 +10,6 @@ export class PostsComponent implements OnInit {
   posts:Post[] = []
   
   title = "Posts"
-  disabled = false
-  inputTxt = ""
 
   constructor() { }
 
@@ -33,17 +30,16 @@ export class PostsComponent implements OnInit {
       this.posts.push(newPost)
     }
 
-    this.inputTxt = " "
+    this.title = ""
   }
 
   onEditedInput(e: Event) {
     const myInput = <HTMLInputElement>e.target
     this.title = myInput.value
-    
   }
 
-  getPostsString() {
-    return JSON.stringify(this.posts)
-  }
+  // getPostsString() {
+  //   return JSON.stringify(this.posts)
+  // }
   
 }
