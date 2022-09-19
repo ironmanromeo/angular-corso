@@ -24,6 +24,10 @@ export class PostsComponent implements OnInit {
 
       this.titolo = ""
     }
+
+    const timer = onclick
+    if 
+
   }
 
   }
