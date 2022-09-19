@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Post } from '../dati/posts.data';
+
 
 @Component({
   selector: 'app-posts',
@@ -7,31 +9,33 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PostsComponent implements OnInit {
 
+
+  posts:Post[] = []
+
   titolo = "Mio titolo"
   disabilitato = false
+  nomeBottone = "Accendi"
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
-<<<<<<< HEAD
+  onPremuto() {
+    const nomePost = prompt("Inserisci titolo post")
+    if (nomePost){
+      const newPost:Post = {
+        titolo:nomePost,
+        testo:"Test",
+        commenti:[]
+      }
 
-  onPremuto() {
-    const t = prompt("Nuovo titolo")
-    if(t){
-=======
-  onPremuto() {
-    const t = prompt("Inserisci titolo", this.titolo)
-    if (t){
->>>>>>> origin/main
-      this.titolo = t
-    } else {
-      this.titolo = ""
+      this.posts.push(newPost)
     }
   }
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/main
+  getPostsString() {
+    return JSON.stringify(this.posts)
+  }
+
 }
