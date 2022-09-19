@@ -1,25 +1,27 @@
-class MyStorage<T extends string | number> {
-  items:T[] = []
 
-  addItem(item:T) {
-    this.items.push(item)
-  }
 
-  removeItem() {
-    this.items.pop()
-  }
 
-  getItems() {
-    return [ ...this.items ]
-  }
+function merge<T,U>(v1:T, v2:U){
+    return Object.assign(v1,v2)
+    //return {...v1,...v2}
 }
 
-const myStorage = new MyStorage<string>()
+const obj1 = {
+    nome:"Renzo",
+    cognome:"Tramaglino"
+}
 
-myStorage.addItem("Pollo")
+const obj2 = {
+    eta:20
+}
 
-const lista1 = myStorage.getItems()
-const nome1 = lista1[0]
-const lunghezzaNome1 = nome1.length
+const obj3 = {
+    altezza:1.74,
+    peso:"troppo"
+}
 
-console.log(lunghezzaNome1)
+const merged = merge(obj1,obj2)
+const merged2 = merge(obj1,obj3)
+//const merged3 = merge(merged,23)
+
+//console.log(merged3)
