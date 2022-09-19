@@ -37,19 +37,7 @@ export class PostsComponent implements OnInit {
     const mioInput = <HTMLInputElement>e.target
     this.titolo = mioInput.value
   }
-<<<<<<< HEAD
-  onModificatoInput(e:Event){
-    this.mioInput=String((<HTMLInputElement>e.target).value)
-  }
-=======
 
-  onModificatoInput(e:Event){
-    //const mioInput = e.target as HTMLInputElement
-    const mioInput = <HTMLInputElement>e.target
-    this.titolo = mioInput.value
-  }
-
->>>>>>> origin/main
   getPostsString() {
     return JSON.stringify(this.posts)
   }
