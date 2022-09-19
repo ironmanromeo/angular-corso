@@ -6,5 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'angular-corso';
+  titolo = 'Titolo pagina'
+  altezza = 24
+  disabilitato = true
+  constructor() {
+    setTimeout(()=>{
+      this.disabilitato = !this.disabilitato
+    },1000)
+  }
 }
