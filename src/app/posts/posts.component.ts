@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Post } from '../dati/posts.data'
 
 @Component({
@@ -18,20 +18,25 @@ export class PostsComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  onPremuto(){
-    const nomePost = prompt("inserisci titolo post")
-    if(nomePost){
+  onPremuto() {
+    const nomePost = prompt("Inserisci nuovo post")
+    if (nomePost) {
       const newPost:Post = {
         titolo:nomePost,
-        testo:"test",
+        testo:"Test",
         commenti:[]
-      } 
-
+      }
       this.posts.push(newPost)
     }
   }
 
-  getPostsString(){
+  onModificatoInput(e:Event){
+    const mioinput = e.target as HTMLInputElement
+    this.titolo = mioinput.value
+  }
+
+  getPostsString() {
     return JSON.stringify(this.posts)
   }
+
 }

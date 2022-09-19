@@ -3,4 +3,3 @@ export type Post = {
     testo:string
     commenti:string[]
 }
-
