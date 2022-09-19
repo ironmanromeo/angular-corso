@@ -32,8 +32,4 @@ export class PostsComponent implements OnInit {
     }
   }
 
-  getPostsString() {
-    return JSON.stringify(this.posts)
-  }
-
 }
