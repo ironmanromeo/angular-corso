@@ -16,12 +16,16 @@ disabilitato = false
   }
 
   onPremuto() {
-    alert("Ci sono")
+    const t = prompt("Inserisci titolo")
+    if (t){
+      this.titolo = t
+      
+    }else{
+      this.titolo = ""
+    }
   }
 
-  function inserimento() {
-    let title = prompt("") 
-    
-  }
+
+
 
 }
