@@ -31,8 +31,9 @@ export class PostsComponent implements OnInit {
       }
 
       this.posts.push(newPost)
-      this.inputTxt = " "
     }
+
+    this.inputTxt = " "
   }
 
   onEditedInput(e: Event) {
