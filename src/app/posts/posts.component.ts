@@ -9,9 +9,9 @@ export class PostsComponent implements OnInit {
 
   titolo = "Mio titolo"
   disabilitato = false
-  status="accendi"
-  constructor() {
-   }
+  testoStatoBottone = ""
+
+  constructor() { }
 
   ngOnInit(): void {
   }
@@ -25,17 +25,21 @@ export class PostsComponent implements OnInit {
     }
   }
 
+  onLoading() {
+    this.disabilitato = true
+    this.testoStatoBottone = "loading..."
 
-  accendi(){
-    this.disabilitato=true
-    this.status="Acceso Loading"
-    setTimeout(()=>{
-      this.disabilitato=!this.disabilitato
-      this.status="accendi"
+    setTimeout(()=> {
+      this.disabilitato = false
+      this.testoStatoBottone = ""
     },2000)
-
-
   }
-  
+
+
+
+  // 1) bottone Accendi: premendo si deve disabilitare
+  // 2) quando è disabilitato deve apparire la scritta Loading (Accendi loading...)
+  // 3) dopo 2 secondi deve tornare nella condizione precedente (solo Accendi)
+
 
 }
