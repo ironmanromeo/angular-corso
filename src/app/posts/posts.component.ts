@@ -9,6 +9,7 @@ export class PostsComponent implements OnInit {
 
   titolo = "Mio titolo"
   disabilitato = false
+  testoBottone="Accendi"
 
   constructor() { }
 
@@ -16,12 +17,14 @@ export class PostsComponent implements OnInit {
   }
 
   onPremuto() {
-    const t = prompt("Inserisci titolo", this.titolo)
-    if (t){
-      this.titolo = t
-    } else {
-      this.titolo = ""
-    }
+    this.disabilitato=true
+    this.testoBottone="Accendi loading"
+    setTimeout(() => {
+      this.testoBottone="Accendi"
+      this.disabilitato=false
+    }, 2000);
+
+
   }
 
 }
