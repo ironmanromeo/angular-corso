@@ -1,30 +1,18 @@
-class MyStorage<T> {
-    items: T[] = [];
-  
-    constructor(item:T) {
-      this.addItem(item)
-    }
-  
-    addItem(item: T) {
-      this.items.push(item);
-    }
-  
-    removeItem() {
-      this.items.pop();
-    }
-  
-    getItems() {
-      return [...this.items];
-    }
-  }
-  
-  const myStorage = new MyStorage(2);
-  
-  myStorage.addItem(4);
-  
-  const lista1 = myStorage.getItems();
-  const nome1 = lista1[0]
-  const lunghezzaNome1 = nome1
-  
-  console.log(lunghezzaNome1);
-  
+const persona1_parte1 = {
+  nome : "L",
+  cognome : "M",
+}
+
+const persona1_parte2 = {
+  eta:30,
+  altezza:140
+}
+
+function combina<T,U>(obj1:T,obj2:U){
+  return {...obj1,...obj2}
+}
+
+const persona1 = combina(persona1_parte1,persona1_parte2)
+
+console.log(persona1.eta)
+
