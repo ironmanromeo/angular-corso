@@ -16,8 +16,12 @@ export class PostsComponent implements OnInit {
   }
 
   onPressed() {
-    const message:any = prompt()
-    this.title = message
+    const t = prompt("Insert title")
+    
+    if(t) {
+      this.title = t
+    } else {
+      this.title = ""
+    }
   }
-
 }
