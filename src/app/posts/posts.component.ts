@@ -7,7 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PostsComponent implements OnInit {
 
+  titolo = "Mio titolo"
+  disabilitato = false
+
   constructor() { }
+
+  cambiaTitolo(){
+    const nuovoTitolo: any = prompt()
+    this.titolo = nuovoTitolo
+  }
 
   ngOnInit(): void {
   }
