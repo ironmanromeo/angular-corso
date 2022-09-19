@@ -1,21 +1,27 @@
-class Magazzino<T extends string | number>{
-  items:T[]=[]
 
-  pushItem(oggetto:T){
-    this.items.push(oggetto)
-  }
 
-  removeItem(){
-    this.items.pop()
-  }
 
-  getNewArray(){
-    return [...this.items]
-  }
+function merge<T,U>(v1:T, v2:U){
+    return Object.assign(v1,v2)
+    //return {...v1,...v2}
 }
 
-const mg=new Magazzino<string>()
-mg.pushItem("Ciao")
-const temp=mg.getNewArray()[0].length
-console.log(temp)
+const obj1 = {
+    nome:"Renzo",
+    cognome:"Tramaglino"
+}
 
+const obj2 = {
+    eta:20
+}
+
+const obj3 = {
+    altezza:1.74,
+    peso:"troppo"
+}
+
+const merged = merge(obj1,obj2)
+const merged2 = merge(obj1,obj3)
+//const merged3 = merge(merged,23)
+
+//console.log(merged3)
