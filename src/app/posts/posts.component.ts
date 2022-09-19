@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Post } from '../dati/posts.data';
+import { Post } from '../dati/posts.data'
+
 
 @Component({
   selector: 'app-posts',
@@ -19,16 +20,19 @@ export class PostsComponent implements OnInit {
   }
 
   onPremuto() {
-    const nomePost = prompt("Inserisci nuovo post", this.titolo)
+    const nomePost = prompt("Inserisci nuovo post")
     if (nomePost) {
       const newPost:Post = {
-        titolo: nomePost,
-        testo: "Test",
-        commenti: []
+        titolo:nomePost,
+        testo:"Test",
+        commenti:[]
       }
-
       this.posts.push(newPost)
     }
+  }
+
+  getPostsString() {
+    return JSON.stringify(this.posts)
   }
 
 }

@@ -1,7 +1,7 @@
 <p>posts works!</p>
 <div>qui titolo: {{ titolo }}</div>
-<button>Aggiungi post</button>
-<div>{{ posts }}</div>
+<button (click)="onPremuto()" [disabled]="disabilitato">Aggiungi post</button>
+<div>{{ getPostsString() }}</div>
 
 <div *ngFor="let post of posts">
     <h5>{{ post.titolo }}</h5>
