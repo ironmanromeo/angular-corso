@@ -9,6 +9,7 @@ export class PostsComponent implements OnInit {
 
   titolo = "Mio titolo"
   disabilitato = false
+  nomeBottone = ""
 
   constructor() { }
 
@@ -25,9 +26,16 @@ export class PostsComponent implements OnInit {
       this.titolo = ""
     }
 
-    const timer = onclick
-    if 
 
+  }
+
+  onLoading(){
+    this.disabilitato = true
+    this.nomeBottone = "Accendi"
+    setTimeout(() => {
+      this.disabilitato = false
+      this.nomeBottone = "Loading"
+    }, 2000)
   }
 
   }
