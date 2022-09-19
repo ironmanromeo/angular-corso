@@ -9,19 +9,20 @@ export class PostsComponent implements OnInit {
 
   titolo = "Mio titolo"
   disabilitato = false
+  desc="Accendi"
+  constructor() {
 
-  constructor() { }
+   }
 
   ngOnInit(): void {
   }
 
   onPremuto() {
-    const t = prompt("Inserisci titolo", this.titolo)
-    if (t){
-      this.titolo = t
-    } else {
-      this.titolo = ""
-    }
+    this.disabilitato=true
+    this.desc="loading"
+    
   }
 
 }
+
+
