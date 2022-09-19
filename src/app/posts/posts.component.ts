@@ -11,8 +11,8 @@ export class PostsComponent implements OnInit {
 
   posts:Post[] = []
 
-  titolo = "Mio titolo"
-  disabilitato = false
+  titolo = "Mio Titolo"
+ 
 
   constructor() { }
 
@@ -20,7 +20,7 @@ export class PostsComponent implements OnInit {
   }
 
   onPremuto() {
-    const nomePost = prompt("Inserisci nuovo post")
+    const nomePost = this.titolo
     if (nomePost) {
       const newPost:Post = {
         titolo:nomePost,
@@ -28,11 +28,20 @@ export class PostsComponent implements OnInit {
         commenti:[]
       }
       this.posts.push(newPost)
+      this.titolo=""
+     
     }
   }
 
+  onModificatoinput(e:Event){
+    
+    const mioinput =<HTMLInputElement>e.target 
+    this.titolo= mioinput.value
+
+  }
+
   getPostsString() {
-    return JSON.stringify(this.posts)
+    //return JSON.stringify(this.posts)     
   }
 
 }
