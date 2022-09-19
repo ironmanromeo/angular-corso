@@ -1,4 +1,12 @@
 <p>posts works!</p>
 <div>qui titolo: {{ titolo }}</div>
-<button (click)="onPremuto()" [disabled]="disabilitato">Cambia titolo</button>
-<button (click)="onLoading()" [disabled]="disabilitato">Accendi {{ testoStatoBottone }}</button>
+
+<button (click)="onPremuto()" [disabled]="disabilitato">Aggiungi post</button>
+<div>{{getPostsString()}}</div>
+
+<div engFor="let post of posts"> 
+    <h5>{{ post.titolo}}</h5>
+
+    <p engIf ="post.titolo === 'Ciao'"></p>
+    
+</div>
