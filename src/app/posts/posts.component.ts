@@ -6,14 +6,22 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./posts.component.css']
 })
 export class PostsComponent implements OnInit {
-  titolo = "Mio Primo Titolo"
+
+  titolo = "Mio titolo"
+  disabilitato = false
+
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  onClicked(){
-    this.titolo=String(prompt("Inserisci dato-->","ciao"))
+  onPremuto() {
+    const t = prompt("Inserisci titolo", this.titolo)
+    if (t){
+      this.titolo = t
+    } else {
+      this.titolo = ""
+    }
   }
 
 }
