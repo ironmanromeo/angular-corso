@@ -1,5 +1,5 @@
 <p>posts works!</p>
+<div>qui titolo: {{ titolo }}</div>
+<button (click)="onPremuto()" [disabled]="disabilitato">Cambia titolo</button>
 
-<div>qui titolo {{titolo}}</div>
-
-<button (click)="onpremuto()">Cambia titolo</button>
+<button [innerText]="nomeBottone" (click)="onLoading()" [disabled]="disabilitato">Accendi</button>
