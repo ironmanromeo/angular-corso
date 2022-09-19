@@ -27,13 +27,11 @@ export class PostsComponent implements OnInit {
   }
 
   onAct(){
-    this.disabilitato= true;
-    const bottone = "Accendi";
-    setInterval(()=>{
-      this.disabilitato= false;
-      this.bottone = "Loading";
-    },1000)
-    this.bottone = "Accendi";
+    this.bottone = "Loading";
+    this.disabilitato=true;
+    setTimeout(()=>{
+      this.disabilitato= false; 
+      this.bottone = "Accendi";
+    },2000)
   }
-
 }
