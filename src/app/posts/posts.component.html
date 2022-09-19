@@ -1,12 +1,9 @@
 <p>posts works!</p>
 <div>qui titolo: {{ titolo }}</div>
-
 <button (click)="onPremuto()" [disabled]="disabilitato">Aggiungi post</button>
-<div>{{getPostsString()}}</div>
+<div>{{ getPostsString() }}</div>
 
-<div engFor="let post of posts"> 
-    <h5>{{ post.titolo}}</h5>
-
-    <p engIf ="post.titolo === 'Ciao'"></p>
-    
+<div *ngFor="let post of posts">
+    <h5>{{ post.titolo }}</h5>
+    <p *ngIf="post.titolo === 'Ciao'">Hai salutato</p>
 </div>
