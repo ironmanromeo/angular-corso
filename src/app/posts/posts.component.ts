@@ -1,5 +1,6 @@
+import { getSafePropertyAccessString } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
-
+import { Post } from '../data/posts.data'
 @Component({
   selector: 'app-posts',
   templateUrl: './posts.component.html',
@@ -7,35 +8,33 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PostsComponent implements OnInit {
 
-  title = "Mio Titolo"
+  posts:Post[] = []
+  
+  title = "Posts"
   disabled = false
-  loading = "Accendi"
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  onPressed() {
-    const t = prompt("Insert title")
-    
-    if(t) {
-      this.title = t
-    } else {
-      this.title = ""
+  createPost() {
+    const postTitle = prompt("Insert post title")
+
+    if(postTitle) {
+
+      const newPost:Post = {
+        title: postTitle,
+        text: "some text",
+        comments: ["comment1","comment2"]
+      }
+
+      this.posts.push(newPost)
     }
   }
 
-  onAccensione() {
-    this.disabled = true
-    this.loading = "Loading"
-
-    if(this.disabled == true) {
-      setInterval(() => {
-        this.loading = "Accendi"
-        this.disabled = false
-      }, 2000)
-    }
+  getPostsString() {
+    return JSON.stringify(this.posts)
   }
   
 }
