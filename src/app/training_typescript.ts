@@ -1,5 +1,9 @@
-class MyStorage<T extends string | number> {
+class MyStorage<T> {
     items: T[] = []
+
+    constructor(item: T) {
+        this.addItem(item)
+    }
 
     addItem(item: T) {
         this.items.push(item)
@@ -14,8 +18,8 @@ class MyStorage<T extends string | number> {
     }
 }
 
-const stringStorage = new MyStorage<string>()
-const numberStorage = new MyStorage<number>()
+const stringStorage = new MyStorage("Luffy",)
+const numberStorage = new MyStorage(3)
 
 stringStorage.addItem("AAAAAAAAAAAAAAAAAAAAAAAAAAAA")
 numberStorage.addItem(32)
