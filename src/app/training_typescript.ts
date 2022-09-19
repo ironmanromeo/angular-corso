@@ -1,27 +1,30 @@
+class MyStorage<T> {
+  items: T[] = [];
+
+  constructor(item:T) {
+    this.addItem(item)
+  }
 
 
+  addItem(item: T) {
+    this.items.push(item);
+  }
 
-function merge<T,U>(v1:T, v2:U){
-    return Object.assign(v1,v2)
-    //return {...v1,...v2}
+  removeItem() {
+    this.items.pop();
+  }
+
+  getItems() {
+    return [...this.items];
+  }
 }
 
-const obj1 = {
-    nome:"Renzo",
-    cognome:"Tramaglino"
-}
+const myStorage = new MyStorage("ciao");
 
-const obj2 = {
-    eta:20
-}
+myStorage.addItem("Pollo");
 
-const obj3 = {
-    altezza:1.74,
-    peso:"troppo"
-}
+const lista1 = myStorage.getItems();
+const nome1 = lista1[0];
+const lunghezzaNome1 = nome1.length;
 
-const merged = merge(obj1,obj2)
-const merged2 = merge(obj1,obj3)
-//const merged3 = merge(merged,23)
-
-//console.log(merged3)
+console.log(lunghezzaNome1);
