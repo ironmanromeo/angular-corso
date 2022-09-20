@@ -4,19 +4,23 @@
 
 <div [innerText]="titolo"></div>
 
-<button 
-(click)="onPremuto()" 
+<button
+(click)="onPremuto()"
 [disabled]="!titolo">
     Aggiungi post
 </button>
 
 <input
- name="titolo" 
+ name="titolo"
  [value]="titolo"
- (input)="onModificatoInput($event)" 
+ (input)="onModificatoInput($event)"
  >
+ <input [(ngModel)] = "testo">
 
 <div *ngFor="let post of posts">
     <h5>{{ post.titolo }}</h5>
     <p *ngIf="post.titolo === 'Ciao'">Hai salutato</p>
 </div>
+
+
+
