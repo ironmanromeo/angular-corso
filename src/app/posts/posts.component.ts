@@ -13,7 +13,8 @@ export class PostsComponent implements OnInit {
   posts:Post[] = []
 
   titolo = "Mio titolo"
-  testo=""
+  testo = "Mio testo"
+
   constructor() { }
 
   ngOnInit(): void {
@@ -28,9 +29,13 @@ export class PostsComponent implements OnInit {
         commenti:[]
       }
       this.posts.push(newPost)
-      this.titolo = this.testo
-      console.log(this.testo)
+      this.titolo = ""
+      this.testo = ""
     }
+  }
+
+  bottoneDisabilitato() {
+    return !this.titolo || !this.testo
   }
 
   onModificatoInput(e:Event){
