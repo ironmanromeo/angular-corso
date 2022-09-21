@@ -30,8 +30,8 @@ export class FormComponent {
   }
 
   onMandaCitta() {
-    const el=<HTMLInputElement>this.cittaRef?.nativeElement
-    console.log(el.value)
+    const el = this.cittaRef?.nativeElement as HTMLInputElement
+    console.log("Citta:",el.value)
   }
 
 }
