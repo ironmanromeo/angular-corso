@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-accordion',
@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AccordionComponent {
 
+  @Input("t") titolo = ""
   aperto = true
 
   constructor() { }
