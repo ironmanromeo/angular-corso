@@ -14,9 +14,8 @@ export class FormComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  onModificaPippo(e:Event){
-    const mioNome = <HTMLInputElement>e.target
-    this.nome = mioNome.value
+  onMandaForm(){
+    
   }
 
 }
