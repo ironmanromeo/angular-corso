@@ -1,2 +1,10 @@
 <h3>Post:</h3>
 <div> Title: {{ title }} </div>
+
+<button (click)="onDelete()" class="btn btn-warning"> Delete Post </button>
+
+<button
+    title="My button"
+    (click)="onShoot($event)">
+    Shoot
+</button>

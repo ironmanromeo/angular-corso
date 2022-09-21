@@ -21,4 +21,9 @@ export class AppComponent {
     const name = this.getRandomName()
     this.randomName = name
   }
+
+  onReceiveEvent(t:string, sec?: string) {
+    console.log("I received: " + t);
+    
+  }
 }
