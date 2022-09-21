@@ -22,7 +22,7 @@ export class AppComponent {
     this.nomeRandom = nome
   }
 
-  onRiceviEvento(t:string) {
-    console.log("Ho rivevuto: ",t)
+  onRicevitEvento(t:string, sec?:string){
+    console.log("Ho ricevuto: ",t + sec)
   }
 }
