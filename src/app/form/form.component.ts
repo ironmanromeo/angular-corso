@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-form',
@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FormComponent {
 
+  @ViewChild("cittaRef") cittaRef?:ElementRef
   nome = "Pippo"
 
   constructor() { }
@@ -27,4 +28,7 @@ export class FormComponent {
     console.log("Persona da form: ",persona)
   }
 
+  onMandaCitta(){
+    console.log(this.cittaRef?.nativeElement.value)
+  }
 }
