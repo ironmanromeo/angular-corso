@@ -17,7 +17,13 @@ export class FormComponent {
   }
 
   onMandaForm(c:HTMLInputElement, i:HTMLInputElement){
-    console.log(c.value, i.value)
+
+    const persona = {
+      nome:this.nome,
+      cogome : c.value,
+      indirizzo : i.value
+    }
+    console.log(persona)
   }
 
 }
