@@ -14,6 +14,7 @@ export class PostsComponent implements OnInit {
   posts:Post[] = []
 
   titolo = "Mio titolo"
+  testo = "Mio testo"
 
   constructor() { }
 
@@ -30,7 +31,12 @@ export class PostsComponent implements OnInit {
       }
       this.posts.push(newPost)
       this.titolo = ""
+      this.testo = ""
     }
+  }
+
+  bottoneDisabilitato() {
+    return !this.titolo || !this.testo
   }
 
   onModificatoInput(e:Event){
