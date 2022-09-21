@@ -8,7 +8,9 @@
 
 <h3>aggingi input e colllega tramite binding bi-direzionale</h3>
 
+<p>
 <input [(ngModel)]="nome">
+</p>
 
 <p>
     <input placeholder="cognome" #cognomeRef>
@@ -16,9 +18,8 @@
     <button (click)="onMandaForm(cognomeRef,indirizzoRef)">Manda form</button>
 </p>
 
+
 <p>
     <input placeholder="citta" #cittaRef>
     <button (click)="onMandaCitta()">Manda citta</button>
 </p>
-
-
