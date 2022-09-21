@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 import { PostsComponent } from './posts/posts.component'
 import { PostComponent } from './post/post.component';
 import { FormComponent } from './form/form.component';
+import { AccordionComponent } from './accordion/accordion.component';
 
 import './training_javascript'
 import './training_typescript';
@@ -18,6 +19,7 @@ import './training_typescript';
     PostsComponent,
     PostComponent,
     FormComponent,
+    AccordionComponent,
   ],
   imports: [
     BrowserModule,
