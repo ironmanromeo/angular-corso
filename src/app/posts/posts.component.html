@@ -1,7 +1,9 @@
 <p>posts works!</p>
 
+<!-- string interpolation di proprietà -->
 <div>qui titolo: {{ titolo }}</div>
 
+<!-- property binding di proprietà -->
 <div [innerText]="titolo"></div>
 
 <button (click)="onPremuto()" [disabled]="bottoneDisabilitato()">Aggiungi post</button><br>
@@ -9,7 +11,13 @@
 <input name="titolo" [value]="titolo" (input)="onModificatoInput($event)"><br>
 <input name="testo" [(ngModel)]="testo"><br>
 
-<div *ngFor="let post of posts">
+ <!-- binding bi-direzionale -->
+ <input 
+ name="testo" 
+ [(ngModel)]="testo">
+
+ <!-- core directive ngFor - ngIf - ngModel -->
+ <div *ngFor="let post of posts">
     <h5>{{ post.titolo }}</h5>
     <p *ngIf="post.titolo === 'Ciao'">Hai salutato</p>
     <div>{{ post.testo }}</div>

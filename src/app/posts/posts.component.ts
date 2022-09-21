@@ -24,16 +24,14 @@ export class PostsComponent implements OnInit {
     const nomePost = this.titolo
     const testoPost = this.testo
     if (nomePost) {
-      if (testoPost) {
-        const newPost:Post = {
-          titolo:this.titolo,
-          testo:this.testo,
-          commenti:[]
-        }
-        this.posts.push(newPost)
-        this.titolo = ""
-        this.testo = ""
+      const newPost:Post = {
+        titolo:nomePost,
+        testo:"Test",
+        commenti:[]
       }
+      this.posts.push(newPost)
+      this.titolo = ""
+      this.testo = ""
     }
   }
 
@@ -41,7 +39,7 @@ export class PostsComponent implements OnInit {
     return !this.titolo || !this.testo
   }
 
-  onModificatoInput(e:Event) {
+  onModificatoInput(e:Event){
     //const mioInput = e.target as HTMLInputElement
     const mioInput = <HTMLInputElement>e.target
     this.titolo = mioInput.value
