@@ -1,13 +1,13 @@
 <div [ngStyle]="{
-    borderwidth:1,
-    borderColor:'black',
+    borderWidth:1, 
+    borderColor:'black', 
     borderStyle:'solid',
     backgroundColor:'black',
     margin:'20px'
 }">
-    <h3 style="color:aqua">Titolo accordion</h3>
-    <div style="background-color:white">
-        ole ole ole ole <br> ole ole ole ole
+    <h3 (click)="onPremutoTitolo()" style="color:aqua">Titolo{{ aperto }}</h3>
+    <div *ngif="aperto" style="background-color:white">
+        <ng-content></ng-content>
     </div>
 </div>
 

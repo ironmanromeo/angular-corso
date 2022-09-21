@@ -20,19 +20,21 @@ export class FormComponent {
     this.nome = el.value
   }
   
+  
   onMandaForm(cRef:HTMLInputElement, iRef:HTMLInputElement){
+
     const persona = {
       nome:this.nome,
       cognome:cRef.value,
       indirizzo:iRef.value
     }
-    
-    console.log("Persona da form: ", persona)
+
+    console.log("Persona da form: ",persona)
   }
 
-  onMandaCitta(){
-    const el=this.cittaRef?.nativeElement as HTMLInputElement
-    console.log("Citta:", el)
+  onMandaCitta() {
+    const el = this.cittaRef?.nativeElement as HTMLInputElement
+    console.log("Citta:",el.value)
   }
 
   onAccordion(){
