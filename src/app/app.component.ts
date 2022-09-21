@@ -1,3 +1,4 @@
+import { ViewEncapsulation } from '@angular/compiler';
 import { Component } from '@angular/core';
 
 @Component({
