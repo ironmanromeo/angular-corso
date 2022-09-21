@@ -3,10 +3,6 @@
 <label> {{ formLabel }} </label> <br>
 
 <input [value]= "formLabel" (input)="onEditedInput($event)"> <br>
-<input [value]= "formLabel"  (input)="onEditedInput($event)"> <br>
-
-<br>
-
 <input [(ngModel)] = "formLabel"> <br>
 <input [(ngModel)] = "formLabel"> <br>
 
@@ -20,5 +16,5 @@
 
 <div>
     <input placeholder="Città" #cittaRef>
-    <button class="btn btn-dark" (click)="onSendCity(cittaRef)" > Send City </button>
+    <button class="btn btn-dark" (click)="onSendCity()" > Send City </button>
 </div>

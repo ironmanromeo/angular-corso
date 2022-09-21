@@ -29,7 +29,7 @@ export class FormComponent {
         console.log(persona);
       }
 
-      onSendCity(city: HTMLInputElement) {
+      onSendCity() {
         console.log(this.cittaRef?.nativeElement.value);
       }
 }
