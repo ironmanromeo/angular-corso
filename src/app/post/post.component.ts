@@ -19,8 +19,6 @@ export class PostComponent {
 
   testo = "Mio testo"
 
-  @Output() generaEvento = new EventEmitter<string>()
-
   constructor() { }
 
   onCancella() {
