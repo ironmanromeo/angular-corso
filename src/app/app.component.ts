@@ -6,12 +6,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  titolo="Berserk"
-  altezza = 24
-  disabilitato = false
-  constructor(){
-    setInterval(()=>{
-      this.disabilitato= false;
-    },1000)
+  persone = ["Renzo", "Lucia", "Don Abbondio"]
+  nomeRandom = "nessuno"
+
+  getRandom() {
+    const indice = Math.floor(Math.random()*this.persone.length)
+    const nuovoNome = this.persone[indice]
+    return nuovoNome
+  }
+  onGeneraRandom() {
+    alert("onGeneraRandom");
+    const nuovonome = this.getRandom();
   }
 }
