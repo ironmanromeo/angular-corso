@@ -2,15 +2,13 @@
     borderWidth: 1,
     borderColor:'black',
     borderStyle:'solid',
-    backgroundColr:'black',
+    backgroundColor:'black',
     margin:'20px'
 }">
 
-    <h3 style="color: acqua;">Titolo</h3>
-    <div style="background-color: white;">
-        fewgwegwe <br>
-        fewgwegwe <br>
-        fewgwegwe <br>
+    <h3 style="color: aqua;" (click)="onTitle()">Titolo {{ aperto }}</h3>
+    <div *ngIf="aperto" style="background-color: white;">
+        <ng-content></ng-content>
     </div>
 
 </div>

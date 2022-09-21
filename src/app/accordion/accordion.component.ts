@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AccordionComponent {
 
+    aperto=true
+
+    constructor() { }
+
+    onTitle() {
+        this.aperto = !this.aperto
+    }
 }
