@@ -21,6 +21,10 @@ export class AppComponent {
     const nome = this.getRandom()
     this.nomeRandom = nome
   }
+
+  onRiceviEvent(t:string){
+    console.log("Ho ricevuto ", t)
+  }
 }
 
 
