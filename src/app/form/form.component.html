@@ -2,10 +2,20 @@
 
 <div >{{ nome }}</div>
 <input type="text"
-(input)="onInserito($event)"
+(input)="onInput($event)"
 [value]="nome"
 >
 <input type="text"
-(input)="onInserito($event)"
+(input)="onInput($event)"
 [value]="nome"
 >
+<div>qui nome: {{ nome }}</div>
+<div [innerText]="nome"></div>
+
+<input type="text" [value]="nome" (input)="onInput($event)">
+<input type="text" [value]="nome" (input)="onInput($event)">
+
+<h3>aggingi input e colllega tramite binding bi-direzionale</h3>
+
+
+<input >
