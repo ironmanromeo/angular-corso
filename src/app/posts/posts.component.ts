@@ -40,12 +40,6 @@ export class PostsComponent implements OnInit {
 
   }
 
-  onModificatoInput(e:Event){
-    //const mioInput = e.target as HTMLInputElement
-    const mioInput = <HTMLInputElement>e.target
-    this.titolo = mioInput.value
-  }
-
   getPostsString() {
     return JSON.stringify(this.posts)
   }
