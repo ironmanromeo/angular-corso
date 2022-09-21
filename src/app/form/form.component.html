@@ -1,13 +1,4 @@
 <p>form works!</p>
-<<<<<<< HEAD
-<h3>{{nome}}</h3>
-
-<input  [value]="nome" (input)="onInput($event)">
-<input  [value]="nome" (input)="onInput($event)">
-
-<h3>Aggiungi input e collega tramite binding bi-direzionale</h3>
-<input [(ngModel)]="nome" (input)="onInput($event)">
-=======
 
 <div>qui nome: {{ nome }}</div>
 <div [innerText]="nome"></div>
@@ -22,6 +13,5 @@
 <div>
     <input #cognomeRef>
     <input #indirizzoRef>
-    <button (click)="onMandaForm()">Manda form</button>
+    <button (click)="onMandaForm(cognomeRef,indirizzoRef)">Manda form</button>
 </div>
->>>>>>> origin/main
