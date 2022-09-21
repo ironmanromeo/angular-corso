@@ -11,4 +11,8 @@ export class PostComponent {
 
   constructor() { }
 
+  onCancella() {
+    alert("Cancella")
+  }
+
 }
