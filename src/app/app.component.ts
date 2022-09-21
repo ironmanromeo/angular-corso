@@ -6,9 +6,7 @@ import { Component, ViewEncapsulation } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-<<<<<<< HEAD
-  title = "Angular-corso";
-=======
+
   title = 'angular-corso';
   persone = ["Renzo","Lucia","Don Abbondio"]
 
@@ -28,5 +26,4 @@ export class AppComponent {
   onRicevitEvento(t:string, sec?:string){
     console.log("Ho ricevuto: ",t + sec)
   }
->>>>>>> origin/main
 }
