@@ -10,3 +10,9 @@
 
 
 <input [(ngModel)]="nome">
+
+<div>
+    <input placeholder="cognome" #cognomeRef>
+    <input placeholder="indirizzo" #indirizzoRef>
+    <button (click)="onMandaForm(cognomeRef,indirizzoRef)">Manda form</button>
+</div>
