@@ -11,7 +11,8 @@ import { FormComponent } from './form/form.component';
 
 import './training_javascript'
 import './training_typescript';
-
+import { PostComponent } from './post/post.component';
+import { FormComponent } from './form/form.component';
 
 @NgModule({
   declarations: [
