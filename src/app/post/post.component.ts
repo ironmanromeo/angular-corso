@@ -1,9 +1,9 @@
 import { 
-        Component,
-        Input,
-        Output,
-        EventEmitter
-       } from '@angular/core';
+  Component, 
+  Input, 
+  Output, 
+  EventEmitter 
+} from '@angular/core';
 
 @Component({
   selector: 'app-post',
@@ -18,11 +18,11 @@ export class PostComponent {
 
   constructor() { }
 
-  onCancella(){
-    alert("onCancella: "+this.titolo)
+  onCancella() {
+    this.generaEvento.emit(this.titolo)
   }
 
-  onSpara(v:string){
+  onSpara(v:Event){
     console.log("onSpara",v)
   }
 

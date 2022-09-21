@@ -1,9 +1,9 @@
 <p>post works! {{ titolo }}</p>
-<button
-    (click)="onCancella"
-    class ="btn btn-warning">
+
+<button 
+    (click)="onCancella()" 
+    class="btn btn-warning">
     Cancella
 </button>
-<button title="MioButton"
-    (click)="onSpara('pippo')">
-    Spara</button>
+
+<button title="MioBotton" (click)="onSpara($event)">Spara</button>
