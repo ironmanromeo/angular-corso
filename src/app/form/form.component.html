@@ -5,4 +5,4 @@
 <input  [value]="nome" (input)="onInput($event)">
 
 <h3>Aggiungi input e collega tramite binding bi-direzionale</h3>
-<input [(ngModel)]="nome">
+<input [(ngModel)]="nome" (input)="onInput($event)">
