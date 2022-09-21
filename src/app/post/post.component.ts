@@ -1,15 +1,22 @@
-import { EmitterVisitorContext } from '@angular/compiler';
-import { Component, Input, Output, EventEmitter, ViewEncapsulation } from '@angular/core';
-import { Title } from '@angular/platform-browser';
+import { 
+  Component, 
+  Input, 
+  Output, 
+  EventEmitter, 
+  ViewEncapsulation
+} from '@angular/core';
 
 @Component({
   selector: 'app-post',
   templateUrl: './post.component.html',
-  styleUrls: ['./post.component.css']
+  styleUrls: ['./post.component.css'],
+  //encapsulation:ViewEncapsulation.None
 })
 export class PostComponent {
 
   @Input("ti") titolo = "Mio titolo"
+
+  testo = "Mio testo"
 
   @Output() generaEvento = new EventEmitter<string>()
 
@@ -19,8 +26,8 @@ export class PostComponent {
     this.generaEvento.emit(this.titolo)
   }
 
-  onSpara(v:Event) {
-    console.log(v)
+  onSpara(v:Event){
+    console.log("onSpara",v)
   }
 
 }
