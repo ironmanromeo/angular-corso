@@ -28,8 +28,10 @@ export class FormComponent {
 
     console.log("Persona da form: ",persona)
   }
-  onMandaCitta(){
-    
+
+  onMandaCitta() {
+    const el = this.cittaRef?.nativeElement as HTMLInputElement
+    console.log("Citta:",el.value)
   }
 
 }

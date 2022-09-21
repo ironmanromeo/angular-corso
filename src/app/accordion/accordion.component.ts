@@ -5,11 +5,11 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './accordion.component.html',
   styleUrls: ['./accordion.component.css']
 })
-export class AccordionComponent {
-  titolo="MioTitolo"
-  stato=false
+export class AccordionComponent implements OnInit {
 
   constructor() { }
 
+  ngOnInit(): void {
+  }
 
 }
