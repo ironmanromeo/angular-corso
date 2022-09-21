@@ -2,8 +2,18 @@
 <div [innerText]="formLabel"></div>
 <label> {{ formLabel }} </label> <br>
 
-<input [value]= "formLabel" (input)="onEditedInput($event)">
-<input [value]= "formLabel" (input)="onEditedInput($event)">
+<input [value]= "formLabel" (input)="onEditedInput($event)"> <br>
+<input [value]= "formLabel"  (input)="onEditedInput($event)"> <br>
 
-<input [(ngModel)] = "formLabel" >
-<input [(ngModel)] = "formLabel" >
+<br>
+
+<input [(ngModel)] = "formLabel" > <br>
+<input [(ngModel)] = "formLabel" > <br>
+
+<br> 
+
+<div>
+    <input #cognomerRef>
+    <input #indirizzoRef>
+    <button class="btn btn-dark" (click)="onSendForm(cognomerRef, indirizzoRef)"> Send Form </button>
+</div>

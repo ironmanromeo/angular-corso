@@ -14,4 +14,8 @@ export class FormComponent {
         const myInput = <HTMLInputElement>e.target
         this.formLabel = myInput.value
       }
+
+      onSendForm(input1: HTMLInputElement, input2: HTMLInputElement) {
+        console.log(input1.value,input2.value);
+      }
 }
