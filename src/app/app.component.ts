@@ -19,7 +19,10 @@ export class AppComponent {
   }
 
   onGeneraRandom() {
-    const nome = this.getRandom()
+    var nome = this.getRandom()
+    while(nome==this.nomeRandom){
+      nome=this.getRandom()
+    }
     this.nomeRandom = nome
   }
 }
