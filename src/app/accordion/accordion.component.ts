@@ -1,20 +1,21 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-accordion',
   templateUrl: './accordion.component.html',
   styleUrls: ['./accordion.component.css']
 })
-export class AccordionComponent implements OnInit {
+export class AccordionComponent {
 
-    aperto = false
+  @Input() titolo = "Mio Titolo"
+
+
+
+ aperto = true
 
   constructor() { }
-    ngOnInit(): void {
-        throw new Error('Method not implemented.');
-    }
 
-  onPremutoTitolo(){
+  onPremutoTitolo() {
     this.aperto = !this.aperto
   }
 
