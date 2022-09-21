@@ -1,3 +1,4 @@
+import { HtmlTagDefinition } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -16,5 +17,11 @@ export class FormComponent {
     this.nome = el.value
   }
 
+  onMandaForm(f:HTMLInputElement,i:HTMLInputElement){
+    const persona = 
+    console.log("valore"+f.value);
+
+    
+  }
 
 }
