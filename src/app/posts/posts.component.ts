@@ -13,6 +13,7 @@ export class PostsComponent implements OnInit {
   posts:Post[] = []
 
   titolo = "Mio titolo"
+  testo = "Mio testo"
 
   constructor() { }
 
@@ -49,3 +50,4 @@ export class PostsComponent implements OnInit {
   }
 
 }
+

@@ -16,6 +16,12 @@
  (input)="onModificatoInput($event)" 
  >
 
+
+
+ <input 
+ name="testo" 
+ [(ngModule)]="testo">
+
 <div *ngFor="let post of posts">
     <h5>{{ post.titolo }}</h5>
     <p *ngIf="post.titolo === 'Ciao'">Hai salutato</p>
