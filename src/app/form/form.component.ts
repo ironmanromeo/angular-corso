@@ -1,4 +1,4 @@
-import { Component, OnInit,Input,Output,EventEmitter } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-form',
@@ -6,14 +6,15 @@ import { Component, OnInit,Input,Output,EventEmitter } from '@angular/core';
   styleUrls: ['./form.component.css']
 })
 export class FormComponent {
-  @Input("n")nome="pippo"
-  @Output() generaEvento = new EventEmitter<string>()
+
+  nome = "Pippo"
+
   constructor() { }
 
-  onInput(v:Event){
-    const element= v.target as HTMLInputElement
-    this.nome =element.value
-    
-  
+  onInput(e:Event){
+    const el = e.target as HTMLInputElement
+    this.nome = el.value
   }
+
+
 }
