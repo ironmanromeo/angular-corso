@@ -1,0 +1,15 @@
+import { Component, OnInit } from '@angular/core';
+
+@Component({
+  selector: 'app-accordion',
+  templateUrl: './accordion.component.html',
+  styleUrls: ['./accordion.component.css']
+})
+export class AccordionComponent {
+  titolo="MioTitolo"
+  stato=false
+
+  constructor() { }
+
+
+}
