@@ -17,8 +17,6 @@ export class PostComponent {
   @Input("ti") titolo = "Mio titolo"
   testo= "Mio testo"
 
-  testo = "Mio testo"
-
   @Output() generaEvento = new EventEmitter<string>()
 
   constructor() { }
@@ -30,5 +28,4 @@ export class PostComponent {
   onSpara(v:Event){
     console.log("onSpara",v)
   }
-
 }
