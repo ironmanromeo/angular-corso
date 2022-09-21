@@ -7,12 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FormComponent {
 
-  nome= "pippo"
+  nome = "Pippo"
 
   constructor() { }
 
   onInput(e:Event){
-    const el = e.target as HTMLInputElement 
+    const el = e.target as HTMLInputElement
     this.nome = el.value
   }
+
+
 }
