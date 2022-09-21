@@ -6,8 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = "Angular Corso"
-  persone = ["Renzo, Lucia"]
+  title = 'angular-corso';
+  persone = ["Renzo","Lucia","Don Abbondio"]
 
   nomeRandom = "nessuno"
 
@@ -20,7 +20,18 @@ export class AppComponent {
   onGeneraRandom() {
     const nome = this.getRandom()
     this.nomeRandom = nome
+  }
+}
+
+  onGeneraRandom() {
+    const nome = this.getRandom()
+    this.nomeRandom = nome
+<<<<<<< HEAD
     alert("onGeneraRandom")
   }
 
 }
+=======
+  }
+}
+>>>>>>> origin/main
