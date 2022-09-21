@@ -1,6 +1,12 @@
 <p>form works!</p>
-<h2>{{ nome }}</h2>
-<input type="text" (input)="onInput($event)" [value]="nome">
-<input type="text" (input)="onInput($event)" [value]="nome">
-<h5>Aggiungi input e collega tramite binding direzionale</h5>
+
+<div>qui nome: {{ nome }}</div>
+<div [innerText]="nome"></div>
+
+<input type="text" [value]="nome" (input)="onInput($event)">
+<input type="text" [value]="nome" (input)="onInput($event)">
+
+<h3>aggingi input e colllega tramite binding bi-direzionale</h3>
+
+
 <input >

@@ -1,13 +1,13 @@
-import { Component, OnInit, Input, Output } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-form',
   templateUrl: './form.component.html',
   styleUrls: ['./form.component.css']
 })
-export class FormComponent implements OnInit {
+export class FormComponent {
 
-  nome= "Pippo"
+  nome = "Pippo"
 
   constructor() { }
 
@@ -15,7 +15,6 @@ export class FormComponent implements OnInit {
     const el = e.target as HTMLInputElement
     this.nome = el.value
   }
-  ngOnInit(): void {
-  }
+
 
 }
