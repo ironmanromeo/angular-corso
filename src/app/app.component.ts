@@ -21,4 +21,5 @@ export class AppComponent {
     const nome = this.getRandom()
     this.nomeRandom = nome
   }
+  
 }
