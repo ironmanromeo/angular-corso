@@ -32,8 +32,4 @@ export class FormComponent {
     
   }
 
-  onMandaCitta() {
-    
-  }
-
 }
