@@ -22,19 +22,9 @@ export class FormComponent {
     const persona = 
     console.log("valore"+f.value);
 
-    const persona = {
-      nome:this.nome,
-      cognome:cRef.value,
-      indirizzo:iRef.value
-    }
-
     console.log("Persona da form: ",persona)
   }
 
-  onMandaCitta() {
-    const el = this.cittaRef?.nativeElement as HTMLInputElement
-    console.log("Citta:",el.value)
-  }
 
   onMandaCitta(d:HTMLInputElement) {
      const el = this.cittaRef?.nativeElement as HTMLInputElement
