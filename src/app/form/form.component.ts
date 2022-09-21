@@ -16,6 +16,12 @@ export class FormComponent {
       }
 
       onSendForm(input1: HTMLInputElement, input2: HTMLInputElement) {
-        console.log(input1.value,input2.value);
+        const persona = {
+            nome: this.formLabel,
+            cognome: input1.value,
+            eta: 20,
+            indirizzo: input2.value
+        }
+        console.log(persona);
       }
 }
