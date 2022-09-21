@@ -5,16 +5,15 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './accordion.component.html',
   styleUrls: ['./accordion.component.css']
 })
-export class AccordionComponent implements OnInit {
+export class AccordionComponent {
 
-  aperto=false
+  aperto = true
 
   constructor() { }
 
-  ngOnInit(): void {
+  onPremutoTitolo() {
+    this.aperto = !this.aperto
   }
-  onPremutoTitolo(){
-  this.aperto= !this.aperto
-  
-  }
+
+
 }
