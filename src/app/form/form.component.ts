@@ -7,7 +7,7 @@ import { Component, ElementRef, ViewChild } from '@angular/core';
 })
 export class FormComponent {
 
-    @ViewChild("cittaRef") cittaRef?:ElementRef;
+  @ViewChild("cittaRef") cittaRef?:ElementRef
 
   nome = "Pippo"
 
@@ -29,9 +29,9 @@ export class FormComponent {
     console.log("Persona da form: ",persona)
   }
 
-  onMandaCitta(){
-   const el= this.cittaRef?.nativeElement as HTMLInputElement
-   console.log("Città:",el.value) 
+  onMandaCitta() {
+    const el = this.cittaRef?.nativeElement as HTMLInputElement
+    console.log("Citta:",el.value)
   }
 
 }
