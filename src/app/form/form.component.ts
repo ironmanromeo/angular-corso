@@ -29,7 +29,7 @@ export class FormComponent implements OnInit {
 
   onMandaCitta() {
     const l = this.cittaRef?.nativeElement as HTMLInputElement
-    console.log("citta",l)
+    console.log("citta",l.value)
   }
 
 }
