@@ -1,8 +1,8 @@
 <h1>Angular Corso</h1>
 
 <h3> {{ randomName }} </h3>
-<button (click)="onChangeName()"> Get Random Name </button>
+<button (click)="onChangeName()" class="btn btn-outline-secondary btn-rounded" data-mdb-ripple-color="dark"> Get Random Name </button>
 
-<app-post [ti] = randomName></app-post>
+<app-post [ti] = "randomName"></app-post>
 <app-post ti="Naruto"></app-post>
 <app-post ti="Bleach"></app-post>
