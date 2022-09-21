@@ -14,8 +14,15 @@ export class FormComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  onMandaForm(){
-    
+  onMandaForm(cRef:HTMLInputElement, iRef:HTMLInputElement){
+
+    const persona = {
+      nome:this.nome,
+      cognome:cRef.value,
+      indirizzo:iRef.value
+    }
+
+    console.log("Persona da form: ",persona)
   }
 
 }
