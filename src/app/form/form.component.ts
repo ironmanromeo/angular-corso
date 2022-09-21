@@ -16,7 +16,9 @@ export class FormComponent {
     this.nome = el.value
   }
 
-  onMandaForm(){
+  onMandaForm(cognome:any,indirizzo:any){
+    console.log(cognome.value, indirizzo.value)
+
     
   }
 
