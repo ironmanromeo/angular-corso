@@ -7,8 +7,9 @@ import { Component, Input } from '@angular/core';
 })
 export class AccordionComponent {
 
-  @Input("t") titolo = ""
-  aperto = true
+  @Input() titolo = "Mio titolo"
+
+  aperto = false
 
   constructor() { }
 
