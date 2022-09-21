@@ -15,12 +15,10 @@ export class FormComponent {
     const el = e.target as HTMLInputElement
     this.nome = el.value
   }
-  onMandaForm(){
-    alert("ziopera")
-  }
-
-  onMandaForm(){
+  
+  onMandaForm(c:HTMLInputElement,i:HTMLInputElement){
     
+    console.log(c.value,i.value)
   }
 
 }
