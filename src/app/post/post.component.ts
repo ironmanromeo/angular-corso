@@ -13,7 +13,7 @@ export class PostComponent {
   constructor() { }
 
   onCancella() {
-    alert(this.generaEvento.emit(this.titolo))
+    this.generaEvento.emit(this.titolo)
   }
 
   onSpara(e:Event) {
