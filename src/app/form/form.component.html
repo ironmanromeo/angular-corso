@@ -16,5 +16,12 @@
 <div>
     <input #cognomeRef>
     <input #inirizzoRef>
-    <button class="btn btn-primary" (click)="onMandaForm(cognomeRef, inirizzoRef)">Manda form</button>
+    <button class="btn btn-success" (click)="onMandaForm(cognomeRef, inirizzoRef)">Manda form</button>
+</div>
+
+<hr>
+
+<div>
+    <input placeholder="città" #cittaRef>
+    <button class="btn btn-success" (click)=onMandaCitta()>Manda città</button>
 </div>
