@@ -16,5 +16,8 @@ export class FormComponent {
     this.nome = el.value
   }
 
+  onMandaForm(c:HTMLInputElement, i:HTMLInputElement) {
+    console.log(c.value, i.value)
+  }
 
 }
