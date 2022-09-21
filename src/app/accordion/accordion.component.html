@@ -1,2 +1,15 @@
-<h1 (click)="onClick()">Titolo: {{ titolo }}</h1>
-<p [style]="stato">{{ testo }}</p>
+<div class="accordion" id="accordionExample">
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingOne">
+        <button  (click)="onClick()" class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+            {{testo}}
+        </button>
+      </h2>
+      <div [style]="stato" id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+            {{testo}}
+        </div>
+      </div>
+    </div>
+</div>
+
