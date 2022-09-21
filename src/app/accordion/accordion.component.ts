@@ -12,4 +12,8 @@ export class AccordionComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  onPremutoTitolo(){
+    alert("Titolo premuto!")
+  }
+
 }
