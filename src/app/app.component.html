@@ -1,2 +1,6 @@
 <h1>Angular Corso</h1>
-<app-posts></app-posts>
+<app-post (eventoCancella)="onRiceviEventi($event)" [mioAlias]="nomeRandom"></app-post>
+
+<button (click)="controllaNome()" class="btn btn-primary">Genera Random</button>
+
+<div>{{ nomeRandom }}</div>

@@ -35,6 +35,10 @@ export class PostsComponent implements OnInit {
       this.titolo = ""
       this.testo = ""
     }
+
+    onCancellaNome(nome: string){
+      alert("Devo cancellare dalla lista:" + nome)
+    }
   
 
   ngOnInit(): void {

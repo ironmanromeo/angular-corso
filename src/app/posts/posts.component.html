@@ -1,15 +1,4 @@
-<p>posts works!</p>
-
-<div>Qui titolo: {{ titolo }}</div>
-<button (click)="aggiungiPost()" [disabled]="bottoneDisabilitato()">Aggiungi un nuovo post</button>
-
-<input name="titolo" type="text" [(ngModel)]="titolo">
-
-<input name="testo" type="text" [(ngModel)]="testo">
-
-<div *ngFor="let post of posts">
-    <h2> {{ post.titolo }} </h2>
-    <h5> {{ post.testo }} </h5>
-    <p> {{ post.commenti }} </p>
-    <h3 *ngIf="post.titolo === 'ciao'">Buongiorno</h3>
-</div>
+<app-post>
+    [eventoCancella] = "onCancellaPremuto($event)"
+    [mioAlias] = "nomeRandom"
+</app-post>
