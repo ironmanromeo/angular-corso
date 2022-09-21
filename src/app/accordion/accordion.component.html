@@ -3,10 +3,11 @@
     borderColor:'black', 
     borderStyle:'solid',
     backgroundColor:'black',
-    margin:'20px'
+    margin:'20px',
+    borderRadius:'14px'
 }">
-    <h3 (click)="onPremutoTitolo()" style="color:aqua">Titolo {{ aperto }} </h3>
-    <div *ngIf="aperto" style="background-color:white">
+    <h3 (click)="onPremutoTitolo()" style="color:rgb(68, 221, 221)">Titolo {{ aperto }} </h3>
+    <div *ngIf="aperto" style="background-color:rgb(255, 255, 255) ">
         <ng-content></ng-content>
     </div>
 </div>
