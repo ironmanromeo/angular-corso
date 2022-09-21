@@ -1,5 +1,7 @@
 import {
-    Component
+    Component,
+    ElementRef,
+    ViewChild
 } from "@angular/core"
 
 @Component({
@@ -8,6 +10,8 @@ import {
     styleUrls: ["./form.component.css"],
 })
 export class FormComponent {
+
+    @ViewChild("cittaRef") cittaRef?: ElementRef
     formLabel = "Form Title"
 
     onEditedInput(e: Event) {
@@ -23,5 +27,9 @@ export class FormComponent {
             indirizzo: input2.value
         }
         console.log(persona);
+      }
+
+      onSendCity(city: HTMLInputElement) {
+        console.log(this.cittaRef?.nativeElement.value);
       }
 }
