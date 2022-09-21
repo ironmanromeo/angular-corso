@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-post',
@@ -8,6 +8,7 @@ import { Component, Input } from '@angular/core';
 export class PostComponent {
 
   @Input("ti") titolo = "Mio titolo"
+  @Output() generaEvento = new EventEmitter<string>()
 
   constructor() { }
 
