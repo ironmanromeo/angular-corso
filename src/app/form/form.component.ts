@@ -17,8 +17,7 @@ export class FormComponent {
   }
 
   onMandaForm(){
-    alert("aaaa")
+    
   }
-
 
 }
