@@ -9,7 +9,9 @@ import {
   styleUrls: ["./accordion.component.css"],
 })
 export class AccordionComponent {
-  @Input("title") title?: string
+  @Input() title?: string = "My title"
+
+  list = []
 
   open = false
 

@@ -1,5 +1,12 @@
 import { Component } from '@angular/core';
 
+type Post = {
+  userId: number,
+  id: number,
+  title: string,
+  body: string
+}
+
 @Component({
   selector: "app-root",
   templateUrl: './app.component.html',
@@ -9,7 +16,15 @@ export class AppComponent {
   randomName = "Unknown"
   persons:string[] = ["Renzo", "Lucia", "Don Abbondio"]
 
-  constructor(){}
+  posts:Post[] = []
+
+  constructor(){
+    fetch('https://jsonplaceholder.typicode.com/posts')
+      .then(response => response.json())
+      .then(json => {
+        this.posts = json
+      })
+  }
 
   getRandomName() {
     let index = Math.floor(Math.random() * this.persons.length)
@@ -23,7 +38,6 @@ export class AppComponent {
   }
 
   onReceiveEvent(t:string, sec?: string) {
-    console.log("I received: " + t);
-    
+    console.log("I received: " + t) 
   }
 }
