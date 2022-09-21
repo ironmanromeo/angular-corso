@@ -12,7 +12,7 @@ export class PostComponent {
   constructor() { }
 
   onCancella() {
-    alert("Cancella")
+    alert("Cancella: " + this.titolo)
   }
 
 }
