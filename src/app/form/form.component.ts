@@ -30,7 +30,7 @@ export class FormComponent {
   }
 
   onMandaCitta() {
-    console.log("onMandaCitta", this.cittaRef?.nativeElement.value)
+    console.log(this.cittaRef?.nativeElement.value)
     
   }
 
