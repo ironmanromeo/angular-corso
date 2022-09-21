@@ -32,4 +32,5 @@ export class AppComponent {
     alert("Hai ricevuto:" + t)
   }
 
+
 }

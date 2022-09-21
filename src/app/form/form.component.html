@@ -6,5 +6,32 @@
 <h3>cambia il valore ahahhaahaah
 </h3>
 
-<input [(ngModel)]= "nome" (input)="modificaNome($event)"/>
-<input [(ngModel)]= "nome" (input)="modificaNome($event)"/>
+<input [(ngModel)]="nome"/>
+<input [(ngModel)]="nome"/>
+
+<br>
+<br>
+
+<div>
+    <input #cognomeRef/>
+    <input #indirizzoRef/>
+    <button (click)="onMandaForm(cognomeRef, indirizzoRef)">Manda form</button>
+</div>
+
+<br>
+<br>
+
+<div>
+    <input #cittaRef/>
+    <button (click)="onMandaCitta()">Manda form</button>
+</div>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+

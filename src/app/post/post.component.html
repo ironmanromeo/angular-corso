@@ -4,7 +4,7 @@
 </h5>
 
 <h3>{{ testo }}</h3>
-<input ([ngModule]) = "testo" (input)="cambiaTesto($event)"/>
+<input [(ngModel)] = "testo" (input)="cambiaTesto($event)"/>
 
 <button (click)="onCancellaPremuto()" class="btn btn-warning">Cancella</button>
 
