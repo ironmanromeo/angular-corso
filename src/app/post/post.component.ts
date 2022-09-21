@@ -1,5 +1,9 @@
-
-import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { 
+  Component, 
+  Input, 
+  Output, 
+  EventEmitter 
+} from '@angular/core';
 
 @Component({
   selector: 'app-post',
@@ -10,7 +14,11 @@ export class PostComponent {
 
   @Input("ti") titolo = "Mio titolo"
 
+<<<<<<< HEAD
   generaEvento = new EventEmitter<string>()
+=======
+  @Output() generaEvento = new EventEmitter<string>()
+>>>>>>> origin/main
 
   constructor() { }
   
@@ -21,6 +29,14 @@ export class PostComponent {
   onSpara(v:Event) {
     console.log(v);
     
+  }
+
+  onCancella() {
+    this.generaEvento.emit(this.titolo)
+  }
+
+  onSpara(v:Event){
+    console.log("onSpara",v)
   }
 
 }
