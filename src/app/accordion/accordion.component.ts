@@ -1,5 +1,7 @@
 import { Component, Input } from '@angular/core';
 
+
+
 @Component({
   selector: 'app-accordion',
   templateUrl: './accordion.component.html',
@@ -11,7 +13,10 @@ export class AccordionComponent {
 
   aperto = true
 
-  constructor() { }
+  
+
+  constructor() {
+   }
 
   onPremutoTitolo() {
     this.aperto = !this.aperto

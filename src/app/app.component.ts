@@ -1,5 +1,11 @@
 import { Component, ViewEncapsulation } from '@angular/core';
 
+type Post = {
+  userId:number
+  id:number
+  title:string
+  body:string
+}
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -10,6 +16,16 @@ export class AppComponent {
   persone = ["Renzo","Lucia","Don Abbondio"]
 
   nomeRandom = "nessuno"
+
+  posts:Post[] = []
+
+  constructor() {
+    fetch('https://jsonplaceholder.typicode.com/posts')
+  .then(response => response.json())
+  .then(json => {
+    this.posts = json
+  })
+  }
 
   getRandom() {
     const indice = Math.floor(Math.random() * this.persone.length)
