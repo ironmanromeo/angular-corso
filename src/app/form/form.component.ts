@@ -19,5 +19,8 @@ export class FormComponent {
     alert("ziopera")
   }
 
+  onMandaForm(){
+    
+  }
 
 }
