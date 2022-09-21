@@ -25,8 +25,12 @@ export class FormComponent {
     
   }
 
-  onMandaCitta() {
-    
+  onMandaCitta(d:HTMLInputElement) {
+     const el = this.cittaRef?.nativeElement as HTMLInputElement
+     console.log("Città"+el);
+     
   }
+  
 
 }
+
