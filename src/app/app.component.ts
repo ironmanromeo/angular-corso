@@ -26,4 +26,6 @@ export class AppComponent {
   onRicevitEvento(t:string, sec?:string){
     console.log("Ho ricevuto: ",t + sec)
   }
+
+  
 }

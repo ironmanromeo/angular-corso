@@ -9,7 +9,6 @@ export class FormComponent {
 
   @ViewChild("cittaRef") cittaRef?:ElementRef
 
-
   nome = "Pippo"
   cognome = "Pluto"
   indirizzo = ""
@@ -20,7 +19,6 @@ export class FormComponent {
     const el = e.target as HTMLInputElement
     this.nome = el.value
   }
-
   
   onMandaForm(cRef:HTMLInputElement, iRef:HTMLInputElement){
     const persona = {
@@ -34,6 +32,11 @@ export class FormComponent {
 
   onMandaCitta(){
     const el=this.cittaRef?.nativeElement as HTMLInputElement
+    console.log("Citta:", el)
   }
 
+  onAccordion(){
+    
+  }
+  
 }
