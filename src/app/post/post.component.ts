@@ -1,9 +1,16 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import {
+  Component,
+  Input,
+  Output,
+  EventEmitter,
+  ViewEncapsulation
+} from '@angular/core';
 
 @Component({
   selector: 'app-post',
   templateUrl: './post.component.html',
   styleUrls: ['./post.component.css'],
+  //encapsulation:ViewEncapsulation.None
 })
 export class PostComponent {
 
@@ -13,10 +20,12 @@ export class PostComponent {
 
   constructor() { }
 
-  onCanella(){
+  onCancella() {
     this.generaEvento.emit(this.titolo)
   }
-  onSpara(valore : Event){
-    console.log(valore)
+
+  onSpara(v:Event){
+    console.log("onSpara",v)
   }
+
 }

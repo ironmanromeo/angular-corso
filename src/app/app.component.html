@@ -1,13 +1,9 @@
 <h1>Angular Corso</h1>
 
-<h3>{{ nomeRandom }}</h3>
+<h3>Questo è un H3 random: {{ nomeRandom }}</h3>
 
-<button (click)="onGeneraRandom()"
-class="btn btn-primary"
->Genera random</button>
+<button class="btn btn-primary" (click)="onGeneraRandom()">Genera random</button>
 
-
-
-<app-post ti="fesde" (generaEvento)="onRiceviEvento($event)"></app-post>
-<app-post ti="deadf" (generaEvento)="onRiceviEvento($event)"></app-post>
-<app-post ti="pipp" (generaEvento)="onRiceviEvento($event)"></app-post>
+<app-post (generaEvento)="onRicevitEvento($event, 'Pippo')" [ti]="nomeRandom"></app-post>
+<app-post (generaEvento)="onRicevitEvento($event)" [ti]="'Pippo'+'lll'"></app-post>
+<app-post (generaEvento)="onRicevitEvento($event)" ti="Paperino"></app-post>

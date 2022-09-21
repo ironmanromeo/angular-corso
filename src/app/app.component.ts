@@ -1,5 +1,4 @@
-import { Component } from '@angular/core';
-import { materialize } from 'rxjs';
+import { Component, ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -25,8 +24,8 @@ export class AppComponent {
     this.nomeRandom = nome
   }
 
-  onRiceviEvento(t:string){
-    console.log("Ricevuto",t)
+  onRicevitEvento(t:string, sec?:string){
+    console.log("Ho ricevuto: ",t + sec)
   }
 }
 
