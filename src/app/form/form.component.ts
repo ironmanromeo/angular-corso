@@ -7,9 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FormComponent implements OnInit {
 
+  nome = "pippo"
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  onModificaPippo(e:Event){
+    const mioNome = <HTMLInputElement>e.target
+    this.nome = mioNome.value
   }
 
 }
