@@ -2,8 +2,8 @@
 
 <h3>{{ nomeRandom }}</h3>
 
-<button (click)="onGeneraRandom()">Genera random</button>
+<button class="btn btn-primary" (click)="onGeneraRandom()">Genera random</button>
 
-<app-post ti="{{nomeRandom}}"></app-post>
-<app-post ti="Pluto"></app-post>
+<app-post [ti]="nomeRandom"></app-post>
+<app-post [ti]="'Pippo'+'lll'"></app-post>
 <app-post ti="Paperino"></app-post>
