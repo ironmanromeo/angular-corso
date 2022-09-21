@@ -7,9 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AccordionComponent implements OnInit {
 
+  titolo="miotitolo"
+  stato=true
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  onPremuto(){
+    alert("ho premuto l h3")
   }
 
 }
