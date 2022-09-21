@@ -25,4 +25,10 @@ export class AppComponent {
   onRicevitEvento(t:string, sec?:string){
     console.log("Ho ricevuto: ",t + sec)
   }
+
+  gson(){
+    fetch('https://jsonplaceholder.typicode.com/posts/')
+  .then(response => response.json())
+  .then(json => console.log(json))
+  }
 }
