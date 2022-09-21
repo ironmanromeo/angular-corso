@@ -23,15 +23,3 @@ export class AppComponent {
   }
 }
 
-  onGeneraRandom() {
-    const nome = this.getRandom()
-    this.nomeRandom = nome
-<<<<<<< HEAD
-    alert("onGeneraRandom")
-  }
-
-}
-=======
-  }
-}
->>>>>>> origin/main
