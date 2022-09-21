@@ -11,6 +11,7 @@ import { FormComponent } from './form/form.component';
 
 import './training_javascript'
 import './training_typescript';
+import { AccordionComponent } from './accordion/accordion.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import './training_typescript';
     PostsComponent,
     PostComponent,
     FormComponent,
+    AccordionComponent,
   ],
   imports: [
     BrowserModule,
