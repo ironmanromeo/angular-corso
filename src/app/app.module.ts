@@ -9,11 +9,13 @@ import { PostsComponent } from './posts/posts.component'
 
 import './training_javascript'
 import './training_typescript';
+import { PostComponent } from './post/post.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PostsComponent,
+    PostComponent,
   ],
   imports: [
     BrowserModule,
