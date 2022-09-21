@@ -15,6 +15,8 @@ export class FormComponent {
     const el = e.target as HTMLInputElement
     this.nome = el.value
   }
-
+  onMandaform(){
+    alert("  ")
+  }
 
 }
