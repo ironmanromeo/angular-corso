@@ -26,15 +26,6 @@ export class PostComponent {
     this.generaEvento.emit(this.titolo)
   }
 
-  onSpara(v:Event) {
-    console.log(v);
-    
-  }
-
-  onCancella() {
-    this.generaEvento.emit(this.titolo)
-  }
-
   onSpara(v:Event){
     console.log("onSpara",v)
   }
