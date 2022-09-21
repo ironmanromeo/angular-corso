@@ -8,7 +8,8 @@ import { Component, OnInit } from '@angular/core';
 export class FormComponent {
 
   nome = "Pippo"
-  nome2 = "Pluto"
+  cognome = "Pluto"
+  indirizzo = ""
 
   constructor() { }
 
@@ -17,5 +18,15 @@ export class FormComponent {
     this.nome = el.value
   }
 
+  
+  onMandaForm(cRef:HTMLInputElement, iRef:HTMLInputElement){
+    const persona = {
+      nome:this.nome,
+      cognome:cRef.value,
+      indirizzo:iRef.value
+    }
+    
+    console.log("Persona da form: ", persona)
+  }
 
 }
