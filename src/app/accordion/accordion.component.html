@@ -20,7 +20,7 @@
       aria-labelledby="headingOne"
       data-bs-parent="#accordionExample">
         <div class="accordion-body">
-            <ng-content select="[description]" *ngIf="open"></ng-content>
+            <ng-content *ngIf="open"></ng-content>
         </div>
       </div>
     </div>
