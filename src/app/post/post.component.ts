@@ -17,6 +17,8 @@ export class PostComponent {
   @Input("ti") titolo = "Mio titolo"
   testo="Mio testo"
 
+  testo = "Mio testo"
+
   @Output() generaEvento = new EventEmitter<string>()
 
   constructor() { }

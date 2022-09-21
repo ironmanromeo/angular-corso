@@ -5,17 +5,19 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './form.component.html',
   styleUrls: ['./form.component.css']
 })
-export class FormComponent implements OnInit {
+export class FormComponent {
 
-  nome="Pippo"
+  nome = "Pippo"
 
   constructor() { }
 
-  ngOnInit(): void {
+  onInput(e:Event){
+    const el = e.target as HTMLInputElement
+    this.nome = el.value
   }
 
-  onInput(e:Event){
-    const el=<HTMLInputElement>e.target
-    this.nome=el.value
+  onMandaForm(){
+    
   }
+
 }
