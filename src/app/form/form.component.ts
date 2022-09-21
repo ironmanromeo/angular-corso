@@ -16,5 +16,7 @@ export class FormComponent {
     this.nome = el.value
   }
 
-
+  onMandaForm(cog:string,ind:string){
+    console.log(cog,ind)
+  }
 }

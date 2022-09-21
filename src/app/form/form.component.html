@@ -19,3 +19,9 @@
 
 
 <input [(ngModel)]="nome">
+
+<div>
+  <input #cognomeRef>
+  <input #indirizzoRef>
+  <button (click)="onMandaForm(cognomeRef.value,indirizzoRef.value)">Manda Form</button>
+</div>
