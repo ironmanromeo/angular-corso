@@ -1,18 +1,17 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-form',
   templateUrl: './form.component.html',
   styleUrls: ['./form.component.css']
 })
-export class FormComponent implements OnInit {
+export class FormComponent {
+
+  @ViewChild("cittaRef") cittaRef?:ElementRef
 
   nome = "Pippo"
 
   constructor() { }
-
-  ngOnInit(): void {
-  }
 
   onInput(e:Event){
     const el = e.target as HTMLInputElement
@@ -27,7 +26,10 @@ export class FormComponent implements OnInit {
       indirizzo:iRef.value
     }
 
-    console.log("Persona da form: ", persona);
+    console.log("Persona da form: ",persona)
+  }
+
+  onMandaCitta() {
     
   }
 

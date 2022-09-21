@@ -3,16 +3,23 @@
 <div>qui nome: {{ nome }}</div>
 <div [innerText]="nome"></div>
 
-<input type="text" (input)="onInput($event)" [value]="nome">
-<input type="text" (input)="onInput($event)" [value]="nome">
+<input type="text" [value]="nome" (input)="onInput($event)">
+<input type="text" [value]="nome" (input)="onInput($event)">
 
-<h3>aggiungi input e collega tramite binding bi-direzionale</h3>
+<h3>aggingi input e colllega tramite binding bi-direzionale</h3>
 
-
+<p>
 <input [(ngModel)]="nome">
+</p>
 
-<div>
-    <input placeholder="cognome" #cognomeRef >
-    <input placeholder="indirizzo" #indirizzoRef >
+<p>
+    <input placeholder="cognome" #cognomeRef>
+    <input placeholder="indirizzo" #indirizzoRef>
     <button (click)="onMandaForm(cognomeRef,indirizzoRef)">Manda form</button>
-</div>
+</p>
+
+
+<p>
+    <input placeholder="citta" #cittaRef>
+    <button (click)="onMandaCitta()">Manda citta</button>
+</p>
