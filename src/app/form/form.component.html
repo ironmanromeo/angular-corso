@@ -1,7 +1,7 @@
 <p>form works!</p>
 
-<h1>{{ nome }}</h1>
+<div>{{ nome }}</div>
+<div [innerText]="nome"></div>
 
-<form action="">
-    <input type="text" name="nome" [(ngModel)]="nome">
-</form>
+<input type="text" (input)="onInput($event)">
+<input type="text" (input)="onInput($event)">
