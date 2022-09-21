@@ -20,6 +20,7 @@ export class PostComponent {
 
   onCancella() {
     this.generaEvento.emit(this.titolo)
+    
   }
 
   onSpara(v:Event){
