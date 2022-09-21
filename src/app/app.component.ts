@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { materialize } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,21 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angular-corso'
+  persone = ["Renzo","Lucia","Marco"]
+  nomeRandom = "nessuno"
+
+  getRandom(){
+    const indice = Math.floor(Math.random()*this.persone.length)
+    const nuovoNome=this.persone[indice]
+    return nuovoNome
+  }
+
+  onGeneraRandom(){
+    var nome=this.getRandom()
+    while(nome==this.nomeRandom){
+      nome=this.getRandom()
+    }
+    this.nomeRandom=nome
+  }
 }
+
