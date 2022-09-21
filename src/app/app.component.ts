@@ -8,7 +8,7 @@ import { materialize } from 'rxjs';
 })
 export class AppComponent {
   title = 'angular-corso';
-  persone = ["Renzo","Lucia","Don Abbondio"]
+  persone = ["Renzo","Lucia","Don Abbondio","Mario","Luca","Gio"]
 
   nomeRandom = "nessuno"
 
@@ -19,11 +19,14 @@ export class AppComponent {
   }
 
   onGeneraRandom() {
-    var nome = this.getRandom()
-    while(nome==this.nomeRandom){
-      nome=this.getRandom()
-    }
+    do{
+      var nome = this.getRandom()
+    }while(nome==this.nomeRandom)
     this.nomeRandom = nome
+  }
+
+  onRiceviEvento(t:string){
+    console.log("Ricevuto",t)
   }
 }
 

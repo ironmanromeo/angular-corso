@@ -2,10 +2,12 @@
 
 <h3>{{ nomeRandom }}</h3>
 
-<button (click)="onGeneraRandom()">Genera random</button>
+<button (click)="onGeneraRandom()"
+class="btn btn-primary"
+>Genera random</button>
 
 
 
-<app-post ti="{{ nomeRandom }}"></app-post>
-<app-post ti="{{ nomeRandom }}"></app-post>
-<app-post ti="{{ nomeRandom }}"></app-post>
+<app-post ti="fesde" (generaEvento)="onRiceviEvento($event)"></app-post>
+<app-post ti="deadf" (generaEvento)="onRiceviEvento($event)"></app-post>
+<app-post ti="pipp" (generaEvento)="onRiceviEvento($event)"></app-post>
