@@ -1,2 +1,10 @@
 <h1>Angular Corso</h1>
-<app-posts></app-posts>
+
+
+
+<h3>{{ nomeRandom }}</h3>
+<button (click)="onGeneraRandom()">Estrai random</button>
+
+<app-post ti={{ nomeRandom }}></app-post>
+<app-post ti="Pluto"></app-post>
+<app-post ti="Paperino"></app-post>
