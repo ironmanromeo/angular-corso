@@ -6,6 +6,13 @@ import { Component, ViewEncapsulation } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+
+post = []
+
+constructor(){
+
+}
+
   title = 'angular-corso';
   persone = ["Renzo","Lucia","Don Abbondio"]
 
