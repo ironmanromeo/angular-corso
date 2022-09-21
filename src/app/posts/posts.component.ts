@@ -30,6 +30,7 @@ export class PostsComponent implements OnInit {
       }
       this.posts.push(newPost)
       this.titolo = ""
+      this.testo = ""
     }
     
     if(this.titolo === '') {
@@ -40,7 +41,12 @@ export class PostsComponent implements OnInit {
     
   }
 
-  onModificatoInput(e:Event) {
+  bottoneDisabilitato() {
+    return !this.titolo || !this.testo
+  }
+
+  onModificatoInput(e:Event){
+    //const mioInput = e.target as HTMLInputElement
     const mioInput = <HTMLInputElement>e.target
     this.titolo = mioInput.value
   }
