@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -22,8 +22,7 @@ export class AppComponent {
     this.nomeRandom = nome
   }
 
-  onRiceviEvento(t:string){
-    console.log("Ho ricevuto ", t )
-
+  onRicevitEvento(t:string, sec?:string){
+    console.log("Ho ricevuto: ",t + sec)
   }
 }
