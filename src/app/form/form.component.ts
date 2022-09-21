@@ -29,7 +29,8 @@ export class FormComponent {
     console.log("Persona da form: ",persona)
   }
 
-  onMandaCitta(){
+  onMandaCitta() {
     
   }
+
 }
