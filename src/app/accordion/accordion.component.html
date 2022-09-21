@@ -1,0 +1,14 @@
+<div class="accordion" id="accordionPanelsStayOpenExample">
+  <div class="accordion-item" (click)="changeStatus()">
+    <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+        {{title}}
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" *ngIf="status" class="show">
+      <div class="accordion-body">
+        {{text}}
+      </div>
+    </div>
+  </div>
+</div>
