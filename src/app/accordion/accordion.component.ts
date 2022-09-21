@@ -7,9 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AccordionComponent implements OnInit {
 
+  aperto=false
+
   constructor() { }
 
   ngOnInit(): void {
   }
-
+  onPremutoTitolo(){
+  this.aperto= !this.aperto
+  
+  }
 }
