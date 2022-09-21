@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class FormComponent {
 
   nome = "Pippo"
+  nome2 = "Pluto"
 
   constructor() { }
 
