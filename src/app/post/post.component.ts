@@ -11,14 +11,12 @@ export class PostComponent {
   @Input("ti") titolo = "Mio titolo"
   @Output() generaEvento = new EventEmitter<string>()
 
+  testo = "Mio Testo"
+
   constructor() { }
 
   onCancella() {
     this.generaEvento.emit(this.titolo)
   }
-
-  onSpara(e:Event) {
-    console.log(e)
-  }
-
+  
 }
