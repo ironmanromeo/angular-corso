@@ -16,5 +16,8 @@ export class FormComponent {
     this.nome = el.value
   }
 
+  onMandaForm(){
+    
+  }
 
 }
