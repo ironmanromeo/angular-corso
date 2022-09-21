@@ -1,7 +1,9 @@
 <h1> Form works!</h1>
 <form action="">
+    <div [innerText]="formLabel"></div>
     <label> {{ formLabel }} </label> <br>
-    <input (input)="onEditedInput($event)">
-    <input (input)="onEditedInput($event)">
-    <input (input)="onEditedInput($event)">
+
+    <input [value]= "formLabel" (input)="onEditedInput($event)">
+    <input [value]= "formLabel" (input)="onEditedInput($event)">
+    <input [value]= "formLabel" (input)="onEditedInput($event)">
 </form>
