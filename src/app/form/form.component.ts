@@ -1,4 +1,4 @@
-import { Component, ElementRef, ViewChild } from '@angular/core';
+import { asNativeElements, Component, ElementRef, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-form',
@@ -30,6 +30,8 @@ export class FormComponent {
   }
 
   onMandaCitta() {
+    const el = this.cittaRef?.nativeElement as HTMLInputElement
+    console.log("Citta:",el.value);
     
   }
 
