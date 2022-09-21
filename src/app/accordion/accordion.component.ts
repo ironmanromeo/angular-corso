@@ -6,14 +6,16 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./accordion.component.css']
 })
 export class AccordionComponent {
-  @Input("ti") titolo = "Mio titolo"
-  aperto=true
+
+  @Input() titolo = "Mio titolo"
+
+  aperto = true
+
   constructor() { }
 
-
-
-  onPremuto(){
-    this.aperto=!this.aperto
+  onPremutoTitolo() {
+    this.aperto = !this.aperto
   }
+
 
 }
