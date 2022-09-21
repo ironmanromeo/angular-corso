@@ -1,6 +1,5 @@
 import { Component, Input } from '@angular/core';
 
-
 @Component({
   selector: 'app-post',
   templateUrl: './post.component.html',
@@ -9,9 +8,7 @@ import { Component, Input } from '@angular/core';
 export class PostComponent {
 
   @Input("ti") titolo = "Mio titolo"
-  nomeRandom = "Nessuno"
 
-  constructor(){ }
+  constructor() { }
 
-  
 }

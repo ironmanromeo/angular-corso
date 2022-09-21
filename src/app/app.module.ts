@@ -17,7 +17,6 @@ import { PostComponent } from './post/post.component';
     AppComponent,
     PostsComponent,
     PostComponent,
-    PostComponent,
   ],
   imports: [
     BrowserModule,
