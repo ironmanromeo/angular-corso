@@ -9,13 +9,8 @@ import {
 @Component({
   selector: 'app-post',
   templateUrl: './post.component.html',
-<<<<<<< HEAD
-  styleUrls: ['./post.component.css']
-  //encapsulation:View
-=======
   styleUrls: ['./post.component.css'],
   //encapsulation:ViewEncapsulation.None
->>>>>>> origin/main
 })
 export class PostComponent {
 
