@@ -15,4 +15,5 @@ export class AccordionComponent {
     this.aperto = !this.aperto
   }
 
+
 }
