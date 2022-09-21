@@ -9,15 +9,11 @@ import {
   styleUrls: ["./accordion.component.css"],
 })
 export class AccordionComponent {
-  @Input("accordionElementTitle") accordionElementTitle?: string
+  @Input("title") title?: string
 
   open = false
 
   onShow() {
-    if(this.open === false) {
-      this.open = true
-    } else {
-      this.open = false
-    }
+    this.open = !this.open
   }
 }
