@@ -8,11 +8,10 @@
 
 <h3>aggingi input e colllega tramite binding bi-direzionale</h3>
 
-
 <input [(ngModel)]="nome">
 
-<form>
-    <input #cognomeRef>
-    <input #indirizzoRef>
-    <button (click)="onMandaForm(cognomeRef, indirizzoRef)">Manda form</button>
-</form>
+<div>
+    <input placeholder="cognome" #cognomeRef>
+    <input placeholder="indirizzo" #indirizzoRef>
+    <button (click)="onMandaForm(cognomeRef,indirizzoRef)">Manda form</button>
+</div>
