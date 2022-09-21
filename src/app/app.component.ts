@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -20,5 +20,9 @@ export class AppComponent {
   onGeneraRandom() {
     const nome = this.getRandom()
     this.nomeRandom = nome
+  }
+
+  onRicevitEvento(t:string, sec?:string){
+    console.log("Ho ricevuto: ",t + sec)
   }
 }
