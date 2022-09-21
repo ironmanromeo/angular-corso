@@ -3,6 +3,9 @@
     Hello from post: {{ titolo }} {{ getIsPippo() }}
 </h5>
 
+<h3>{{ testo }}</h3>
+<input ([ngModule]) = "testo" (input)="cambiaTesto($event)"/>
+
 <button (click)="onCancellaPremuto()" class="btn btn-warning">Cancella</button>
 
 <button (click)="onSpara($event)">Spara</button>
