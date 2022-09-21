@@ -8,18 +8,20 @@ import { Component } from '@angular/core';
 
 export class AppComponent {
   title = 'angular-corso';
-  persone = ["Renzo", "Lucia", "Don abbondio"];
+  persone = ["Renzo","Lucia","Don Abbondio"]
 
   nomeRandom = "nessuno"
 
   getRandom() {
-    var indice = Math.floor(Math.random() * this.persone.length);
+    const indice = Math.floor(Math.random() * this.persone.length)
     const nuovoNome = this.persone[indice]
     return nuovoNome
   }
-  onCambianome() {
+
+  onGeneraRandom() {
     const nome = this.getRandom()
     this.nomeRandom = nome
   }
+
 }
 

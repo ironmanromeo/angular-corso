@@ -15,7 +15,7 @@ import './training_typescript';
   declarations: [
     AppComponent,
     PostsComponent,
-    PostComponent
+    PostComponent,
   ],
   imports: [
     BrowserModule,
