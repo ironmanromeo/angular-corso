@@ -14,11 +14,8 @@ export class PostComponent {
 
   @Input("ti") titolo = "Mio titolo"
 
-<<<<<<< HEAD
-  generaEvento = new EventEmitter<string>()
-=======
+
   @Output() generaEvento = new EventEmitter<string>()
->>>>>>> origin/main
 
   constructor() { }
   
