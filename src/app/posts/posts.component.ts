@@ -1,4 +1,4 @@
-import { getSafePropertyAccessString } from '@angular/compiler';
+import { HtmlTagDefinition } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
 import { Post } from '../dati/posts.data'
 
@@ -13,6 +13,7 @@ export class PostsComponent implements OnInit {
   posts:Post[] = []
 
   titolo = "Mio titolo"
+
   disabilitato = false
 
   constructor() { }
@@ -21,7 +22,7 @@ export class PostsComponent implements OnInit {
   }
 
   onPremuto() {
-    const nomePost = prompt("Inserisci nuovo post")
+    const nomePost = this.titolo
     if (nomePost) {
       const newPost:Post = {
         titolo:nomePost,
@@ -29,16 +30,16 @@ export class PostsComponent implements OnInit {
         commenti:[]
       }
       this.posts.push(newPost)
+      this.titolo = ""
     }
   }
   
+
+
   onModificatoInput(e:Event){
-      const mioInput = <HTMLInputElement>e.target
-      console.log(mioInput)
-      this.disabilitato=true
-      setTimeout(() => {
-        this.disabilitato=false
-      }, 2000);
+    //const mioInput = e.target as HTMLInputElement
+    const mioInput = <HTMLInputElement>e.target
+    this.titolo = mioInput.value
   }
 
   getPostsString() {
