@@ -1,4 +1,11 @@
 <p>form works!</p>
 
 <div >{{ nome }}</div>
-<input type="text" (input)="onInserito($event)">
+<input type="text"
+(input)="onInserito($event)"
+[value]="nome"
+>
+<input type="text"
+(input)="onInserito($event)"
+[value]="nome"
+>
