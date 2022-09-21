@@ -18,7 +18,7 @@ export class PostComponent {
     this.generaEvento.emit(this.titolo)
   }
 
-  onSpara(v:Event) {
+  onSpara(v:Event, sec?:string) {
     console.log("onSpara", v)
   }
 }
