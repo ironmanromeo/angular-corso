@@ -1,6 +1,4 @@
-import { JsonPipe } from '@angular/common';
-import { Component, OnInit,Input } from '@angular/core';
-
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-accordion',
@@ -8,13 +6,13 @@ import { Component, OnInit,Input } from '@angular/core';
   styleUrls: ['./accordion.component.css']
 })
 export class AccordionComponent {
-  body=""
-  aperto = true
-  @Input("ti")titolo=""
 
-  constructor() {
-    }
-     
+  @Input() titolo = "Mio titolo"
+
+  aperto = false
+
+  constructor() { }
+
   onPremutoTitolo() {
     this.aperto = !this.aperto
   }
