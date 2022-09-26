@@ -1,10 +1,6 @@
 <h1>Angular Corso</h1>
 
-<h3>{{ nomeRandom }}</h3>
 
-<button class="btn btn-primary" (click)="onGeneraRandom()">Genera random</button>
-
-<app-post (generaEvento)="onRiceviEvento($event)" [ti]="nomeRandom"></app-post>
-<app-post (generaEvento)="onRiceviEvento($event)" [ti]="nomeRandom"></app-post>
-<app-post (generaEvento)="onRiceviEvento($event)" [ti]="nomeRandom"></app-post>
-<app-form></app-form>
+<app-accordion *ngFor="let post of posts" [titolo]="post.title">
+    {{ post.body }}
+</app-accordion>

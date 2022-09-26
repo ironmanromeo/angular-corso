@@ -8,20 +8,18 @@ import { PostComponent } from './post/post.component';
 
 import './training_javascript'
 import './training_typescript';
-import { FormComponent } from './form/form.component';
-import { FormsModule } from '@angular/forms';
+import { AccordionComponent } from './accordion/accordion.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PostsComponent,
     PostComponent,
-    FormComponent,
+    AccordionComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
