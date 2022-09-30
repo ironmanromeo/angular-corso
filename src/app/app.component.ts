@@ -4,8 +4,9 @@ type Post = {
   userId:number
   id:number
   title:string
-  body:number
+  body:string
 }
+
 
 @Component({
   selector: 'app-root',
@@ -13,21 +14,21 @@ type Post = {
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'angular-corso';
-  persone = ["Renzo","Lucia","Don Abbondio"]
-
-  nomeRandom = "nessuno"
 
   posts:Post[] = []
 
   constructor() {
     fetch('https://jsonplaceholder.typicode.com/posts')
-  .then(response => response.json())
-  .then(json => {
-    this.posts = json
-    console.log(this.posts)
-  })
+      .then(response => response.json())
+      .then(json => {
+        this.posts = json
+      })
   }
+  
+  title = 'angular-corso';
+  persone = ["Renzo","Lucia","Don Abbondio"]
+
+  nomeRandom = "nessuno"
 
   getRandom() {
     const indice = Math.floor(Math.random() * this.persone.length)
@@ -40,7 +41,7 @@ export class AppComponent {
     this.nomeRandom = nome
   }
 
-  onRiceviEvento(t:string) {
-    alert(t)
+  onRicevitEvento(t:string, sec?:string){
+    console.log("Ho ricevuto: ",t + sec)
   }
 }
