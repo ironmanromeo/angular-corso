@@ -7,11 +7,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PrincipaleComponent implements OnInit {
 
-  
+  mostrato: boolean = true
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  cambia(){
+    if(this.mostrato)
+      this.mostrato=false
+    else
+      this.mostrato=true
   }
 
 }
