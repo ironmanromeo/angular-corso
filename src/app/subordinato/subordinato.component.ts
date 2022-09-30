@@ -1,4 +1,4 @@
-import { Component, OnInit,Input } from '@angular/core';
+import { Component,Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-subordinato',
@@ -6,15 +6,22 @@ import { Component, OnInit,Input } from '@angular/core';
   styleUrls: ['./subordinato.component.css']
 })
 export class SubordinatoComponent implements OnInit {
-  @Input("t") testo=""
+
+  @Input() testo = ""
+
   constructor() {
-    console.log("constructor", this.testo)
-   }
+    console.log(this.testo);
+    
+  }
 
   ngOnInit(): void {
-    console.log("oninit", this.testo)
+    console.log(this.testo);
+    
   }
-checkTesto():boolean{
-  return this.testo==="pippo"
-}
+
+  checkTesto() :boolean{
+    return this.testo === "Pippo"
+  }
+    
+
 }
