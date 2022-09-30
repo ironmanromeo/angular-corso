@@ -1,4 +1,5 @@
 <div class="accordion" id="accordionExample">
+<<<<<<< HEAD
 
     <div class="accordion-item"> 
       <h2 class="accordion-header" id="headingOne">
@@ -24,3 +25,20 @@
         </div>
       </div>
     </div>
+=======
+    <div class="accordion-item">
+        <h2 (click)="onPremutoTitolo()" class="accordion-header">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" [ngClass]="{'collapsed': !aperto}"            >
+                <b>{{ titolo }}</b>  
+            </button>
+        </h2>
+        <div *ngIf = "aperto" id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+                <ng-content></ng-content>
+            </div>
+        </div>
+</div>
+
+</div>
+
+>>>>>>> origin/main
