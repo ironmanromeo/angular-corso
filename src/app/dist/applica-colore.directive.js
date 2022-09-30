@@ -9,11 +9,16 @@ exports.__esModule = true;
 exports.ApplicaColoreDirective = void 0;
 var core_1 = require("@angular/core");
 var ApplicaColoreDirective = /** @class */ (function () {
-    function ApplicaColoreDirective(renderer, elementRef) {
-        this.renderer = renderer;
+    function ApplicaColoreDirective(elementRef) {
         this.elementRef = elementRef;
-        this.renderer.setStyle(this.elementRef.nativeElement., 'background-color', 'green');
+        ngOnInit();
+        void {
+            "this": .backgroundColor = "red"
+        };
     }
+    __decorate([
+        core_1.HostBinding("style.backgroundColor")
+    ], ApplicaColoreDirective.prototype, "backgroundColor");
     ApplicaColoreDirective = __decorate([
         core_1.Directive({
             selector: '[appApplicaColore]'
