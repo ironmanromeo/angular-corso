@@ -11,12 +11,13 @@ var core_1 = require("@angular/core");
 var SubordinatoComponent = /** @class */ (function () {
     function SubordinatoComponent() {
         this.testo = "";
-        console.log();
+        console.log(this.testo);
     }
     SubordinatoComponent.prototype.ngOnInit = function () {
+        console.log(this.testo);
     };
     SubordinatoComponent.prototype.checkTesto = function () {
-        return this.testo == "PIppo";
+        return this.testo === "Pippo";
     };
     __decorate([
         core_1.Input()
