@@ -5,18 +5,18 @@ import { Directive, ElementRef, HostBinding, OnInit, HostListener, Input } from 
 })
 export class ApplicaColoreDirective implements OnInit{
 
-  @Input() coloreOn = "blue"
-  @Input() coloreOff = "orange"
+  @Input() coloreOn = "transparent"
+  @Input() coloreOff?:string
 
   @HostBinding("style.backgroundColor") backgroundColor?:string
 
 
-  constructor(public elementRef: ElementRef) {
-
+  constructor() {
+    this.backgroundColor = this.coloreOff || "orange"
   }
 
   ngOnInit(): void {
-    this.backgroundColor = this.coloreOff
+    // this.backgroundColor = this.coloreOff
   }
 
   @HostListener("mouseenter")
