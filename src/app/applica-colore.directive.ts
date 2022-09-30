@@ -5,14 +5,14 @@ import { Directive, ElementRef, HostBinding, OnInit, HostListener, Input } from 
 })
 export class ApplicaColoreDirective implements OnInit{
 
-  @Input("appApplicaColore") coloreOn = "orange"
+  @Input("appApplicaColore") coloreOn?:string
   @Input() coloreOff?:string
 
   @HostBinding("style.backgroundColor") backgroundColor?:string
 
 
   constructor() {
-    this.backgroundColor = this.coloreOff || "orange"
+    this.backgroundColor = this.coloreOff
   }
 
   ngOnInit(): void {
