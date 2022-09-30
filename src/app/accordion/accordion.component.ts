@@ -7,9 +7,9 @@ import { Component, Input } from '@angular/core';
 })
 export class AccordionComponent {
 
-  @Input() titolo = "Mio Titolo"
+  @Input() titolo = "Mio titolo"
 
- aperto = true
+  aperto = false
 
   constructor() { 
     fetch('https://jsonplaceholder.typicode.com/posts/1')
