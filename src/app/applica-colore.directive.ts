@@ -6,21 +6,24 @@ import { Directive, ElementRef, HostBinding, OnInit, HostListener } from '@angul
 export class ApplicaColoreDirective {
 
   @HostBinding("style.backgroundColor") backgroundColor?:string
-  @HostListener("mouseenter")
-  onMouseEnter(){
-    this.backgroundColor="red"
-  }
-  @HostListener("mouseleave")
-  onMouseLeave(){
-    this.backgroundColor="yellow"
-  }
-  
+
+
   constructor(public elementRef: ElementRef) {
 
   }
 
-  // ngOnInit(): void {
-  //   this.backgroundColor = "red"
-  // }
+  @HostListener("mouseenter")
+  onMouseEnter() {
+    this.backgroundColor = "yellow"
+  }
+
+  @HostListener("mouseleave")
+  onMouseLeave() {
+    this.backgroundColor = "transparent"
+  }
+
+  ngOnInit(): void {
+    //this.backgroundColor = "red"
+  }
 
 }
