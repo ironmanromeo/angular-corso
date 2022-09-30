@@ -1,4 +1,4 @@
-import { Directive, ElementRef, HostBinding, OnInit, HostListener, Input} from '@angular/core';
+import { Directive, ElementRef, HostBinding, OnInit, HostListener, Input } from '@angular/core';
 
 @Directive({
   selector: '[appApplicaColore]'
@@ -9,9 +9,12 @@ export class ApplicaColoreDirective implements OnInit{
   @Input() coloreOn:string="orange"
   @Input() coloreOff:string="transparent"
 
+  @Input() coloreOn:string = "orange"
+  @Input() coloreOff:string = "red"
 
   constructor() {
-    
+    //this.backgroundColor = this.coloreOff
+
   }
 
   ngOnInit(): void {
@@ -28,6 +31,5 @@ export class ApplicaColoreDirective implements OnInit{
     this.backgroundColor = this.coloreOff
   }
 
-  
 
 }
