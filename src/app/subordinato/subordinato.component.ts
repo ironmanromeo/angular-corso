@@ -9,7 +9,9 @@ export class SubordinatoComponent implements OnInit {
 
   @Input() testo = "qualcosa"
 
-  constructor() { }
+  constructor() { 
+    console.log(this.testo)
+   }
 
   ngOnInit(): void {
     console.log(this.testo)
