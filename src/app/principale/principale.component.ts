@@ -8,16 +8,16 @@ import { Component, OnInit } from '@angular/core';
 export class PrincipaleComponent implements OnInit {
   mostrasubordinato=true
 
-  
+  mostraSubordinato = false
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  toggle(){
-   this.mostrasubordinato = !this.mostrasubordinato
-   console.log(this.mostrasubordinato)
+  changeStatus() {
+    this.mostraSubordinato = !this.mostraSubordinato
+    console.log(this.mostraSubordinato);
   }
 
 }
