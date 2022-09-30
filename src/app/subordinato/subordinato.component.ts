@@ -10,27 +10,24 @@ export class SubordinatoComponent implements OnInit, OnDestroy, OnChanges {
   @Input() testo = ""
 
   constructor() {
-    console.log("Constructor", this.testo);
-
-  }
-  ngOnChanges(changes: SimpleChanges): void {
-    console.log("onOnChanges", changes);
+    console.log(this.testo);
+    
   }
   ngOnDestroy(): void {
-    throw new Error('Method not implemented.');
+    console.log("onDestroy: ",this.testo)
   }
   ngOnChanges(changes: SimpleChanges): void {
-    throw new Error('Method not implemented.');
+    console.log("onOnChanges: ",changes)  
   }
 
   ngOnInit(): void {
-    console.log("ngOnInit", this.testo);
-
+    console.log(this.testo);
+    
   }
 
   checkTesto() :boolean{
     return this.testo === "Pippo"
   }
-
+    
 
 }
