@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component,Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-subordinato',
@@ -9,10 +9,19 @@ export class SubordinatoComponent implements OnInit {
 
   @Input() testo = ""
 
-  constructor() { }
-  
-  ngOnInit(): void {
-    console.log("costruttore",this.testo)
+  constructor() {
+    console.log(this.testo);
+    
   }
+
+  ngOnInit(): void {
+    console.log(this.testo);
+    
+  }
+
+  checkTesto() :boolean{
+    return this.testo === "Pippo"
+  }
+    
 
 }
