@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-principale',
@@ -7,11 +7,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PrincipaleComponent implements OnInit {
 
+
+  @Input() mostraSubordinato:boolean=false
+
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  cambiaStato(){
+    this.mostraSubordinato=!this.mostraSubordinato
+    console.log(this.mostraSubordinato)
+  }
 
 
 }
