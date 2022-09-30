@@ -11,14 +11,14 @@ var core_1 = require("@angular/core");
 var AppComponent = /** @class */ (function () {
     function AppComponent() {
         var _this = this;
-        this.post = [];
+        this.posts = [];
         this.title = 'angular-corso';
         this.persone = ["Renzo", "Lucia", "Don Abbondio"];
         this.nomeRandom = "nessuno";
         fetch('https://jsonplaceholder.typicode.com/posts')
             .then(function (response) { return response.json(); })
             .then(function (json) {
-            _this.post = json;
+            _this.posts = json;
         });
     }
     AppComponent.prototype.getRandom = function () {

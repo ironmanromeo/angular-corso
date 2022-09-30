@@ -1,6 +1,6 @@
 import { Component, ViewEncapsulation } from '@angular/core';
 
-type post = {
+type Post = {
   userId:number
   id:number
   title:string
@@ -15,17 +15,16 @@ type post = {
 })
 export class AppComponent {
 
-  post:post[]=[]
+  posts:Post[] = []
 
   constructor() {
-  fetch('https://jsonplaceholder.typicode.com/posts')
-  .then(response => response.json())
-  .then(json => {
-    this.post = json
-  })
+    fetch('https://jsonplaceholder.typicode.com/posts')
+      .then(response => response.json())
+      .then(json => {
+        this.posts = json
+      })
   }
-
-
+  
   title = 'angular-corso';
   persone = ["Renzo","Lucia","Don Abbondio"]
 
