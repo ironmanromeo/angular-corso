@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { SubordinatoComponent } from '../subordinato/subordinato.component';
 
 @Component({
   selector: 'app-principale',
