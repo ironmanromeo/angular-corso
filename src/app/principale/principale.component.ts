@@ -6,8 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./principale.component.css']
 })
 export class PrincipaleComponent implements OnInit {
-  mostrasubordinato=true
-  
+
+  mostraSubordinato = false
 
   constructor() { }
 
@@ -15,6 +15,9 @@ export class PrincipaleComponent implements OnInit {
   }
 mostra(){
 
-  this.mostrasubordinato=!this.mostrasubordinato
-}
+  changeStatus() {
+    this.mostraSubordinato = !this.mostraSubordinato
+    console.log(this.mostraSubordinato);
+  }
+
 }
