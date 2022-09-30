@@ -1,11 +1,7 @@
 <h1>Angular Corso</h1>
 
-<app-accordion titolo="Pippo fgyu dsudf ">
+<app-accordion *ngFor="let post of posts" [titolo]="post.title">
     <div>
-        <h5>osdifjgdfkg fduyg fdkuy fdkuyfd kuydfg </h5>
+        <h5>{{ post.body }}</h5>
     </div>
-</app-accordion>
-
-<app-accordion titolo="Pluto">
-    DEVE MOSTRARE QUESTO ygsdfuyuykjdfguydfudfyduyg yfduk 
 </app-accordion>
