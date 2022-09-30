@@ -15,6 +15,7 @@ import { AccordionComponent } from './accordion/accordion.component';
 import { PrincipaleComponent } from './principale/principale.component';
 import { SubordinatoComponent } from './subordinato/subordinato.component';
 import { ApplicaColoreDirective } from './applica-colore.directive';
+import { ProdottiComponent } from './prodotti/prodotti.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { ApplicaColoreDirective } from './applica-colore.directive';
     PrincipaleComponent,
     SubordinatoComponent,
     ApplicaColoreDirective,
+    ProdottiComponent,
   ],
   imports: [
     BrowserModule,
