@@ -7,6 +7,8 @@ import { Component,Input, OnInit, OnDestroy, OnChanges, SimpleChanges } from '@a
 })
 export class SubordinatoComponent implements OnInit, OnDestroy, OnChanges {
 
+
+
   @Input() testo = ""
 
   constructor() {
