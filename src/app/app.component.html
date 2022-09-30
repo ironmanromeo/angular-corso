@@ -1,27 +1,7 @@
 <h1>Angular Corso</h1>
 
-<!-- <app-form></app-form>
 
-<br><br><br><hr><br><br> -->
 
-<app-accordion>
-    DEVE MOSTRARE QUESTO <br>
-    DEVE MOSTRARE QUESTO <br>
-    DEVE MOSTRARE QUESTO <br>
-    DEVE MOSTRARE QUESTO
+<app-accordion *ngFor="let post of posts" titolo="post.title">
+    <p>{{  posts.body }}</p>
 </app-accordion>
-
-<app-accordion>
-    DEVE MOSTRARE QUESTO <br>
-    DEVE MOSTRARE QUESTO <br>
-    DEVE MOSTRARE QUESTO <br>
-    DEVE MOSTRARE QUESTO
-</app-accordion>
-
-<app-accordion>
-    DEVE MOSTRARE QUESTO <br>
-    DEVE MOSTRARE QUESTO <br>
-    DEVE MOSTRARE QUESTO <br>
-    DEVE MOSTRARE QUESTO
-</app-accordion>
-

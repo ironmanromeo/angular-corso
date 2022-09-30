@@ -1,14 +1,13 @@
 <div [ngStyle]="{
-    borderWidth: 1,
-    borderColor:'black',
+    borderWidth:1, 
+    borderColor:'black', 
     borderStyle:'solid',
     backgroundColor:'black',
     margin:'20px'
 }">
-
-    <h3 style="color: aqua;" (click)="onTitle()">Titolo {{ aperto }}</h3>
-    <div *ngIf="aperto" style="background-color: white;">
+    <h3 (click)="onPremutoTitolo()" style="color:aqua">{{ titolo }}</h3>
+    <div *ngIf="aperto" style="background-color:white">
         <ng-content></ng-content>
     </div>
-
 </div>
+

@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+
 
 @Component({
   selector: 'app-accordion',
@@ -7,11 +8,16 @@ import { Component } from '@angular/core';
 })
 export class AccordionComponent {
 
-    aperto=true
+//   @Input() titolo?:string; 
 
-    constructor() { }
+  @Input() titolo = "Mio titolo"
+  aperto = true
 
-    onTitle() {
-        this.aperto = !this.aperto
-    }
+  constructor() { }
+
+  onPremutoTitolo() {
+    this.aperto = !this.aperto
+  }
+
+
 }
