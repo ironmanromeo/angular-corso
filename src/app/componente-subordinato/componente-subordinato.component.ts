@@ -8,10 +8,12 @@ import { Component, Input, OnInit } from '@angular/core';
 export class ComponenteSubordinatoComponent implements OnInit {
 
   @Input() testo:string = ""
-
-  constructor() { }
+  constructor() { 
+    console.log("constructor", this.testo)
+  }
 
   ngOnInit(): void {
+    console.log("ngOnInit", this.testo)
   }
 
 }
