@@ -7,13 +7,12 @@ export class ApplicaColoreDirective implements OnInit{
 
   @HostBinding('style.backgroundColor') backgroundColor?:string 
 
-  @Input() coloreOn = "red"
+  @Input("appApplicaColore") coloreOn?:string
   @Input() coloreOff = "green"
 
 
   constructor() {
     //this.backgroundColor = this.coloreOff
-
   }
 
   ngOnInit(): void {
@@ -22,7 +21,7 @@ export class ApplicaColoreDirective implements OnInit{
 
   @HostListener("mouseenter")
   onMouseEnter() {
-    this.backgroundColor = this.coloreOn
+    this.backgroundColor = this.coloreOn || "red"
   }
 
   @HostListener("mouseleave")
