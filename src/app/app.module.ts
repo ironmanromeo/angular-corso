@@ -11,6 +11,7 @@ import './training_typescript';
 import { AccordionComponent } from './accordion/accordion.component';
 import { ComponentePrincipaleComponent } from './componente-principale/componente-principale.component';
 import { ComponenteSubordinatoComponent } from './componente-subordinato/componente-subordinato.component';
+import { ApplicaColoreDirective } from './applica-colore.directive';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { ComponenteSubordinatoComponent } from './componente-subordinato/compone
     AccordionComponent,
     ComponentePrincipaleComponent,
     ComponenteSubordinatoComponent,
+    ApplicaColoreDirective,
   ],
   imports: [
     BrowserModule,
