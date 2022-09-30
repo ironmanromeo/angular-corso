@@ -28,7 +28,7 @@ export class ApplicaColoreDirective implements OnInit{
   }
 
   ngOnInit(): void {
-    // this.backgroundColor = this.coloreOff
+  this.backgroundColor = this.coloreOff
   
   }
 
