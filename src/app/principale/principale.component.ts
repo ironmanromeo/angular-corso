@@ -11,15 +11,7 @@ export class PrincipaleComponent implements OnInit {
   mostraSubordinato = false
 
   constructor() { 
-    function Toggle() {
-      if (this.mostrasubordinato==true)
-      {
-        this.mostrasubordinato=false
-      }
-      else{
-        this.mostrasubordinato=true
-      }
-    }
+
   }
  
   ngOnInit(): void {
