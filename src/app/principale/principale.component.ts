@@ -7,13 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PrincipaleComponent implements OnInit {
 
-  mostraSubordinato:Boolean = false
-
-  toggleBtn = "toggle"
-
-  constructor() {
-    console.log("principale constructor", this.mostraSubordinato)
-  }
+  mostraSubordinato = false
 
   toggleSubordinato() {
     this.mostraSubordinato = !this.mostraSubordinato
@@ -21,6 +15,11 @@ export class PrincipaleComponent implements OnInit {
 
   ngOnInit(): void {
     console.log("principale ngOnInit", this.mostraSubordinato)
+  }
+
+  changeStatus() {
+    this.mostraSubordinato = !this.mostraSubordinato
+    console.log(this.mostraSubordinato);
   }
 
 }
