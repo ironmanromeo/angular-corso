@@ -7,7 +7,7 @@ export class ApplicaColoreDirective implements OnInit{
 
   @HostBinding("style.backgroundColor") backgroundColor?:string
 
-  @Input("appApplicaColore") coloreOn?:string 
+  @Input("appApplicaColore") coloreOn?:string
   @Input() coloreOff:string = "transparent"
 
   constructor() {
@@ -21,7 +21,7 @@ export class ApplicaColoreDirective implements OnInit{
 
   @HostListener("mouseenter")
   onMouseEnter() {
-    this.backgroundColor = this.coloreOn
+    this.backgroundColor = this.coloreOn || "orange"
   }
 
   @HostListener("mouseleave")
