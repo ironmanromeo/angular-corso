@@ -9,8 +9,6 @@ export class ApplicaColoreDirective implements OnInit{
   @Input() coloreOn:string="orange"
   @Input() coloreOff:string="transparent"
 
-  @Input() coloreOn:string = "orange"
-  @Input() coloreOff:string = "red"
 
   constructor() {
     //this.backgroundColor = this.coloreOff
