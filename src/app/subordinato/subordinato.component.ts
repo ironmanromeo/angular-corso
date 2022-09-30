@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, OnDestroy, OnChanges, SimpleChanges } from '@angular/core';
+import { Component,Input, OnInit, OnDestroy, OnChanges, SimpleChanges } from '@angular/core';
 
 @Component({
   selector: 'app-subordinato',
@@ -7,22 +7,33 @@ import { Component, OnInit, Input, OnDestroy, OnChanges, SimpleChanges } from '@
 })
 export class SubordinatoComponent implements OnInit, OnDestroy, OnChanges {
 
-  
 
-  @Input() testo = "qualcosa"
 
-  constructor() { 
-    console.log(this.testo)
-   }
-  ngOnChanges(changes: SimpleChanges): void {
-    console.log("OnChanges",this.testo)
+  @Input() testo = ""
+
+  constructor() {
+    console.log("Constructor", this.testo);
+
   }
-  ngOnDestroy(): void {
-    console.log("OnDestroy",this.testo)
+  ngOnChanges(changes: SimpleChanges): void {
+    console.log("onOnChanges", changes);
   }
 
   ngOnInit(): void {
-    console.log(this.testo)
+    console.log("ngOnInit", this.testo);
+
   }
+
+  ngOnDestroy(): void {
+    console.log("ngOnDestroy", this.testo);
+
+  }
+
+
+
+  checkTesto() :boolean{
+    return this.testo === "Pippo"
+  }
+
 
 }
