@@ -10,10 +10,11 @@ export class PrincipaleComponent implements OnInit {
   testo = "pippo"
 
   constructor() { 
-    console.log("principale :", this.testo)
+    console.log("costruttore principale :", this.testo)
    }
 
   ngOnInit(): void {
+    console.log("noOnInit principale :", this.testo)
   }
 
 }

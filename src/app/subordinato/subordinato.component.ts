@@ -10,10 +10,11 @@ export class SubordinatoComponent implements OnInit {
   @Input() propertyTesto?:String
 
   constructor() {
-    console.log("subordinato : ", this.propertyTesto)
+    console.log("costruttore subordinato : ", this.propertyTesto)
   }
 
   ngOnInit(): void {
+    console.log("ngOnInit subordinato : ", this.propertyTesto)
   }
 
 }
