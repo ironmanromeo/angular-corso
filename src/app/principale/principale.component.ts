@@ -13,7 +13,7 @@ export class PrincipaleComponent implements OnInit {
 
   ngOnInit(): void {
   }
-mostra(){
+
 
   changeStatus() {
     this.mostraSubordinato = !this.mostraSubordinato
