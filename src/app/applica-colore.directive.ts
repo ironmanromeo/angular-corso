@@ -1,13 +1,14 @@
-import { Directive, ElementRef, Renderer2 } from '@angular/core';
+import { Directive, ElementRef, HostBinding, OnInit} from '@angular/core';
 
 @Directive({
   selector: '[appApplicaColore]'
 })
-export class ApplicaColoreDirective {
+export class ApplicaColoreDirective implements OnInit {
+  @HostBinding("style.backgroundColor") backgroundColor ?: String
 
-  constructor(public renderer: Renderer2, public elementRef: ElementRef) {
-    this.renderer.setStyle(this.elementRef.nativeElement, "background-color", "red")
+  constructor(public elementRef: ElementRef) {}
+
+  ngOnInit():void {
+    this.backgroundColor = "blue"
   }
-
-  ngOnInit():void {}
 }
