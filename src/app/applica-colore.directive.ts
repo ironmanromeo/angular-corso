@@ -1,12 +1,13 @@
-import { Directive, ElementRef, Renderer2 } from '@angular/core';
+import { constructorParametersDownlevelTransform } from '@angular/compiler-cli';
+import { Directive, ElementRef, Renderer2, HostBinding} from '@angular/core';
 
 @Directive({
   selector: '[appApplicaColore]'
 })
 export class ApplicaColoreDirective {
+  @HostBinding("style.backgroundColor") backgroundColor?:string
 
-  constructor(public elementRef: ElementRef, public renderer: Renderer2) {
-    this.renderer.setStyle(this.elementRef.nativeElement, 'background-color', 'green')
+  constructor(public elementRef: ElementRef) {
+    this.backgroundColor="red"
+    }
   }
-
-}
