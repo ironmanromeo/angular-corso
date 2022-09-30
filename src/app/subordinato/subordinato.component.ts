@@ -1,25 +1,37 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component,Input, OnInit, OnDestroy, OnChanges, SimpleChanges } from '@angular/core';
 
 @Component({
   selector: 'app-subordinato',
   templateUrl: './subordinato.component.html',
   styleUrls: ['./subordinato.component.css']
 })
-export class SubordinatoComponent implements OnInit {
+export class SubordinatoComponent implements OnInit, OnDestroy, OnChanges {
 
+  @Input() testo = ""
 
-  constructor() { 
-    console.log("constructor",this.testo)
+  constructor() {
+    console.log("Constructor", this.testo);
+
   }
-
+  ngOnChanges(changes: SimpleChanges): void {
+    console.log("onOnChanges", changes);
+  }
 
   ngOnInit(): void {
-    console.log("OnInit",this.testo)
+    console.log("ngOnInit", this.testo);
+
   }
 
-  @Input() testo?:string
+  ngOnDestroy(): void {
+    console.log("ngOnDestroy", this.testo);
 
-  checkTesto(){
-    return this.testo==="pippo"
   }
+
+
+
+  checkTesto() :boolean{
+    return this.testo === "Pippo"
+  }
+
+
 }
