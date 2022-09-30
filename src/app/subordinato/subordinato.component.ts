@@ -7,7 +7,7 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class SubordinatoComponent implements OnInit {
 
-  @Input() propertyTesto:String = ""
+  @Input() propertyTesto?:String
 
   constructor() {
     console.log("subordinato : ", this.propertyTesto)
