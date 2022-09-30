@@ -7,9 +7,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PrincipaleComponent implements OnInit {
 
+  mostraSubordinato?:boolean
+
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  toggle(){
+    if(this.mostraSubordinato===true){
+      this.mostraSubordinato = false
+    }else{
+      this.mostraSubordinato = true
+    }
+  }
 }
