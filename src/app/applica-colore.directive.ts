@@ -1,4 +1,4 @@
-import { Directive, ElementRef, HostBinding, HostListener, OnInit, Renderer2 } from '@angular/core';
+import { Directive, ElementRef, HostBinding, HostListener, Input, OnInit, Renderer2 } from '@angular/core';
 
 @Directive({
   selector: '[appApplicaColore]'
@@ -7,22 +7,27 @@ export class ApplicaColoreDirective implements OnInit{
 
   @HostBinding('style.backgroundColor') backgroundColor?:string 
 
-  constructor(public elementRef: ElementRef) {
+  @Input() coloreOn = "red"
+  @Input() coloreOff = "green"
+
+
+  constructor() {
     
+  }
+
+  ngOnInit(): void {
+    this.backgroundColor = this.coloreOff
   }
 
   @HostListener("mouseenter") 
   onMouseEnter(): void{
-    this.backgroundColor = "red"
+    this.backgroundColor = this.coloreOn
   }
 
   @HostListener("mouseleave") 
   onMouseLevae(): void{
-    this.backgroundColor = "green"
+    this.backgroundColor = this.coloreOff
   }
 
-  ngOnInit(): void {
-    //this.backgroundColor = "red"
-  }
 
 }
