@@ -14,6 +14,7 @@ import './training_typescript';
 import { AccordionComponent } from './accordion/accordion.component';
 import { PrincipaleComponent } from './principale/principale.component';
 import { SubordinatoComponent } from './subordinato/subordinato.component';
+import { ApplicaColoreDirectiveComponent } from './applica-colore-directive/applica-colore-directive.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { SubordinatoComponent } from './subordinato/subordinato.component';
     AccordionComponent,
     PrincipaleComponent,
     SubordinatoComponent,
+    ApplicaColoreDirectiveComponent,
   ],
   imports: [
     BrowserModule,
