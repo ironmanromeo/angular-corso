@@ -1,25 +1,3 @@
-<<<<<<< HEAD
-<h1> Form works!</h1>
-<div [innerText]="formLabel"></div>
-<label> {{ formLabel }} </label> <br>
-
-<input [value]= "formLabel" (input)="onEditedInput($event)"> <br>
-<input [(ngModel)] = "formLabel"> <br>
-<input [(ngModel)] = "formLabel"> <br>
-
-<br> 
-
-<div>
-    <input placeholder="Surname" #cognomerRef>
-    <input placeholder="Address" #indirizzoRef>
-    <button class="btn btn-dark" (click)="onSendForm(cognomerRef, indirizzoRef)" > Send Form </button>
-</div>
-
-<div>
-    <input placeholder="Città" #cittaRef>
-    <button class="btn btn-dark" (click)="onSendCity()" > Send City </button>
-</div>
-=======
 <p>form works!</p>
 
 <div>qui nome: {{ nome }}</div>
@@ -49,4 +27,3 @@
     <input placeholder="citta" #cittaRef>
     <button (click)="onMandaCitta()">Manda citta</button>
 </p>
->>>>>>> origin/main

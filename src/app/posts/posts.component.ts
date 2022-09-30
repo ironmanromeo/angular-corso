@@ -1,12 +1,8 @@
 import { HtmlTagDefinition } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
-<<<<<<< HEAD
-import { Post } from '../data/posts.data'
-=======
 import { Post } from '../dati/posts.data'
 
 
->>>>>>> origin/main
 @Component({
   selector: ".app-posts",
   templateUrl: './posts.component.html',
@@ -15,15 +11,9 @@ import { Post } from '../dati/posts.data'
 export class PostsComponent implements OnInit {
 
   posts:Post[] = []
-<<<<<<< HEAD
-  
-  title = "Posts"
-  text = "Insert text"
-=======
 
   titolo = "Mio titolo"
   testo = "Mio testo"
->>>>>>> origin/main
 
   constructor() { }
 
