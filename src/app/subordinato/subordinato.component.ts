@@ -5,6 +5,8 @@ import { Component,Input, OnInit, OnDestroy, OnChanges, SimpleChanges } from '@a
   templateUrl: './subordinato.component.html',
   styleUrls: ['./subordinato.component.css']
 })
+
+
 export class SubordinatoComponent implements OnInit, OnDestroy, OnChanges {
 
   @Input() testo = ""
