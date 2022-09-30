@@ -9,19 +9,10 @@ export class SubordinatoComponent implements OnInit {
 
   @Input() testo = ""
 
-  constructor() {
-    console.log(this.testo);
-    
-  }
+  constructor() {}
 
   ngOnInit(): void {
-    console.log(this.testo);
-    
-  }
-
-  checkTesto() :boolean{
-    return this.testo === "Pippo"
-  }
-    
+   
+  }    
 
 }

@@ -1,1 +1,2 @@
-<app-subordinato testo = "Pippo"></app-subordinato>
+<button (click)="toggleSubordinato()">{{ toggleBtn }}</button>
+<app-subordinato *ngIf="mostraSubordinato" [testo]="'pippo'"></app-subordinato>
