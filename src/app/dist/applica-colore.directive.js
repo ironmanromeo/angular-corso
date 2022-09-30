@@ -12,12 +12,24 @@ var ApplicaColoreDirective = /** @class */ (function () {
     function ApplicaColoreDirective(elementRef) {
         this.elementRef = elementRef;
     }
+    ApplicaColoreDirective.prototype.onMouseEnter = function () {
+        this.backgroundColor = "red";
+    };
+    ApplicaColoreDirective.prototype.onMouseLeave = function () {
+        this.backgroundColor = "trasparent";
+    };
     ApplicaColoreDirective.prototype.ngOnInit = function () {
         this.backgroundColor = "red";
     };
     __decorate([
         core_1.HostBinding("style.backgroundColor")
     ], ApplicaColoreDirective.prototype, "backgroundColor");
+    __decorate([
+        core_1.HostListener("mouseenter")
+    ], ApplicaColoreDirective.prototype, "onMouseEnter");
+    __decorate([
+        core_1.HostListener("mouseleave")
+    ], ApplicaColoreDirective.prototype, "onMouseLeave");
     ApplicaColoreDirective = __decorate([
         core_1.Directive({
             selector: '[appApplicaColore]'
