@@ -11,10 +11,16 @@ var core_1 = require("@angular/core");
 var SubordinatoComponent = /** @class */ (function () {
     function SubordinatoComponent() {
         this.testo = "";
-        console.log(this.testo);
+        console.log("Constructor", this.testo);
     }
+    SubordinatoComponent.prototype.ngOnChanges = function (changes) {
+        console.log("onOnChanges", changes);
+    };
     SubordinatoComponent.prototype.ngOnInit = function () {
-        console.log(this.testo);
+        console.log("ngOnInit", this.testo);
+    };
+    SubordinatoComponent.prototype.ngOnDestroy = function () {
+        console.log("ngOnDestroy", this.testo);
     };
     SubordinatoComponent.prototype.checkTesto = function () {
         return this.testo === "Pippo";
