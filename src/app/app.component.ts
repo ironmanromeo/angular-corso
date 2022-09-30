@@ -1,10 +1,19 @@
 import { Component, ViewEncapsulation } from '@angular/core';
 
+
+
+type Post={
+  userId:number
+  id:number
+  title:string
+  body:string
+}
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
+
 export class AppComponent {
   title = 'angular-corso';
   persone = ["Renzo","Lucia","Don Abbondio"]
@@ -25,4 +34,14 @@ export class AppComponent {
   onRicevitEvento(t:string, sec?:string){
     console.log("Ho ricevuto: ",t + sec)
   }
+
+
+  posts:Post[]=[] 
+
+  constructor(){
+    fetch('https://jsonplaceholder.typicode.com/posts')
+  .then(response => response.json())
+  .then(json => console.log(json))
+  }
+
 }
