@@ -9,7 +9,7 @@ export class AccordionComponent {
   
   @Input() titolo= "Mio Titolo"
 
-  aperto = true
+  aperto = false
 
   constructor() { }
 
