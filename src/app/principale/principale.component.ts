@@ -1,4 +1,4 @@
-import { Component, OnInit, } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-principale',
@@ -6,15 +6,17 @@ import { Component, OnInit, } from '@angular/core';
   styleUrls: ['./principale.component.css']
 })
 export class PrincipaleComponent implements OnInit {
-  mostraSubordinato :boolean = true
+
+  mostraSubordinato = false
+
   constructor() { }
 
   ngOnInit(): void {
-
   }
 
-  toggle(){
-    this.mostraSubordinato=!this.mostraSubordinato
+  changeStatus() {
+    this.mostraSubordinato = !this.mostraSubordinato
+    console.log(this.mostraSubordinato);
   }
 
 }
