@@ -12,6 +12,8 @@ import { AccordionComponent } from './accordion/accordion.component';
 import { PrincipaleComponent } from './principale/principale.component';
 import { SubordinatoComponent } from './subordinato/subordinato.component';
 
+import { ApplicaColoreDirective } from './applica-colore.directive';
+
 import './training_javascript'
 import './training_typescript';
 
@@ -23,7 +25,8 @@ import './training_typescript';
     FormComponent,
     AccordionComponent,
     PrincipaleComponent,
-    SubordinatoComponent
+    SubordinatoComponent,
+    ApplicaColoreDirective
   ],
   imports: [
     BrowserModule,
