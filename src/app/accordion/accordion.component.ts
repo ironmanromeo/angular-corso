@@ -12,6 +12,7 @@ export class AccordionComponent {
   aperto = true
 
   constructor() { 
+    
 
     
   }
