@@ -13,13 +13,13 @@ var ApplicaColoreDirective = /** @class */ (function () {
         this.elementRef = elementRef;
     }
     ApplicaColoreDirective.prototype.onMouseEnter = function () {
-        this.backgroundColor = "red";
+        this.backgroundColor = "yellow";
     };
     ApplicaColoreDirective.prototype.onMouseLeave = function () {
-        this.backgroundColor = "trasparent";
+        this.backgroundColor = "transparent";
     };
     ApplicaColoreDirective.prototype.ngOnInit = function () {
-        this.backgroundColor = "red";
+        //this.backgroundColor = "red"
     };
     __decorate([
         core_1.HostBinding("style.backgroundColor")
