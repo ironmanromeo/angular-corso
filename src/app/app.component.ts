@@ -4,8 +4,9 @@ type Post = {
   userId:number
   id:number
   title:string
-  body:number
+  body:string
 }
+
 
 @Component({
   selector: 'app-root',
@@ -13,6 +14,17 @@ type Post = {
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+
+  posts:Post[] = []
+
+  constructor() {
+    fetch('https://jsonplaceholder.typicode.com/posts')
+      .then(response => response.json())
+      .then(json => {
+        this.posts = json
+      })
+  }
+  
   title = 'angular-corso';
   persone = ["Renzo","Lucia","Don Abbondio"]
 
