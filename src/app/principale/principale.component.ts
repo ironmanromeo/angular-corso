@@ -6,12 +6,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./principale.component.css']
 })
 export class PrincipaleComponent implements OnInit {
-
+  mostrasubordinato=true
   
 
   constructor() { }
 
   ngOnInit(): void {
   }
+mostra(){
 
+  this.mostrasubordinato=!this.mostrasubordinato
+}
 }
