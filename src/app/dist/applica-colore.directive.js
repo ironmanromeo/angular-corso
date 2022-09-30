@@ -11,11 +11,10 @@ var core_1 = require("@angular/core");
 var ApplicaColoreDirective = /** @class */ (function () {
     function ApplicaColoreDirective(elementRef) {
         this.elementRef = elementRef;
-        ngOnInit();
-        void {
-            "this": .backgroundColor = "red"
-        };
     }
+    ApplicaColoreDirective.prototype.ngOnInit = function () {
+        this.backgroundColor = "red";
+    };
     __decorate([
         core_1.HostBinding("style.backgroundColor")
     ], ApplicaColoreDirective.prototype, "backgroundColor");
