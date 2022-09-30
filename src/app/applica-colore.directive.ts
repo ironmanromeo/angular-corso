@@ -7,22 +7,23 @@ export class ApplicaColoreDirective implements OnInit{
 
   @HostBinding("style.backgroundColor") backgroundColor?:string
 
+
   constructor(public elementRef: ElementRef) {
 
   }
+
   @HostListener("mouseenter")
-  onMouseEnter(){
-    this.backgroundColor ="yellow"
+  onMouseEnter() {
+    this.backgroundColor = "yellow"
   }
 
   @HostListener("mouseleave")
-  onMouseLeave(){
-    this.backgroundColor =""
+  onMouseLeave() {
+    this.backgroundColor = "transparent"
   }
+
   ngOnInit(): void {
-    // this.backgroundColor = "red"
+    //this.backgroundColor = "red"
   }
 
 }
-
-
