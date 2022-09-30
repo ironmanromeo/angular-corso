@@ -1,6 +1,12 @@
 <p>componente-principale works!</p>
 
+<button type="button" class="btn btn-primary" (click) = "mostra()">Clicca</button>
+
 <app-componente-subordinato
-testo="pippo">
+
+*ngIf="mostraSubordinato === true"
+ 
+>
 
 </app-componente-subordinato>
+

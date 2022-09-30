@@ -7,7 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ComponentePrincipaleComponent implements OnInit {
 
+  mostraSubordinato = false
+
   constructor() { }
+
+  mostra() {
+    this.mostraSubordinato =! this.mostraSubordinato
+  }
 
   ngOnInit(): void {
   }
