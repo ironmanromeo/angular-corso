@@ -1,7 +1,5 @@
 import { Component, Input } from '@angular/core';
 
-
-
 @Component({
   selector: 'app-accordion',
   templateUrl: './accordion.component.html',
@@ -9,11 +7,10 @@ import { Component, Input } from '@angular/core';
 })
 export class AccordionComponent {
 
-  @Input("t") titolo = ""
+  @Input() titolo = "Mio titolo"
 
-  aperto = true
+  aperto = false
 
-  
 
   constructor() {
    }
