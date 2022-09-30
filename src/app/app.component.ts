@@ -7,7 +7,6 @@ type Post = {
   body:string
 }
 
-
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
