@@ -5,9 +5,6 @@ import { Directive, ElementRef, HostBinding, OnInit, HostListener, Input } from 
 })
 export class ApplicaColoreDirective implements OnInit{
 
-  @Input("appApplicaColore") coloreOn?:string
-  @Input() coloreOff?:string
-
   @HostBinding("style.backgroundColor") backgroundColor?:string
 
   @Input() coloreOn:string = "orange"
