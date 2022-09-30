@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component,Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-subordinato',
@@ -7,14 +7,21 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class SubordinatoComponent implements OnInit {
 
-  @Input() propertyTesto:String = ""
+  @Input() testo = ""
 
   constructor() {
-    console.log("costruttore subordinato :", this.propertyTesto)
+    console.log(this.testo);
+    
   }
 
   ngOnInit(): void {
-    console.log("ngOnInit subordinato :", this.propertyTesto)
+    console.log(this.testo);
+    
   }
+
+  checkTesto() :boolean{
+    return this.testo === "Pippo"
+  }
+    
 
 }

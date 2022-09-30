@@ -7,14 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PrincipaleComponent implements OnInit {
 
-  testo = "pippo"
+  
 
-  constructor() { 
-    console.log("costruttore principale :", this.testo)
-   }
+  constructor() { }
 
   ngOnInit(): void {
-    console.log("noOnInit principale :", this.testo)
   }
 
 }
