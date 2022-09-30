@@ -10,7 +10,6 @@ export class ApplicaColoreDirective implements OnInit{
   @Input("appApplicaColore") coloreOn?:string
   @Input() coloreOff = "green"
 
-
   constructor() {
     //this.backgroundColor = this.coloreOff
   }
@@ -21,13 +20,11 @@ export class ApplicaColoreDirective implements OnInit{
 
   @HostListener("mouseenter")
   onMouseEnter() {
-    this.backgroundColor = this.coloreOn || "red"
+    this.backgroundColor = this.coloreOn || "orange"
   }
 
   @HostListener("mouseleave")
   onMouseLeave() {
     this.backgroundColor = this.coloreOff
   }
-
-
 }
