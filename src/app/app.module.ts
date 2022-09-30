@@ -23,7 +23,7 @@ import { SubordinatoComponent } from './subordinato/subordinato.component';
     FormComponent,
     AccordionComponent,
     PrincipaleComponent,
-    SubordinatoComponent
+    SubordinatoComponent,
   ],
   imports: [
     BrowserModule,
