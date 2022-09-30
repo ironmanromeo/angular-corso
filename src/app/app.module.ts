@@ -9,6 +9,8 @@ import { PostComponent } from './post/post.component';
 import './training_javascript'
 import './training_typescript';
 import { AccordionComponent } from './accordion/accordion.component';
+import { ComponentePrincipaleComponent } from './componente-principale/componente-principale.component';
+import { ComponenteSubordinatoComponent } from './componente-subordinato/componente-subordinato.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +18,8 @@ import { AccordionComponent } from './accordion/accordion.component';
     PostsComponent,
     PostComponent,
     AccordionComponent,
+    ComponentePrincipaleComponent,
+    ComponenteSubordinatoComponent,
   ],
   imports: [
     BrowserModule,
