@@ -11,13 +11,16 @@ export class PrincipaleComponent implements OnInit {
 
   toggleBtn = "toggle"
 
-  constructor() {}
+  constructor() {
+    console.log("principale constructor", this.mostraSubordinato)
+  }
 
   toggleSubordinato() {
     this.mostraSubordinato = !this.mostraSubordinato
   }
 
   ngOnInit(): void {
+    console.log("principale ngOnInit", this.mostraSubordinato)
   }
 
 }
