@@ -11,6 +11,8 @@ import { FormComponent } from './form/form.component';
 import './training_javascript'
 import './training_typescript';
 import { AccordionComponent } from './accordion/accordion.component';
+import { PrincipaleComponent } from './principale/principale.component';
+import { SubordinatoComponent } from './subordinato/subordinato.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +21,8 @@ import { AccordionComponent } from './accordion/accordion.component';
     PostComponent,
     FormComponent,
     AccordionComponent,
+    PrincipaleComponent,
+    SubordinatoComponent,
   ],
   imports: [
     BrowserModule,
