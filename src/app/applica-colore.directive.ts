@@ -8,11 +8,15 @@ export class ApplicaColoreDirective implements OnInit{
   @HostBinding("style.backgroundColor") backgroundColor?:string
 
   @Input("appApplicaColore") coloreOn?:string
-  @Input() coloreOff="transparent"
-
+  @Input() coloreOff:string = "transparent"
 
   constructor() {
+    //this.backgroundColor = this.coloreOff
 
+  }
+
+  ngOnInit(): void {
+    this.backgroundColor = this.coloreOff
   }
 
   @HostListener("mouseenter")
@@ -25,8 +29,5 @@ export class ApplicaColoreDirective implements OnInit{
     this.backgroundColor = this.coloreOff
   }
 
-  ngOnInit(): void {
-    this.backgroundColor = this.coloreOff
-  }
 
 }
