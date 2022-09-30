@@ -6,11 +6,22 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./principale.component.css']
 })
 export class PrincipaleComponent implements OnInit {
+  mostrasubordinato:boolean=false
 
   
 
-  constructor() { }
-
+  constructor() { 
+    function Toggle() {
+      if (this.mostrasubordinato==true)
+      {
+        this.mostrasubordinato=false
+      }
+      else{
+        this.mostrasubordinato=true
+      }
+    }
+  }
+ 
   ngOnInit(): void {
   }
 
