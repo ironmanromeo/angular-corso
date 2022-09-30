@@ -9,11 +9,13 @@ export class AccordionComponent {
 
   @Input() titolo = "Mio Titolo"
 
-
-
  aperto = true
 
-  constructor() { }
+  constructor() { 
+    fetch('https://jsonplaceholder.typicode.com/posts/1')
+    .then(response => response.json())
+    .then(json => console.log(json))
+  }
 
   onPremutoTitolo() {
     this.aperto = !this.aperto
