@@ -1,1 +1,4 @@
-<app-subordinato testo = "Pippo"></app-subordinato>
+<app-subordinato *ngIf="mostraSubordinata === true" testo = "Pippo"></app-subordinato>
+<button (click)="toggle()">BOTTONE</button>
+
+<h3 appApplicaColore>Ciao</h3>

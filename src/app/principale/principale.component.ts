@@ -7,11 +7,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PrincipaleComponent implements OnInit {
 
-  
+  mostraSubordinata = true
 
-  constructor() { }
+  constructor() {}
 
   ngOnInit(): void {
+  }
+
+  toggle() {
+    
+    this.mostraSubordinata=!this.mostraSubordinata
+    console.log(this.mostraSubordinata)
   }
 
 }

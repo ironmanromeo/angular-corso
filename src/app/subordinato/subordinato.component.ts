@@ -1,11 +1,11 @@
-import { Component,Input, OnInit } from '@angular/core';
+import { Component,Input, OnInit, OnDestroy, OnChanges, SimpleChanges } from '@angular/core';
 
 @Component({
   selector: 'app-subordinato',
   templateUrl: './subordinato.component.html',
   styleUrls: ['./subordinato.component.css']
 })
-export class SubordinatoComponent implements OnInit {
+export class SubordinatoComponent implements OnInit, OnDestroy, OnChanges {
 
   @Input() testo = ""
 
@@ -21,6 +21,14 @@ export class SubordinatoComponent implements OnInit {
 
   checkTesto() :boolean{
     return this.testo === "Pippo"
+  }
+
+  ngOnDestroy(): void {
+    console.log("ngOnDestroy",this.testo)
+  }
+
+  ngOnChanges(changes: SimpleChanges): void {
+    console.log("onChanges",this.testo)
   }
     
 
