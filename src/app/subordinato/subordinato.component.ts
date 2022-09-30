@@ -28,13 +28,6 @@ export class SubordinatoComponent implements OnInit, OnDestroy, OnChanges {
 
   }
 
-  ngOnDestroy(): void {
-    console.log("ngOnDestroy", this.testo);
-
-  }
-
-
-
   checkTesto() :boolean{
     return this.testo === "Pippo"
   }
