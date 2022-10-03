@@ -8,7 +8,6 @@ import { ProdottoService } from '../prodotto.service';
   styleUrls: ['./prodotti.component.css']
 })
 export class ProdottiComponent implements OnInit {
-
   ngOnInit(): void {
     throw new Error('Method not implemented.');
   }
