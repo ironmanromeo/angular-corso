@@ -1,13 +1,19 @@
-type persona = {
-  nome:string,
-  cognome:string,
-  eta:Number,
-  altezza?:Number
+class Datastore {
+  private _dati:string[] = []
+
+  get Gati() {
+    return this._dati
+  }
+
+  set Dati(dati:string[]) {
+    this._dati = dati
+  } 
+
+  get DatiSenzaParentesi( ) {
+    return this._dati
+  }
 }
 
-const persona1 = {
-  nome:"Mario",
-  cognome:"Rossi",
-  eta:20,
-  altezza:1.85
-}
+const ds = new Datastore
+
+ds.Dati=["Ciao"]
