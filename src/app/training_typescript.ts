@@ -1,22 +1,28 @@
 class Datastore {
-  private _dati:string[]=[]
+  private _dati :string = ""
 
-  getDati(){
+  get dati() {
+    console.log("sto leggendo i dati");
+
     return this._dati
   }
 
-  setDati(dati : string[]){
-    this._dati = dati
+  set dati(dati :string) {
+    if (dati !== "pippo") {
+      console.log("sto settando i dati");
+      this._dati = dati
+    } else {
+      console.log("Errore!");
+
+    }
+
   }
 
-  get datiSenzaParentesi(){
-    return this._dati
-  }
 }
 
 const ds = new Datastore()
 
-//ds.dati=["Ciao"]
+ds.dati = "pippo"
 
-console.log(ds.getDati());
-console.log(ds.datiSenzaParentesi);
+console.log(ds.dati);
+

@@ -10,6 +10,8 @@ export class HomeComponent implements OnInit {
 
   isLogged = false
 
+  //testoBottone = "Non loggato"
+
   constructor(private router: Router) {
 
   }
@@ -18,7 +20,6 @@ export class HomeComponent implements OnInit {
   }
 
   onVaiAProdotto() {
-
     const path = this.isLogged ? "/admin" : "prodotti"
     this.router.navigate([path])
   }
@@ -27,8 +28,11 @@ export class HomeComponent implements OnInit {
     this.isLogged = !this.isLogged
   }
 
-  testoBottone(){
-    return this.isLogged = !this.isLogged
+  get testoBottone() {
+    return this.isLogged ? "Loggato" : "Non loggato"
   }
 
+  changeLogginStatus2() {
+    this.isLogged = !this.isLogged
+  }
 }
