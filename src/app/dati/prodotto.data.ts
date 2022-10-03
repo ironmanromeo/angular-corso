@@ -1,6 +1,6 @@
-export type Prodotto ={
+export type Prodotto = {
   codice:string,
-  nome : string,
-  foto : number,
-  prezzo : number
+  nome:string,
+  foto:string,
+  prezzo:Number
 }

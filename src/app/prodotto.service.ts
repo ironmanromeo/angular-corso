@@ -5,21 +5,30 @@ import { Prodotto } from './dati/prodotto.data';
   providedIn: 'root'
 })
 export class ProdottoService {
-  _prodotti: Prodotto[] = []
-  _carrello : Prodotto[] = []
-  aggiungiACarrello(prod:Prodotto){
-    this.carrello.push(prod)
+
+  private _prodotti :Prodotto[] = [
+    {codice:"001",nome:"prodotto1",prezzo:100,foto:""},
+    {codice:"002",nome:"prodotto2",prezzo:200,foto:""},
+    {codice:"003",nome:"prodotto3",prezzo:300,foto:""}
+  ]
+
+  private _carrello :Prodotto[] = []
+
+  aggiungiACarrello(prodotto:Prodotto) {
+    this._carrello.push(prodotto)
   }
 
-  togliDaCarrello(prod:Prodotto){
-    this.carrello.filter(p => p!= prod)
+  togliDaCarrello(prodotto:Prodotto) {
+    this._carrello = this._carrello.filter(p => p !== prodotto)
   }
-  constructor() { }
 
-  get prodotti(){
+  get prodotti() {
     return [...this._prodotti]
   }
-  get carrello(){
+
+  get carrello() {
     return [...this._carrello]
   }
+
+  constructor() { }
 }
