@@ -7,21 +7,26 @@ import { Router } from '@angular/router';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
+
   isLogged = false
 
-  constructor(private router:Router) { }
+  constructor(private router: Router) {
+
+  }
 
   ngOnInit(): void {
     
   }
 
-  onToggleLogged() {
+  onVaiAProdotto() {
+
+    const path = this.isLogged ? "/admin" : "prodotti"
+    this.router.navigate([path])
+  }
+
+  changeLogginStatus() {
     this.isLogged = !this.isLogged
   }
 
-  onVaiAProdotti() {
-    const path = this.isLogged ? "/admin" : "/prodotti"
 
-    this.router.navigate([path])
-  }
 }
