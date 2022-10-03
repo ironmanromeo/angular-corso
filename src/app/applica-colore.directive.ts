@@ -1,4 +1,4 @@
-import { Directive, ElementRef, HostBinding, OnInit, HostListener, Input } from '@angular/core';
+import { Directive, HostBinding, HostListener, Input } from '@angular/core';
 
 @Directive({
   selector: '[appApplicaColore]'
@@ -7,7 +7,7 @@ export class ApplicaColoreDirective {
 
   @HostBinding("style.backgroundColor") backgroundColor?:string
 
-  @Input() coloreOn:string = "orange"
+  @Input("appApplicaColore") coloreOn:string = "orange"
   @Input() coloreOff:string = "red"
 
   constructor() {
