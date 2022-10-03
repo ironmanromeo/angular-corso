@@ -16,6 +16,8 @@ import { ApplicaColoreDirective } from './applica-colore.directive';
 
 import './training_javascript'
 import './training_typescript';
+import { ProdottiComponent } from './prodotti/prodotti.component';
+import { ProdottoComponent } from './prodotto/prodotto.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,9 @@ import './training_typescript';
     AccordionComponent,
     PrincipaleComponent,
     SubordinatoComponent,
-    ApplicaColoreDirective
+    ApplicaColoreDirective,
+    ProdottiComponent,
+    ProdottoComponent
   ],
   imports: [
     BrowserModule,
