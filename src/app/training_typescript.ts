@@ -1,10 +1,13 @@
-type person ={
-  nome : string,
-  cogome : string,
-  eta : number,
-  altezza ?: number
+type persona = {
+  nome:string,
+  cognome:string,
+  eta:Number,
+  altezza?:Number
 }
 
-const calcolaNomi = (p1:string, p2:string)=>{
-  return p1+p2
+const persona1 = {
+  nome:"Mario",
+  cognome:"Rossi",
+  eta:20,
+  altezza:1.85
 }
