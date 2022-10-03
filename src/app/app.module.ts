@@ -15,6 +15,7 @@ import { ApplicaColoreDirective } from './applica-colore.directive';
 import { ProdottiComponent } from './prodotti/prodotti.component';
 import { ProdottoComponent } from './prodotto/prodotto.component';
 import { LoginComponent } from './login/login.component';
+import { AdminComponent } from './admin/admin.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { LoginComponent } from './login/login.component';
     ProdottiComponent,
     ProdottoComponent,
     LoginComponent,
+    AdminComponent,
   ],
   imports: [
     BrowserModule,
