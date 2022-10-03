@@ -6,8 +6,8 @@ type persona = {
 }
 
 const persona1 = {
-  nome: "Mario",
-  cognome: "Rossi",
-  eta: 20,
-  altezza: 1.85
+  nome:"Mario",
+  cognome:"Rossi",
+  eta:20,
+  altezza:1.85
 }
