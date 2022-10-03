@@ -1,12 +1,6 @@
-import { Component, ViewEncapsulation } from '@angular/core';
-
-type Post = {
-  userId:number
-  id:number
-  title:string
-  body:string
-}
-
+import { ThisReceiver } from '@angular/compiler';
+import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -14,35 +8,14 @@ type Post = {
   styleUrls: ['./app.component.css']
 })
 
-export class AppComponent {
+export class AppComponent implements OnInit {
 
-  posts: Post[] = []
+  constructor(private router: Router) {
 
-  constructor() {
-    fetch('https://jsonplaceholder.typicode.com/posts')
-  .then(response => response.json())
-  .then(json => {
-    this.posts = json
-  })
   }
 
-  title = 'angular-corso';
-  persone = ["Renzo","Lucia","Don Abbondio"]
-
-  nomeRandom = "nessuno"
-
-  getRandom() {
-    const indice = Math.floor(Math.random() * this.persone.length)
-    const nuovoNome = this.persone[indice]
-    return nuovoNome
-  }
-  onGeneraRandom() {
-    const nome = this.getRandom()
-    this.nomeRandom = nome
+  ngOnInit(): void {
+    throw new Error('Method not implemented.');
   }
 
-  onRicevitEvento(t:string, sec?:string){
-    console.log("Ho ricevuto: ",t + sec)
-  }
 }
-
