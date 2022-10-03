@@ -8,13 +8,15 @@ import { ProdottoService } from '../prodotto.service';
   styleUrls: ['./prodotti.component.css']
 })
 export class ProdottiComponent implements OnInit {
+
+  prodotti: Prodotto[] = []
+
+  constructor(private prodottoService: ProdottoService) {}
+
   ngOnInit(): void {
-    throw new Error('Method not implemented.');
+    this.prodotti = this.prodottoService.prodotti
   }
 
-  prodotti :Prodotto[] = [
-    {codice: "001", nome: "prodotto 1", foto: "foto1", prezzo: 20},
-    {codice: "002", nome: "prodotto 2", foto: "foto2", prezzo: 30},
-    {codice: "003", nome: "prodotto 3", foto: "foto3", prezzo: 40},
-  ]
+
+
 }
