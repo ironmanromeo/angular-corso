@@ -5,5 +5,7 @@ import { Injectable } from '@angular/core';
 })
 export class OutService {
 
+  isLogged = false
+  
   constructor() { }
 }
