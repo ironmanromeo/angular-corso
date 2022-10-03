@@ -16,6 +16,7 @@ import { ProdottiComponent } from './prodotti/prodotti.component';
 import { ProdottoComponent } from './prodotto/prodotto.component';
 import { LoginComponent } from './login/login.component';
 import { AdminComponent } from './admin/admin.component';
+import { PaginaNonTrovataComponent } from './pagina-non-trovata/pagina-non-trovata.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { AdminComponent } from './admin/admin.component';
     ProdottoComponent,
     LoginComponent,
     AdminComponent,
+    PaginaNonTrovataComponent,
   ],
   imports: [
     BrowserModule,
