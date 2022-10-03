@@ -22,8 +22,8 @@ export class ProdottoService {
     this._carrello = this._carrello.filter(p => p !== prodotto)
   }
 
-  cercaProdotto(slug:string) {
-    return this.prodotti.find(p => p.slug === slug)
+  cercaProdotto(slug: string) {
+    return this._prodotti.find(p => p.slug === slug)
   }
 
   get prodotti() {

@@ -11,7 +11,7 @@ const routes: Routes = [
   {path:"prodotti", component:ProdottiComponent},
   {path:"admin", component:AdminComponent},
   {path:"log-in", component:LoginComponent},
-  {path:"prodotti/:slug", component:ProdottoComponent},
+  {path:"prodotti/:slug", component:ProdottoComponent}
 ];
 
 @NgModule({
