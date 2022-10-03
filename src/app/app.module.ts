@@ -21,6 +21,7 @@ import { ApplicaColoreDirective } from './applica-colore.directive';
 
 import './training_javascript'
 import './training_typescript';
+import { PaginaNonTrovataComponent } from './pagina-non-trovata/pagina-non-trovata.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import './training_typescript';
     ProdottoComponent,
     AdminComponent,
     LoginComponent,
-    HomeComponent
+    HomeComponent,
+    PaginaNonTrovataComponent
   ],
   imports: [
     BrowserModule,
