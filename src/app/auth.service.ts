@@ -1,27 +1,31 @@
 import { Injectable } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
 
-  isLogged:boolean = false
+  isLogged = false
 
-  constructor() { }
+  constructor(private router : Router) { }
 
-  login(){
-    this.isLogged=true
+  logIn() {
+    this.isLogged = true
+    this.router.navigate(["/admin"])
   }
 
-  logout(){
-    this.isLogged=false
+  logOut() {
+    this.isLogged = false
+    this.router.navigate(["/log-in"])
   }
 
-  isAuthenticated(){
-    const promise = new Promise<boolean>((resolve,reject)=>{
-      setTimeout(() => {
-        resolve(this.isLogged)
-      }, 500);
+  isAutenticated() {
+    const promise = new Promise<boolean>((resolve, reject) => {
+      setTimeout(()=> {
+       resolve(this.isLogged)
+      }
+       , 500)
     })
     return promise
   }
