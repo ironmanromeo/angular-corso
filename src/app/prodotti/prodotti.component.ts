@@ -9,13 +9,9 @@ import { ProdottoService } from '../prodotto.service';
 })
 export class ProdottiComponent implements OnInit {
 
-  prodotti :Prodotto[] = []
-  
-  constructor(private prodottoService: ProdottoService) { 
-    this.prodotti = this.prodottoService.prodotti
-  }
-
   ngOnInit(): void {
+    throw new Error('Method not implemented.');
   }
 
+  prodotti :Prodotto[] = []
 }

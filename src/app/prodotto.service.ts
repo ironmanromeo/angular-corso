@@ -6,13 +6,13 @@ import { Prodotto } from './dati/prodotto.data';
 })
 export class ProdottoService {
 
-  private _prodotti: Prodotto[] = [
-    {codice:"001", nome:"prodotto1",prezzo:100,foto:""},
-    {codice:"002", nome:"prodotto2",prezzo:200,foto:""},
-    {codice:"003", nome:"prodotto3",prezzo:300,foto:""}
+  private _prodotti :Prodotto[] = [
+    {codice:"001",nome:"prodotto1",prezzo:100,foto:""},
+    {codice:"002",nome:"prodotto2",prezzo:200,foto:""},
+    {codice:"003",nome:"prodotto3",prezzo:300,foto:""}
   ]
 
-  private _carrello: Prodotto[] = []
+  private _carrello :Prodotto[] = []
 
   aggiungiACarrello(prodotto:Prodotto) {
     this._carrello.push(prodotto)
