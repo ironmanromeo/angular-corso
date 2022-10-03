@@ -4,5 +4,4 @@ export type Prodotto = {
   slug:string,
   foto:string,
   prezzo:Number,
-  slug:string
 }
