@@ -25,7 +25,12 @@ export class HomeComponent implements OnInit {
   }
 
   changeLogginStatus() {
+
     this.isLogged = !this.isLogged
+  }
+
+  get testoBottone() {
+    return this.isLogged ? "Loggato" : "Non Loggato"
   }
 
 

@@ -1,13 +1,18 @@
-type persona = {
-  nome:string,
-  cognome:string,
-  eta:Number,
-  altezza?:Number
+class DataStore {
+  private _dati :string[] = []
+
+  getdati() {
+    return this._dati
+  }
+
+  setdati(dati :string[]) {
+    this._dati = dati
+
+  }
 }
 
-const persona1 = {
-  nome:"Mario",
-  cognome:"Rossi",
-  eta:20,
-  altezza:1.85
-}
+const ds = new DataStore()
+ds.setdati(["ciao"])
+console.log(ds.getdati())
+
+
