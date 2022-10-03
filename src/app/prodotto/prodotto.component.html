@@ -6,4 +6,7 @@
   </ul>
 </div>
 
-<button (click)="onGoProduct2()">Go on product 2</button>
+
+<button (click)="onGoProduct2()" [routerLink]="['prodotti']" [queryParams]="{id:3}">Go on product 2</button>
+<button (click)="onGoProduct2()">Go on product</button>
+
