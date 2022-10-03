@@ -27,8 +27,7 @@ export class ProdottoComponent implements OnInit, OnDestroy {
     })
   }
 
-  vaiAProdotto2() {
-    this.router.navigate(["/prodotti/prod2"])
+  ngOnInit(): void {
   }
 
   ngOnDestroy(): void {
