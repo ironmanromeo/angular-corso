@@ -17,18 +17,6 @@ export class HomeComponent implements OnInit {
   }
 
   onVaiAProdotto() {
-
-    const path = this.isLogged ? "/admin" : "prodotti"
-    this.router.navigate([path])
+    this.router.navigate(["/prodotti"])
   }
-
-  testoBottone(){
-    return this.isLogged ? "Loggato" : "Non Loggato"
-  }
-
-  changeLogginStatus() {
-    this.isLogged = !this.isLogged
-  }
-
-
 }
