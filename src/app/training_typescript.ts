@@ -1,30 +1,20 @@
-class MyStorage<T> {
-    items: T[] = [];
-  
-    constructor(item:T) {
-      this.addItem(item)
-    }
-  
-    addItem(item: T) {
-      this.items.push(item);
-    }
-  
-    removeItem() {
-      this.items.pop();
-    }
-  
-    getItems() {
-      return [...this.items];
-    }
+
+  type persona =  {
+    nome: string;
+    cognome: string;
+    eta: number;
+    altezza?: number;
+
+  }
+
+  const persona1 = {
+    nome: "mario",
+    cognome:"rossi",
+    eta:20,
+    altezza:1.85
   }
   
-  const myStorage = new MyStorage(2);
-  
-  myStorage.addItem(4);
-  
-  const lista1 = myStorage.getItems();
-  const nome1 = lista1[0]
-  const lunghezzaNome1 = nome1
-  
-  console.log(lunghezzaNome1);
-  
+  const calcolaNomi = (p1:string,p2:string) => {
+    return p1+p2
+
+  }
