@@ -8,8 +8,8 @@ import { ProdottiComponent } from './prodotti/prodotti.component';
 const routes: Routes = [
   {path:"", component:HomeComponent},
   {path:"prodotti", component:ProdottiComponent},
-  {path:"Admin", component:AdminComponent},
-  {path:"Login", component:LoginComponent},
+  {path:"admin", component:AdminComponent},
+  {path:"log-in", component:LoginComponent},
 ];
 
 @NgModule({

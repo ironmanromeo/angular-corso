@@ -1,10 +1,10 @@
 <div class="container">
   <header class="d-flex justify-content-center py-3">
     <ul class="nav nav-pills">
-      <li class="nav-item"><a routerLink="/" class="nav-link active" aria-current="page">Home</a></li>
-      <li class="nav-item"><a routerLink="/prodotti" class="nav-link ">Prodotti</a></li>
-      <li class="nav-item"><a routerLink="/Admin" class="btn btn-warning">Admin</a></li>
-      <li class="nav-item"><a routerLink="/Login" class="btn btn-success">Login</a></li>
+      <li class="nav-item"><a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" class="nav-link" aria-current="page">Home</a></li>
+      <li class="nav-item"><a routerLink="/prodotti" routerLinkActive="active" class="nav-link">Prodotti</a></li>
+      <li class="nav-item"><a routerLink="/admin" routerLinkActive="active" class="nav-link">Admin</a></li>
+      <li class="nav-item"><a routerLink="/log-in" routerLinkActive="active" class="nav-link">Log-in</a></li>
     </ul>
   </header>
 </div>
