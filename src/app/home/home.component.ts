@@ -9,23 +9,11 @@ export class HomeComponent implements OnInit {
 
   isLogged = false
 
-  constructor(private router: Router) {
+  constructor(private router: Router) {}
 
-  }
-
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
   onProducts() {
-    const path = this.isLogged ? "admin" : "prodotti"
-    this.router.navigate([path])
-  }
-
-  changeLogin() {
-    this.isLogged = !this.isLogged
-  }
-
-  get btnText() {
-    return this.isLogged ? "logged" : "not logged"
+    this.router.navigate(["/prodotti"])
   }
 }
