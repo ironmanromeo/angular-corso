@@ -15,15 +15,10 @@ import { AccordionComponent } from './accordion/accordion.component';
 import { PrincipaleComponent } from './principale/principale.component';
 import { SubordinatoComponent } from './subordinato/subordinato.component';
 import { ApplicaColoreDirective } from './applica-colore.directive';
-<<<<<<< HEAD
-import { ProdottoComponent } from './prodotto/prodotto.component';
-import { ProdottiComponent } from './prodotti/prodotti.component';
-=======
 import { ProdottiComponent } from './prodotti/prodotti.component';
 import { ProdottoComponent } from './prodotto/prodotto.component';
 import { AdminComponent } from './admin/admin.component';
 import { LoginComponent } from './login/login.component';
->>>>>>> origin/main
 
 @NgModule({
   declarations: [
@@ -35,15 +30,10 @@ import { LoginComponent } from './login/login.component';
     PrincipaleComponent,
     SubordinatoComponent,
     ApplicaColoreDirective,
-<<<<<<< HEAD
-    ProdottoComponent,
-    ProdottiComponent,
-=======
     ProdottiComponent,
     ProdottoComponent,
     AdminComponent,
     LoginComponent,
->>>>>>> origin/main
   ],
   imports: [
     BrowserModule,
