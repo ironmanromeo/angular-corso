@@ -7,9 +7,9 @@ import { Prodotto } from './dati/prodotto.data';
 export class ProdottoService {
 
   private _prodotti :Prodotto[] = [
-    {codice:"001",nome:"prodotto 1", slug: "prod1", prezzo:100,foto:""},
-    {codice:"002",nome:"prodotto 2", slug: "prod2",prezzo:200,foto:""},
-    {codice:"003",nome:"prodotto 3", slug: "prod3",prezzo:300,foto:""}
+    {codice:"001",nome:"prodotto 1",slug:"prod1",prezzo:100,foto:""},
+    {codice:"002",nome:"prodotto 2",slug:"prod2",prezzo:200,foto:""},
+    {codice:"003",nome:"prodotto 3",slug:"prod3",prezzo:300,foto:""}
   ]
 
   private _carrello :Prodotto[] = []
@@ -23,7 +23,7 @@ export class ProdottoService {
   }
 
   cercaProdotto(slug: string) {
-    const this._prodotti.find(p => p.slug === slug)
+    return this._prodotti.find(p => p.slug === slug)
   }
 
   get prodotti() {
