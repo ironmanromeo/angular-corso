@@ -11,13 +11,16 @@ import { FormComponent } from './form/form.component';
 import { AccordionComponent } from './accordion/accordion.component';
 import { PrincipaleComponent } from './principale/principale.component';
 import { SubordinatoComponent } from './subordinato/subordinato.component';
+import { ProdottiComponent } from './prodotti/prodotti.component';
+import { ProdottoComponent } from './prodotto/prodotto.component';
+import { AdminComponent } from './admin/admin.component';
+import { LoginComponent } from './login/login.component';
+import { HomeComponent } from './home/home.component';
 
 import { ApplicaColoreDirective } from './applica-colore.directive';
 
 import './training_javascript'
 import './training_typescript';
-import { ProdottiComponent } from './prodotti/prodotti.component';
-import { ProdottoComponent } from './prodotto/prodotto.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +33,10 @@ import { ProdottoComponent } from './prodotto/prodotto.component';
     SubordinatoComponent,
     ApplicaColoreDirective,
     ProdottiComponent,
-    ProdottoComponent
+    ProdottoComponent,
+    AdminComponent,
+    LoginComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
