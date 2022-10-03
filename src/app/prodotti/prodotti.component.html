@@ -1,11 +1,5 @@
 <div *ngFor="let prodotto of prodotti">
-<<<<<<< HEAD
-    <ul>
-        <li>{{ prodotto.nome }}</li>
-    </ul>
-=======
   <ul>
-    <li>{{prodotto.nome}}</li>
+    <li><a [routerLink]="['/prodotti', prodotto.slug]"></a>{{prodotto.nome}}</li>
   </ul>
->>>>>>> origin/main
 </div>
