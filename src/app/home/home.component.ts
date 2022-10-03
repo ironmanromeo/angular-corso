@@ -9,7 +9,6 @@ import { Router } from '@angular/router';
 export class HomeComponent implements OnInit {
 
   isLogged = false
-
   constructor(private router: Router) {
 
   }
@@ -21,6 +20,10 @@ export class HomeComponent implements OnInit {
 
     const path = this.isLogged ? "/admin" : "prodotti"
     this.router.navigate([path])
+  }
+
+  testoBottone(){
+    return this.isLogged ? "Loggato" : "Non Loggato"
   }
 
   changeLogginStatus() {
