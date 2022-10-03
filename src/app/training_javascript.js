@@ -1,29 +1,30 @@
-const persona = {
-    nome:"Mario",
-    cognome:"Rossi",
-    eta:23,
-    altezza:1.85
-  }
-  
-  const persona2 = {
-    nome:"Giulia",
-    cognome:"Ottarini",
-    eta:23,
-    altezza:1.85
-  }
-  
-  const persone = {persona,persona2}
-  
-  const calcolaNomi = (p1,p2) =>{
-    return p1 + p2
-  }
-  
-  
-  const datastore = {
-    nPersone: 10,
-    persone,
-  }
-  
-  const altaezza1 = datastore?.persone?.[0]?.altezza??0
-  console.log(altezza1);
-  
+const persona1 = {
+  nome:"Mario",
+  cognome:"Rossi",
+  eta:20,
+  altezza:1.85
+}
+
+const persona2 = {
+  nome:"Mario",
+  cognome:"Rossi",
+  eta:20
+}
+
+const persone = [persona1, persona2]
+
+const calcolaNomi = (p1, p2) => {
+  return p1 + p2
+}
+
+const dataStore = {
+  nPersone: 10,
+  persone,
+  calcolaNomi,
+}
+
+const altezza1 = dataStore?.persone?.[0]?.altezza ?? 0
+
+console.log(altezza1);
+
+dataStore?.calcolaNomi?.()
