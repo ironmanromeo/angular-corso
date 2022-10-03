@@ -1,21 +1,30 @@
-const persona = {
+const persona1 = {
     nome: "Mario",
     cognome: "Rossi",
-    eta: "42"
-}
+    eta:20,
+    altezza:1.85
+  }
+  
+  const persona2 = {
+    nome: "Mario",
+    cognome: "Rossi",
+    eta:20,
+  }
+  
+  const persone = [persona1, persona2]
+  
+  const calcolanomi = (p1, p2) =>{
+    return p1+p2
+  }
+  
+  const dataStore = {
+    nPersone:10,
+    persone,
+    calcolanomi,
+  }
+  
+  const altezza1=dataStore?.persone?.[0]?.altezza ?? ""
 
-const nome = persona.nome
-const cognome=persona.cognome
-const eta=persona.eta
-
-console.log(nome)
-console.log(cognome)
-console.log(eta)
-
-const cognome2=persona["cognome"]
-
-const chiavi=Object.keys(persona);
-
-const chiaveeta=chiavi[2];
-const eta2=persona[chiaveeta];
-
+  console.log(altezza1)
+  
+  dataStore?.calcolanomi?.()
