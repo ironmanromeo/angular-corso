@@ -1,9 +1,9 @@
 <div>
-  Nome : {{prodotto?.nome}} <br>
-  Codice : {{prodotto?.codice}}
+  <ul>
+    <li>{{prodotto?.nome}}</li>
+    <li>{{prodotto?.prezzo}}</li>
+    <li>{{prodotto?.slug}}</li>
+  </ul>
 </div>
 
-
-<button (click)="goToProdotto2()">
-  Vai al prodotto 2
-</button>
+<button (click)="vaiAProdotto2()">Vai a prodotto2</button>
