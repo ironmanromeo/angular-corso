@@ -8,20 +8,31 @@ import { Router } from '@angular/router';
 })
 export class HomeComponent implements OnInit {
 
-  isLogged=false
+  isLogged = false
 
-  constructor(private router:Router) { }
+  //testoBottone = "Non loggato"
+
+  constructor(private router: Router) {
+
+  }
 
   ngOnInit(): void {
   }
 
-  OnVaiAProdotto(){
-    const path=this.isLogged ? "/admin" : "prodotti"
+  onVaiAProdotto() {
+    const path = this.isLogged ? "/admin" : "prodotti"
     this.router.navigate([path])
   }
 
-  changeLogginStatus(){
-    this.isLogged=!this.isLogged
+  changeLogginStatus() {
+    this.isLogged = !this.isLogged
   }
 
+  get testoBottone() {
+    return this.isLogged ? "Loggato" : "Non loggato"
+  }
+
+  changeLogginStatus2() {
+    this.isLogged = !this.isLogged
+  }
 }
