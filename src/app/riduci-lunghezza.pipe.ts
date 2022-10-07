@@ -5,12 +5,11 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class RiduciLunghezzaPipe implements PipeTransform {
 
-  transform(value: string, limite: number = 10 ): string {
-    var a =""
-    if(value.length > limite){
-      return value.substring(0,limite)+"..."
+  transform(value: string, limite: number = 10): string {
+    if (value.length > limite) {
+      return value.substring(0, limite)
     }
-    return  value;
+    return value;
   }
 
 }
