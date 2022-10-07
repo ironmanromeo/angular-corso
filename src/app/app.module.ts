@@ -15,6 +15,11 @@ import { AccordionComponent } from './accordion/accordion.component';
 import { PrincipaleComponent } from './principale/principale.component';
 import { SubordinatoComponent } from './subordinato/subordinato.component';
 import { ApplicaColoreDirective } from './applica-colore.directive';
+import { ProdottiComponent } from './prodotti/prodotti.component';
+import { ProdottoComponent } from './prodotto/prodotto.component';
+import { AdminComponent } from './admin/admin.component';
+import { LoginComponent } from './login/login.component';
+import { PaginaNonTrovataComponent } from './pagina-non-trovata/pagina-non-trovata.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +31,11 @@ import { ApplicaColoreDirective } from './applica-colore.directive';
     PrincipaleComponent,
     SubordinatoComponent,
     ApplicaColoreDirective,
+    ProdottiComponent,
+    ProdottoComponent,
+    AdminComponent,
+    LoginComponent,
+    PaginaNonTrovataComponent,
   ],
   imports: [
     BrowserModule,
