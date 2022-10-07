@@ -23,6 +23,7 @@ import { LoginComponent } from './login/login.component';
 import { PaginaNonTrovataComponent } from './pagina-non-trovata/pagina-non-trovata.component';
 import { RiduciLunghezzaPipe } from './riduci-lunghezza.pipe';
 import { FiltraArrayPipe } from './filtra-array.pipe';
+import { CheckOutComponent } from './check-out/check-out.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import { FiltraArrayPipe } from './filtra-array.pipe';
     LoginComponent,
     PaginaNonTrovataComponent,
     RiduciLunghezzaPipe,
-    FiltraArrayPipe
+    FiltraArrayPipe,
+    CheckOutComponent
   ],
   imports: [
     BrowserModule,

@@ -14,6 +14,7 @@ export class ProdottiComponent implements OnInit, OnDestroy {
   ricerca: string = ""
 
   private intervalSubscription?: Subscription
+  private prodottiSubscription?: Subscription
 
 
   constructor(private prodottoservice: ProdottoService) {
@@ -24,10 +25,18 @@ export class ProdottiComponent implements OnInit, OnDestroy {
     this.intervalSubscription = interval(1000).subscribe( count => {
       console.log(count);
     })
+
+    this.prodottiSubscription = this.prodottoservice.emitter.subscribe( prods => {
+      this.prodotti = prods 
+    })
   }
 
   ngOnDestroy(): void {
     this.intervalSubscription?.unsubscribe()
+  }
+
+  aggiungiProdotti(){
+    this.prodottoservice.aggiungiProdotti()
   }
 
 }
