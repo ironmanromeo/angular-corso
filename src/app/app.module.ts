@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
-
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PostsComponent } from './posts/posts.component'
@@ -23,6 +22,7 @@ import { HomeComponent } from './home/home.component';
 import { RiduciLunghezzaPipe } from './riduci-lunghezza.pipe';
 import { FiltraArrayPipe } from './filtra-array.pipe';
 import { CheckoutComponent } from './checkout/checkout.component';
+import { Checkout2Component } from './checkout2/checkout2.component';
 
 @NgModule({
   declarations: [
@@ -43,11 +43,13 @@ import { CheckoutComponent } from './checkout/checkout.component';
     RiduciLunghezzaPipe,
     FiltraArrayPipe,
     CheckoutComponent,
+    Checkout2Component,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
