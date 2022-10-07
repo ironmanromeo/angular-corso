@@ -5,25 +5,27 @@ import { Router } from '@angular/router';
   providedIn: 'root'
 })
 export class AuthService {
+
   isLogged = false
 
-  constructor(private router:Router) { }
+  constructor(private router : Router) { }
 
-  login() {
+  logIn() {
     this.isLogged = true
     this.router.navigate(["/admin"])
   }
 
-  logout() {
+  logOut() {
     this.isLogged = false
-    this.router.navigate([""])
+    this.router.navigate(["/log-in"])
   }
 
   isAutenticated() {
-    const promise = new Promise((resolve, reject) => {
-      setTimeout(() => {
-      resolve(this.isLogged)
-    }, 500)
+    const promise = new Promise<boolean>((resolve, reject) => {
+      setTimeout(()=> {
+       resolve(this.isLogged)
+      }
+       , 500)
     })
     return promise
   }
