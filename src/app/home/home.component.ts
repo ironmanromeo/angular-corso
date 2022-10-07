@@ -12,7 +12,6 @@ export class HomeComponent implements OnInit {
   nome = "Pippo Pluto e Paperino"
   miaData = new Date()
   isLogged = false
-  nome = "Pippo"
   data = Date()
 
   //testoBottone = "Non loggato"

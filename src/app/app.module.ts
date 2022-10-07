@@ -38,10 +38,7 @@ import { RiduciLunghezzaPipe } from './riduci-lunghezza.pipe';
     LoginComponent,
     PaginaNonTrovataComponent,
     HomeComponent,
-<<<<<<< HEAD
-=======
     RiduciLunghezzaPipe,
->>>>>>> origin/main
   ],
   imports: [
     BrowserModule,
