@@ -10,18 +10,10 @@ import { ProdottoService } from '../prodotto.service';
 })
 export class ProdottiComponent implements OnInit {
 
-<<<<<<< HEAD
-  prodotti: Prodotto[] = []
-  constructor(private prodottoService: ProdottoService) {
-    this.prodotti = this.prodottoService.prodotti
-  }
-
-=======
   prodotti :Prodotto[] = []
   constructor(private router: Router,private prodottoService :ProdottoService) {
     this.prodotti = this.prodottoService.prodotti
    }
->>>>>>> origin/main
   ngOnInit(): void {
   }
 

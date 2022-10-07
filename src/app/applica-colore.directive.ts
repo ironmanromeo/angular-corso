@@ -7,13 +7,8 @@ export class ApplicaColoreDirective {
 
   @HostBinding("style.backgroundColor") backgroundColor?:string
 
-<<<<<<< HEAD
-  @Input("appApplicaColore") coloreOn:string = "orange"
-  @Input() coloreOff:string = "red"
-=======
   @Input("appApplicaColore") coloreOn?:string
   @Input() coloreOff:string = "transparent"
->>>>>>> origin/main
 
   constructor() {
     //this.backgroundColor = this.coloreOff
