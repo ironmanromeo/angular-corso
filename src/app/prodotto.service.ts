@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Observable, subscribeOn, Subscription } from 'rxjs';
+import { Observable } from 'rxjs';
 import { Prodotto } from './dati/prodotto.data';
 
 @Injectable({
@@ -27,14 +27,11 @@ export class ProdottoService {
         count++
       }, 1000)
     })
-   }
-
-   ngOninit() {
-    
-   }
+  }
 
   aggiungiACarrello(prodotto:Prodotto) {
     this._carrello.push(prodotto)
+
   }
 
   togliDaCarrello(prodotto:Prodotto) {
