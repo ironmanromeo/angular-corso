@@ -20,6 +20,9 @@ import './training_typescript';
 import { HomeComponent } from './home/home.component';
 import { AdminComponent } from './admin/admin.component';
 import { LoginComponent } from './login/login.component';
+import { PaginaNonTrovataComponent } from './pagina-non-trovata/pagina-non-trovata.component';
+import { RiduciLunghezzaPipe } from './riduci-lunghezza.pipe';
+import { FiltraArrayPipe } from './filtra-array.pipe';
 
 @NgModule({
   declarations: [
@@ -35,7 +38,10 @@ import { LoginComponent } from './login/login.component';
     ProdottoComponent,
     HomeComponent,
     AdminComponent,
-    LoginComponent
+    LoginComponent,
+    PaginaNonTrovataComponent,
+    RiduciLunghezzaPipe,
+    FiltraArrayPipe
   ],
   imports: [
     BrowserModule,

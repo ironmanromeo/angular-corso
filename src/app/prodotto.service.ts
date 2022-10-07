@@ -8,9 +8,11 @@ import { Prodotto } from './dati/prodotto.data';
 export class ProdottoService {
 
   private _prodotti: Prodotto[] = [
-    {codice: "001", nome: "prodotto1", foto: "", prezzo: 100},
-    {codice: "002", nome: "prodotto2", foto: "", prezzo: 100},
-    {codice: "003", nome: "prodotto3", foto: "", prezzo: 100}
+    {codice: "001", nome: "prodotto1", categoria:1, slug:"prod1", foto: "", prezzo: 100},
+    {codice: "002", nome: "prodotto2", categoria:2, slug:"prod2", foto: "", prezzo: 100},
+    {codice: "003", nome: "prodotto3", categoria:3, slug:"prod3", foto: "", prezzo: 100},
+    {codice: "004", nome: "prodotto4", categoria:4, slug:"prod4", foto: "", prezzo: 100},
+    {codice: "005", nome: "prodotto5", categoria:5, slug:"prod5", foto: "", prezzo: 100}
   ]
   private _carrello: Prodotto[] = []
 
@@ -20,6 +22,10 @@ export class ProdottoService {
 
   togliCarrello(prodotto: Prodotto){
     this._carrello = this._carrello.filter(p => p !== prodotto)
+  }
+
+  cercaProdotto(slug: string){
+    return this._prodotti.find(p => p.slug === slug)
   }
 
   get prodotti(){
