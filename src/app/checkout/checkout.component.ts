@@ -18,14 +18,6 @@ export class CheckoutComponent implements OnInit {
 
   }
 
-  onSubmit(ngForm: NgForm) {
-    console.log(ngForm);
 
-  }
-
-  onSubmit(ngForm: NgForm) {
-    console.log(ngForm);
-
-  }
 
 }
