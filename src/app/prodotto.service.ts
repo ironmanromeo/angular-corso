@@ -70,7 +70,7 @@ export class ProdottoService {
     return [...this._carrello]
   }
 
-  aggiungiProdotti(){
+  aggiungiProdotto(){
     const nuoviProdotti=[
       {codice:"006",nome:"prodotto 6", categoria:2, slug:"prod6",prezzo:600,foto:""},
       {codice:"007",nome:"prodotto 7", categoria:2, slug:"prod7",prezzo:700,foto:""},
