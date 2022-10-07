@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { count, interval, Subscription } from 'rxjs';
 import { Prodotto } from '../dati/prodotto.data';
@@ -9,13 +9,14 @@ import { ProdottoService } from '../prodotto.service';
   templateUrl: './prodotti.component.html',
   styleUrls: ['./prodotti.component.css']
 })
-export class ProdottiComponent implements OnInit {
+export class ProdottiComponent implements OnInit, OnDestroy {
 
   private intervalSubscription?:Subscription
   private prodottiSubscription?:Subscription
 
   ricerca = ""
   prodotti :Prodotto[] = []
+
   constructor(private router: Router,private prodottoService :ProdottoService) {
     this.prodotti = this.prodottoService.prodotti
   }

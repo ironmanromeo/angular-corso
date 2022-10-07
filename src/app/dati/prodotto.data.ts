@@ -1,8 +1,8 @@
 export type Prodotto = {
   codice:string,
   nome:string,
-  slug:string,
   categoria:number,
+  slug:string,
   foto:string,
   prezzo:Number
 }
