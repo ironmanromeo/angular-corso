@@ -5,9 +5,12 @@ import { Prodotto } from './dati/prodotto.data'
 })
 export class ProductService {
   private _prodotti :Prodotto[]=[
-    {codice:"001",nome:"prodotto1",prezzo:100},
-    {codice:"002",nome:"prodotto2",prezzo:200},
-    {codice:"003",nome:"prodotto3",prezzo:300}
+    {codice:"001",nome:"prodotto1",prezzo:100,slug:"prod1",foto:""},
+    {codice:"002",nome:"prodotto2",prezzo:200,slug:"prod2",foto:""},
+    {codice:"003",nome:"prodotto3",prezzo:300,slug:"prod3",foto:""},
+    {codice:"004",nome:"prodotto1",prezzo:100,slug:"prod4",foto:""},
+    {codice:"005",nome:"prodotto2",prezzo:200,slug:"prod5",foto:""},
+    
   ]
   private _carrello :Prodotto[]=[]
 
