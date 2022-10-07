@@ -8,6 +8,10 @@ import { Router } from '@angular/router';
 })
 export class HomeComponent implements OnInit {
 
+  isLogged = false
+
+  //testoBottone = "Non loggato"
+
   constructor(private router: Router) {
 
   }
@@ -16,9 +20,6 @@ export class HomeComponent implements OnInit {
   }
 
   onVaiAProdotto() {
-
     this.router.navigate(["/prodotti"])
   }
-
-
 }

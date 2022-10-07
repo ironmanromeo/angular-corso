@@ -1,7 +1,19 @@
+<<<<<<< HEAD
 <p>prodotto works!</p>
 
 <p>{{prodotto?.nome}}</p>
 <p>{{prodotto?.prezzo}}</p>
 <p>{{prodotto?.slug}}</p>
 
+=======
+<div>
+  <ul>
+    <li>{{prodotto?.nome}}</li>
+    <li>{{prodotto?.prezzo}}</li>
+    <li>{{prodotto?.slug}}</li>
+  </ul>
+</div>
+
+<button [routerLink]="['/prodotti/prod2']" [queryParams]="{id:2}">Vai a prodotto2</button>
+>>>>>>> origin/main
 <button (click)="vaiAProdotto2()">Vai a prodotto2</button>

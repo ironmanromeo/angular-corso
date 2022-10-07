@@ -7,18 +7,21 @@ class Datastore {
   }
 
   set dati(dati :string) {
-    console.log("sto settando i dati");
-    this._dati = dati
+    if (dati !== "pippo") {
+      console.log("sto settando i dati");
+      this._dati = dati
+    } else {
+      console.log("Errore!");
+
+    }
+
   }
 
-  get datiSenzaParentesi() {
-    return this._dati
-  }
 }
 
 const ds = new Datastore()
 
-ds.dati = "ciao"
+ds.dati = "pippo"
 
-console.log(ds.dati)
+console.log(ds.dati);
 
