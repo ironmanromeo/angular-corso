@@ -60,7 +60,7 @@
                     <div class="row g-3">
                         <div class="col-sm-6">
                             <label for="firstName" class="form-label">First name</label>
-                            <input ngModel name="firstName" type="text" class="form-control" id="firstName" required #firstName="ngModel">
+                            <input ngModel="Pippo" name="firstName" type="text" class="form-control" id="firstName" required #firstName="ngModel">
                             <div class="help-block" *ngIf="!firstName.valid && firstName.touched">
                                 Valid first name is required.
                             </div>
