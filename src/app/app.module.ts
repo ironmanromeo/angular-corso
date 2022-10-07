@@ -1,8 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
-//import { UpperCasePipe } from '@angular/common'
-
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -23,7 +21,7 @@ import { LoginComponent } from './login/login.component';
 import { PaginaNonTrovataComponent } from './pagina-non-trovata/pagina-non-trovata.component';
 import { HomeComponent } from './home/home.component';
 import { RiduciLunghezzaPipe } from './riduci-lunghezza.pipe';
- 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -40,7 +38,7 @@ import { RiduciLunghezzaPipe } from './riduci-lunghezza.pipe';
     LoginComponent,
     PaginaNonTrovataComponent,
     HomeComponent,
-    RiduciLunghezzaPipe
+    RiduciLunghezzaPipe,
   ],
   imports: [
     BrowserModule,
