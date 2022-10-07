@@ -10,12 +10,15 @@ import { ProdottoService } from '../prodotto.service';
 })
 export class ProdottiComponent implements OnInit {
 
+  ricerca = ""
   prodotti :Prodotto[] = []
   constructor(private router: Router,private prodottoService :ProdottoService) {
     this.prodotti = this.prodottoService.prodotti
    }
   ngOnInit(): void {
   }
+
+  
 
 
 
