@@ -22,7 +22,6 @@ import { PaginaNonTrovataComponent } from './pagina-non-trovata/pagina-non-trova
 import { HomeComponent } from './home/home.component';
 import { RiduciLunghezzaPipe } from './riduci-lunghezza.pipe';
 
-
 @NgModule({
   declarations: [
     AppComponent,

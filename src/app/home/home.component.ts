@@ -10,7 +10,9 @@ import { pipe } from 'rxjs';
 
 })
 export class HomeComponent implements OnInit {
-  nome :string = "pippoplutoaa"
+
+  nome = "Pippo Pluto e Paperino"
+  miaData = new Date()
   isLogged = false
   miaData = new Date()
 

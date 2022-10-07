@@ -1,7 +1,7 @@
 <p>home works!</p>
 
-<h2>{{nome | riduciLunghezza:6 }}</h2>
+<h1>{{ nome | riduciLunghezza:15}}</h1>
 
-<h3>{{miaData | date:"short" | uppercase}}</h3>
+<h3>{{ miaData | date:'short' | uppercase }}</h3>
 
 <button class="btn btn-primary" (click)="onVaiAProdotto()">vai a prodotti</button>
