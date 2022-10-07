@@ -10,7 +10,7 @@ import { ProdottoService } from '../prodotto.service';
   styleUrls: ['./prodotto.component.css']
 })
 export class ProdottoComponent implements OnInit, OnDestroy {
-
+  ricerca =""
   prodotto?:Prodotto
   subscription?:Subscription
 
