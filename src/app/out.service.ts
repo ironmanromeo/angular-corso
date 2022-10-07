@@ -6,22 +6,6 @@ import { Injectable } from '@angular/core';
 export class OutService {
 
   isLogged = false
-
+  
   constructor() { }
-
-  logIn() {
-    this.isLogged = true
-  }
-
-  logOut() {
-    this.isLogged = false
-  }
-
-  isAutenticated() {
-    const promise = new Promise((resolve, reject) => {
-      setTimeout(() => {
-        resolve(this.isLogged)
-      }, 100)
-    })
-  }
 }
