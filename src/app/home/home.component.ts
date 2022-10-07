@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-
+import { CommonModule } from '@angular/common';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
 export class HomeComponent implements OnInit {
 
   isLogged = false
-
+  nome = "pippo"
   //testoBottone = "Non loggato"
 
   constructor(private router: Router) {
