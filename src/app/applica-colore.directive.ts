@@ -29,5 +29,5 @@ export class ApplicaColoreDirective implements OnInit{
     this.backgroundColor = this.coloreOff
   }
 
-
+  
 }
