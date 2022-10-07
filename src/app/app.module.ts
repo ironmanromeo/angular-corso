@@ -19,6 +19,8 @@ import { ProdottoComponent } from './prodotto/prodotto.component';
 import { AdminComponent } from './admin/admin.component';
 import { LoginComponent } from './login/login.component';
 import { PaginaNonTrovataComponent } from './pagina-non-trovata/pagina-non-trovata.component';
+import {HomeComponent} from './home/home.component';
+import { RiduciLunghezzaPipe } from './riduci-lunghezza.pipe'
 
 @NgModule({
   declarations: [
@@ -35,6 +37,8 @@ import { PaginaNonTrovataComponent } from './pagina-non-trovata/pagina-non-trova
     AdminComponent,
     LoginComponent,
     PaginaNonTrovataComponent,
+    HomeComponent,
+    RiduciLunghezzaPipe,
   ],
   imports: [
     BrowserModule,
