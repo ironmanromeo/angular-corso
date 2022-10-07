@@ -9,7 +9,13 @@ import { ProdottoService } from '../prodotto.service';
   styleUrls: ['./prodotti.component.css']
 })
 export class ProdottiComponent implements OnInit {
-
+  testoAsync= new Promise((resolve, reject)=>
+  {
+    setTimeout (()=>{
+    resolve("pippo")
+  },2000)
+   
+  })
   ricerca = ""
   prodotti :Prodotto[] = []
   constructor(private router: Router,private prodottoService :ProdottoService) {
