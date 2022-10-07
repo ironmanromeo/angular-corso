@@ -17,7 +17,7 @@ export class AuthService {
 
   logOut() {
     this.isLogged = false
-    this.router.navigate(["/log-in"])
+    this.router.navigate(["/login"])
   }
 
   isAutenticated() {

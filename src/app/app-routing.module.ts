@@ -12,7 +12,7 @@ const routes: Routes = [
   {path:"", component:HomeComponent},
   {path:"prodotti", component:ProdottiComponent},
   {path:"admin", component:AdminComponent, canActivate: [AuthGuardService]},
-  {path:"log-in", component:LoginComponent},
+  {path:"login", component:LoginComponent},
   {path:"prodotti/:slug", component:ProdottoComponent},
   {path:"pagina-non-trovata", component: PaginaNonTrovataComponent},
   {path:"**", redirectTo:"pagina-non-trovata"},
