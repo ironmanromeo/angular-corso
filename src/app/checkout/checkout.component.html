@@ -71,9 +71,13 @@
                 type="text"
                 class="form-control"
                 id="firstName"
-                required=""
+                required
+                #firstName="ngModel"
               >
-              <div class="invalid-feedback">
+              <div
+                class="help-block"
+                *ngIf="!firstName.valid && firstName.touched"
+                >
                 Valid first name is required.
               </div>
             </div>
