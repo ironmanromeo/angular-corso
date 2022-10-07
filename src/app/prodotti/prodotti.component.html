@@ -5,3 +5,7 @@
     <li><a [routerLink]="['/prodotti', prodotto.slug]">{{ prodotto.nome }}</a></li>
   </ul>
 </div>
+
+<h2>{{ prodotti | json }}</h2>
+
+<button (click)="aggiungiProdotti()">Aggiungi prodotti</button>

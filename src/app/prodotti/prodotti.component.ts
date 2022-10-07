@@ -11,6 +11,8 @@ import { ProdottoService } from '../prodotto.service';
 })
 export class ProdottiComponent implements OnInit, OnDestroy {
 
+  private prodottiSubscription?: Subscription
+
   private intervalSubscription?: Subscription
   ricerca = ""
   prodotti :Prodotto[] = []
@@ -18,14 +20,23 @@ export class ProdottiComponent implements OnInit, OnDestroy {
   constructor(private router: Router,private prodottoService :ProdottoService) {
     this.prodotti = this.prodottoService.prodotti
    }
+
   ngOnInit(): void {
     this.intervalSubscription = interval(1000).subscribe( count => {
       console.log(count);
+    })
+    this.prodottiSubscription = this.prodottoService.emitter.subscribe(prods => {
+      this.prodotti = prods
     })
   }
 
   ngOnDestroy(): void {
     this.intervalSubscription?.unsubscribe()
+    this.prodottiSubscription?.unsubscribe()
+  }
+
+  aggiungiProdotti() {
+    this.prodottoService.aggiungiProdotti()
   }
 
 }
