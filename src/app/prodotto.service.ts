@@ -70,8 +70,4 @@ export class ProdottoService {
     return [...this._carrello]
   }
 
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/main
 }
