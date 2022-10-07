@@ -8,8 +8,8 @@ export class FiltraArrayPipe implements PipeTransform {
   transform(array: any[], valore: string, chiave: string): any[] {
     if (valore=== "") return array
     
-    const numberValue = +valore
-    return array.filter( v => v[chiave] === numberValue)
+    //const numberValue = +valore
+    return array.filter( v => v[chiave] ==)
     }
 
 }
