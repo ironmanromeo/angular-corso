@@ -9,22 +9,23 @@ import { ProdottoService } from '../prodotto.service';
   templateUrl: './prodotti.component.html',
   styleUrls: ['./prodotti.component.css']
 })
-export class ProdottiComponent implements OnInit, OnDestroy{
+export class ProdottiComponent implements OnInit, OnDestroy {
 
   private intervalSubscription?: Subscription
   ricerca = ""
   prodotti :Prodotto[] = []
+
   constructor(private router: Router,private prodottoService :ProdottoService) {
     this.prodotti = this.prodottoService.prodotti
-
    }
   ngOnInit(): void {
-    this.intervalSubscription = interval(1000).subscribe( (count) => {
-    console.log(count);
+    this.intervalSubscription = interval(1000).subscribe( count => {
+      console.log(count);
     })
   }
+
   ngOnDestroy(): void {
-      this.intervalSubscription?.unsubscribe()
+    this.intervalSubscription?.unsubscribe()
   }
 
 
