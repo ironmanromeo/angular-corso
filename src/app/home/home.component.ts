@@ -14,7 +14,7 @@ export class HomeComponent implements OnInit {
   nome = "Pippo Pluto e Paperino"
   miaData = new Date()
   isLogged = false
-  miaData = new Date()
+
 
   constructor(private router: Router) {
 
