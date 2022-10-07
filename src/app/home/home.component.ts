@@ -8,13 +8,9 @@ import { Router } from '@angular/router';
 })
 export class HomeComponent implements OnInit {
 
-  private _isLogged = false
-
-  nome = "Il grandissimo Pippo"
-
+  nome = "Pippo Pluto e Paperino"
   miaData = new Date()
-
-  //testoBottone = "Non loggato"
+  isLogged = false
 
   //testoBottone = "Non loggato"
 
