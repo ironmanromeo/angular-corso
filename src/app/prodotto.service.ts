@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Observable, Subject } from 'rxjs';
 import { Prodotto } from './dati/prodotto.data';
 
 @Injectable({
@@ -14,6 +14,8 @@ export class ProdottoService {
     {codice:"004",nome:"prodotto 4", categoria:2, slug:"prod4",prezzo:400,foto:""},
     {codice:"005",nome:"prodotto 5", categoria:2, slug:"prod5",prezzo:500,foto:""},
   ]
+
+  public emitter = new Subject<Prodotto[]>()
 
   private _carrello :Prodotto[] = []
 
@@ -34,14 +36,19 @@ export class ProdottoService {
       }, 1000)
     })
   }
-  aggiungiProdotti(){
-    const nuoviProdotti= [
+
+  aggiungiProdotti() {
+    const nuoviProdotti = [
       {codice:"006",nome:"prodotto 6", categoria:2, slug:"prod6",prezzo:500,foto:""},
       {codice:"007",nome:"prodotto 7", categoria:2, slug:"prod7",prezzo:500,foto:""},
       {codice:"008",nome:"prodotto 8", categoria:2, slug:"prod8",prezzo:500,foto:""}
     ]
-    this._prodotti= [... this._prodotti, ...nuoviProdotti]
+
+    this._prodotti = [...this._prodotti, ...nuoviProdotti]
+
+    this.emitter.next(this._prodotti)
   }
+
   aggiungiACarrello(prodotto:Prodotto) {
     this._carrello.push(prodotto)
 
