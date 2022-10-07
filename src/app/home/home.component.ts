@@ -11,6 +11,7 @@ import { ProdottoService } from '../prodotto.service';
 export class HomeComponent implements OnInit, OnDestroy {
 
   private subscription?: Subscription
+  nome = "Pippo"
 
   constructor(private router: Router, private prodService: ProdottoService) {
   }
