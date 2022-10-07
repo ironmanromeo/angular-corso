@@ -7,8 +7,9 @@ import { Router } from '@angular/router';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  nome= "pippociaoaaaa"
-  miadata= new Date()
+
+  nome = "Pippo Pluto e Paperino"
+  miaData = new Date()
   isLogged = false
 
   //testoBottone = "Non loggato"
