@@ -1,13 +1,13 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Observable } from 'rxjs';
+import { count, Observable, Subscribable, Subscription } from 'rxjs';
+import { ProdottoService } from '../prodotto.service';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
-
 export class HomeComponent implements OnInit, OnDestroy {
 
   private subscription?: Subscription
@@ -16,13 +16,21 @@ export class HomeComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit(): void {
-    subscription = this.prodService.observable.subscribe(count => {
-      console.log(count);
+    this.subscription = this.prodService.observable.subscribe({
+        next: count => {
+          console.log(count);
+        },
+        error: error => {
+          console.log(error);
+        },
+        complete: () => {
+          console.log("complete");
+        }
     })
   }
 
   ngOnDestroy(): void {
-      this.subscription?.unsubscribe()
+    this.subscription?.unsubscribe()
   }
 
   onVaiAProdotto() {

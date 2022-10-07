@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { interval, Observable } from 'rxjs';
+import { Observable } from 'rxjs';
 import { Prodotto } from './dati/prodotto.data';
 
 @Injectable({
@@ -25,12 +25,19 @@ export class ProdottoService {
       setInterval(() => {
         subscribe.next(count)
         count++
+        if(count >= 10) {
+          subscribe.complete()
+        }
+        if(count > 7) {
+          subscribe.error(new Error("Stramegaiper errore"))
+        }
       }, 1000)
     })
   }
 
   aggiungiACarrello(prodotto:Prodotto) {
     this._carrello.push(prodotto)
+
   }
 
   togliDaCarrello(prodotto:Prodotto) {
