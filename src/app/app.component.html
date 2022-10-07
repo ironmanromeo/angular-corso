@@ -1,5 +1,15 @@
-<h1>Angular Corso</h1>
+<div class="container">
+  <header class="d-flex justify-content-center py-3">
+    <ul class="nav nav-pills">
+      <li class="nav-item"><a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" class="nav-link" aria-current="page">Home</a></li>
+      <li class="nav-item"><a routerLink="/prodotti" routerLinkActive="active" class="nav-link">Prodotti</a></li>
+      <li class="nav-item"><a routerLink="/admin" routerLinkActive="active" class="nav-link">Admin</a></li>
+      <li class="nav-item"><a routerLink="/log-in" routerLinkActive="active" class="nav-link">Log-in</a></li>
+    </ul>
+  </header>
+</div>
 
+<<<<<<< HEAD
 <h3>{{ nomeRandom }}</h3>
 
 <button class="btn btn-primary" (click)="onGeneraRandom()">Genera random</button>
@@ -9,3 +19,8 @@
 <app-post (generaEvento)="onRiceviEvent($event)" ti="Pippo"></app-post>
 <app-post ti="Pluto"></app-post>
 <app-post ti="Paperino"></app-post>
+=======
+<div>
+  <router-outlet></router-outlet>
+</div>
+>>>>>>> origin/main

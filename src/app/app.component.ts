@@ -1,4 +1,12 @@
-import { Component } from '@angular/core';
+import { Component, ViewEncapsulation } from '@angular/core';
+
+type Post = {
+  userId:number
+  id:number
+  title:string
+  body:string
+}
+
 
 @Component({
   selector: 'app-root',
@@ -6,6 +14,17 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+
+  posts:Post[] = []
+
+  constructor() {
+    fetch('https://jsonplaceholder.typicode.com/posts')
+      .then(response => response.json())
+      .then(json => {
+        this.posts = json
+      })
+  }
+  
   title = 'angular-corso';
   persone = ["Renzo","Lucia","Don Abbondio"]
 
@@ -22,8 +41,8 @@ export class AppComponent {
     this.nomeRandom = nome
   }
 
-  onRiceviEvent(t:string){
-    console.log("Ho ricevuto ", t)
+  onRicevitEvento(t:string, sec?:string){
+    console.log("Ho ricevuto: ",t + sec)
   }
 }
 
