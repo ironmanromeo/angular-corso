@@ -25,7 +25,7 @@ export class ProdottiComponent implements OnInit, OnDestroy {
     this.intervalSubscription = interval(1000).subscribe( count => {
       console.log(count);
     })
-    this.prodottiSubscription = this.prodottoService.emitter.subscribe(prods => {
+    this.prodottiSubscription = this.prodottoService.emitter.subscribe( prods => {
       this.prodotti = prods
     })
   }
@@ -37,6 +37,6 @@ export class ProdottiComponent implements OnInit, OnDestroy {
 
   aggiungiProdotti() {
     this.prodottoService.aggiungiProdotti()
-  }
+    }
 
 }
