@@ -11,11 +11,10 @@ import { ProdottoService } from '../prodotto.service';
 export class ProdottiComponent implements OnInit {
 
   testoAsync = new Promise((resolve, reject) => {
-    setTimeout(() => {
+    setTimeout( () => {
       resolve("Pippo")
     }, 2000)
   })
-
   ricerca = ""
   prodotti :Prodotto[] = []
   constructor(private router: Router,private prodottoService :ProdottoService) {
@@ -24,7 +23,7 @@ export class ProdottiComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  
+
 
 
 
