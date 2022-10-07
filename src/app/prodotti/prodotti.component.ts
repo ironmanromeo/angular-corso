@@ -1,6 +1,5 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { interval, Subscription } from 'rxjs';
 import { Prodotto } from '../dati/prodotto.data';
 import { ProdottoService } from '../prodotto.service';
 import { interval, Subscription } from 'rxjs';
