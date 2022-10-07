@@ -9,7 +9,7 @@ export class FiltraArrayPipe implements PipeTransform {
     if (valore === "") return array
 
     const numberValue = +valore
-    return array.filter( v => v[chiave] === numberValue)
+    return array.filter( v => v[chiave] == valore)
   }
 
 }
