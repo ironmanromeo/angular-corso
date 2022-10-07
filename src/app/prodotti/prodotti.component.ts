@@ -9,8 +9,9 @@ import { ProdottoService } from '../prodotto.service';
   styleUrls: ['./prodotti.component.css']
 })
 export class ProdottiComponent implements OnInit {
+
   testoAsync = new Promise((resolve, reject) => {
-    setTimeout(() => {
+    setTimeout( () => {
       resolve("Pippo")
     }, 2000)
   })
