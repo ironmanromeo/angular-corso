@@ -9,6 +9,7 @@ import { ProdottoService } from '../prodotto.service';
 })
 export class ProdottiComponent implements OnInit {
 
+  ricerca = ""
   prodotti: Prodotto[] = []
 
   constructor(private prodottoService: ProdottoService) {

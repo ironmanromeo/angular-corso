@@ -1,6 +1,9 @@
 <p>prodotti works!</p>
 
-<div *ngFor="let prodotto of prodotti">
+<h3> {{ ricerca }} </h3>
+<input [(ngModel)]="ricerca">
+
+<div *ngFor="let prodotto of prodotti | filtraArray:ricerca:'categoria'">
   <ul>
     <li><a [routerLink]="['/prodotti', prodotto.slug]"> {{ prodotto.nome }} </a></li>
   </ul>

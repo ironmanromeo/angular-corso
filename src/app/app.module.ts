@@ -23,6 +23,7 @@ import './training_javascript'
 import './training_typescript';
 import { PaginaNonTrovataComponent } from './pagina-non-trovata/pagina-non-trovata.component';
 import { RiduciLunghezzaPipe } from './riduci-lunghezza.pipe';
+import { FiltraArrayPipe } from './filtra-array.pipe';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { RiduciLunghezzaPipe } from './riduci-lunghezza.pipe';
     LoginComponent,
     HomeComponent,
     PaginaNonTrovataComponent,
-    RiduciLunghezzaPipe
+    RiduciLunghezzaPipe,
+    FiltraArrayPipe
   ],
   imports: [
     BrowserModule,
