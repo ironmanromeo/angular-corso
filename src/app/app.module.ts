@@ -43,6 +43,7 @@ import { FiltraArrayPipe } from './filtra-array.pipe';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
