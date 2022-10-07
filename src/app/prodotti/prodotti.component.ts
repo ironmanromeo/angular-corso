@@ -9,13 +9,16 @@ import { ProdottoService } from '../prodotto.service';
   styleUrls: ['./prodotti.component.css']
 })
 export class ProdottiComponent implements OnInit {
-  ricerca=""
+
+  ricerca = ""
   prodotti :Prodotto[] = []
   constructor(private router: Router,private prodottoService :ProdottoService) {
     this.prodotti = this.prodottoService.prodotti
    }
   ngOnInit(): void {
   }
+
+  
 
 
 

@@ -21,7 +21,7 @@ import { LoginComponent } from './login/login.component';
 import { PaginaNonTrovataComponent } from './pagina-non-trovata/pagina-non-trovata.component';
 import { HomeComponent } from './home/home.component';
 import { RiduciLunghezzaPipe } from './riduci-lunghezza.pipe';
-import { FiltraarrayPipe } from './filtraarray.pipe';
+import { FiltraArrayPipe } from './filtra-array.pipe';
 
 @NgModule({
   declarations: [
@@ -40,7 +40,7 @@ import { FiltraarrayPipe } from './filtraarray.pipe';
     PaginaNonTrovataComponent,
     HomeComponent,
     RiduciLunghezzaPipe,
-    FiltraarrayPipe,
+    FiltraArrayPipe,
   ],
   imports: [
     BrowserModule,
