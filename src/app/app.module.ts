@@ -23,6 +23,7 @@ import { HomeComponent } from './home/home.component';
 import { RiduciLunghezzaPipe } from './riduci-lunghezza.pipe';
 import { FiltraArrayPipe } from './filtra-array.pipe';
 import { CheckoutComponent } from './checkout/checkout.component';
+import { Checkout2Component } from './checkout2/checkout2.component';
 
 @NgModule({
   declarations: [
@@ -43,6 +44,7 @@ import { CheckoutComponent } from './checkout/checkout.component';
     RiduciLunghezzaPipe,
     FiltraArrayPipe,
     CheckoutComponent,
+    Checkout2Component,
   ],
   imports: [
     BrowserModule,
