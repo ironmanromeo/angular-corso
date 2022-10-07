@@ -19,9 +19,7 @@ export class ProdottiComponent implements OnInit, OnDestroy {
     this.prodotti = this.prodottoService.prodotti
     
    }
-  ngOnDestroy(): void {
-    this.intervalSubscription?.unsubscribe()
-  }
+  
   ngOnInit(): void {
     this.intervalSubscription = interval(1000).subscribe( count => {
       console.log(count);
