@@ -28,7 +28,9 @@ export class ProdottiComponent implements OnInit, OnDestroy {
     this.intervalSubscription?.unsubscribe()
   }
 
-
+  aggiungiProdotti(){
+    this.prodottoService.aggiungiProdotti
+  }
 
 
 
