@@ -1,5 +1,5 @@
 <div *ngFor="let prodotto of prodotti">
     <ul>
-        <li>{{prodotto.nome}}</li>
+        <li><a [routerLink]="['/prodotti', prodotto.slug]">{{prodotto.nome}}</a></li>
     </ul>
 </div>

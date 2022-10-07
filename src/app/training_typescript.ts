@@ -1,30 +1,28 @@
-class MyStorage<T> {
-    items: T[] = [];
-  
-    constructor(item:T) {
-      this.addItem(item)
-    }
-  
-    addItem(item: T) {
-      this.items.push(item);
-    }
-  
-    removeItem() {
-      this.items.pop();
-    }
-  
-    getItems() {
-      return [...this.items];
-    }
+class Datastore {
+  private _dati :string = ""
+
+  get dati() {
+    console.log("sto leggendo i dati");
+
+    return this._dati
   }
-  
-  const myStorage = new MyStorage(2);
-  
-  myStorage.addItem(4);
-  
-  const lista1 = myStorage.getItems();
-  const nome1 = lista1[0]
-  const lunghezzaNome1 = nome1
-  
-  console.log(lunghezzaNome1);
-  
+
+  set dati(dati :string) {
+    if (dati !== "pippo") {
+      console.log("sto settando i dati");
+      this._dati = dati
+    } else {
+      console.log("Errore!");
+
+    }
+
+  }
+
+}
+
+const ds = new Datastore()
+
+ds.dati = "pippo"
+
+console.log(ds.dati);
+
