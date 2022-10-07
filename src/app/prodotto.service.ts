@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
 
 import { Prodotto } from './dati/prodotto.data';
 
@@ -15,6 +16,19 @@ export class ProdottoService {
     {codice: "005", nome: "prodotto5", categoria:5, slug:"prod5", foto: "", prezzo: 100}
   ]
   private _carrello: Prodotto[] = []
+  public observable: Observable<number>
+
+
+  constructor() { 
+    this.observable = new Observable( subscribe => {
+      let count = 0
+      setInterval(() => {
+        subscribe.next(count)
+        count++
+      }, 1000)
+    })
+  }
+
 
   aggiungiCarrello(prodotto: Prodotto){
     this._carrello.push(prodotto)
@@ -35,6 +49,4 @@ export class ProdottoService {
   get carrello(){
     return [...this._carrello]
   }
-
-  constructor() { }
 }
