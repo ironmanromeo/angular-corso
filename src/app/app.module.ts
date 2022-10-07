@@ -21,6 +21,7 @@ import { PaginaNonTrovataComponent } from './pagina-non-trovata/pagina-non-trova
 import { HomeComponent } from './home/home.component';
 import { RiduciLunghezzaPipe } from './riduci-lunghezza.pipe';
 import { FiltraArrayPipe } from './filtra-array.pipe';
+import { CheckoutComponent } from './checkout/checkout.component';
 
 @NgModule({
   declarations: [
@@ -39,6 +40,7 @@ import { FiltraArrayPipe } from './filtra-array.pipe';
     HomeComponent,
     RiduciLunghezzaPipe,
     FiltraArrayPipe,
+    CheckoutComponent,
   ],
   imports: [
     BrowserModule,

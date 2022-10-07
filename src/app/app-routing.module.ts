@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AdminComponent } from './admin/admin.component';
 import { AuthGuardService } from './auth-guard.service';
+import { CheckoutComponent } from './checkout/checkout.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { PaginaNonTrovataComponent } from './pagina-non-trovata/pagina-non-trovata.component';
@@ -13,6 +14,7 @@ const routes: Routes = [
   {path:"prodotti", component:ProdottiComponent},
   {path:"admin", component:AdminComponent, canActivate: [AuthGuardService]},
   {path:"login", component:LoginComponent},
+  {path:"checkout", component:CheckoutComponent},
   {path:"prodotti/:slug", component:ProdottoComponent},
   {path:"pagina-non-trovata", component: PaginaNonTrovataComponent},
   {path:"**", redirectTo:"pagina-non-trovata"},
