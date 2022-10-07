@@ -1,10 +1,13 @@
 import { Injectable } from '@angular/core';
+import { Observable, subscribeOn, Subscription } from 'rxjs';
 import { Prodotto } from './dati/prodotto.data';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ProdottoService {
+
+  public observable:Observable<number>
 
   private _prodotti :Prodotto[] = [
     {codice:"001",nome:"prodotto 1", categoria:1, slug:"prod1",prezzo:100,foto:""},
@@ -15,6 +18,20 @@ export class ProdottoService {
   ]
 
   private _carrello :Prodotto[] = []
+
+  constructor() {
+    this.observable = new Observable(subscribe => {
+      let count = 0
+      setInterval(() => {
+        subscribe.next(count)
+        count++
+      }, 1000)
+    })
+   }
+
+   ngOninit() {
+    
+   }
 
   aggiungiACarrello(prodotto:Prodotto) {
     this._carrello.push(prodotto)
@@ -36,5 +53,4 @@ export class ProdottoService {
     return [...this._carrello]
   }
 
-  constructor() { }
 }

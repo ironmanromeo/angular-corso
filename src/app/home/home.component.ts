@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { count, Subscription } from 'rxjs';
+import { ProdottoService } from '../prodotto.service';
 
 @Component({
   selector: 'app-home',
@@ -8,18 +10,20 @@ import { Router } from '@angular/router';
 })
 export class HomeComponent implements OnInit {
 
-  nome = "Pippo Pluto e Paperino"
-  miaData = new Date()
-  isLogged = false
+  private subscription?:Subscription
 
   //testoBottone = "Non loggato"
 
-  constructor(private router: Router) {
-
-  }
+  constructor(private router:Router, private prodService:ProdottoService) {}
 
   ngOnInit(): void {
-    
+    this.subscription = this.prodService.observable?.subscribe(count => {
+      console.log(count)
+    })
+  }
+
+  ngOnDestroy(): void {
+    this.subscription?.unsubscribe()
   }
 
   onVaiAProdotto() {
