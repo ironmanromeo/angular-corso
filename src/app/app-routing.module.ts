@@ -15,6 +15,7 @@ const routes: Routes = [
   {path:"admin", component:AdminComponent, canActivate: [AuthGuardService]},
   {path:"log-in", component:LoginComponent},
   {path:"checkout", component:CheckoutComponent},
+  {path:"checkout2", component:CheckoutComponent},
   {path:"prodotti/:slug", component:ProdottoComponent},
   {path:"pagina-non-trovata", component: PaginaNonTrovataComponent},
   {path:"**", redirectTo:"pagina-non-trovata"},
