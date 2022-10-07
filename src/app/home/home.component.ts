@@ -8,13 +8,18 @@ import { Router } from '@angular/router';
 })
 export class HomeComponent implements OnInit {
 
-  constructor(private router:Router) { }
+  isLogged = false
+
+  //testoBottone = "Non loggato"
+
+  constructor(private router: Router) {
+
+  }
 
   ngOnInit(): void {
   }
 
-  onGoProducts() {
-    this.router.navigate(['/products'])
+  onVaiAProdotto() {
+    this.router.navigate(["/prodotti"])
   }
-
 }
