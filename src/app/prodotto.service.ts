@@ -25,11 +25,11 @@ export class ProdottoService {
       setInterval(() => {
         subscribe.next(count)
         count++
-        if(count>=10){
+        if(count >= 10) {
           subscribe.complete()
         }
-        if(count>7){
-          subscribe.error(new Error("Numero troppo grande"))
+        if(count > 7) {
+          subscribe.error(new Error("Stramegaiper errore"))
         }
       }, 1000)
     })

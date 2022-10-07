@@ -17,15 +17,15 @@ export class HomeComponent implements OnInit, OnDestroy {
 
   ngOnInit(): void {
     this.subscription = this.prodService.observable.subscribe({
-      next:count => {
-        console.log(count)
-      },
-      error : error =>{
-        console.log("Errore")
-      },
-      complete : () =>{
-        console.log("Errore")
-      }
+        next: count => {
+          console.log(count);
+        },
+        error: error => {
+          console.log(error);
+        },
+        complete: () => {
+          console.log("complete");
+        }
     })
   }
 
