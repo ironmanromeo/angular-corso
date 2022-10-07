@@ -1,6 +1,7 @@
 <p>prodotti works!</p>
 
 <h3> {{ ricerca }} </h3>
+<h3> {{ testoAsync | async }} </h3>
 <input [(ngModel)]="ricerca">
 
 <div *ngFor="let prodotto of prodotti | filtraArray:ricerca:'categoria'">

@@ -9,6 +9,11 @@ import { ProdottoService } from '../prodotto.service';
 })
 export class ProdottiComponent implements OnInit {
 
+  testoAsync = new Promise ( (resolve, reject) => {
+    setTimeout( () => {
+      resolve("Ciaone bello")
+    }, 2000)
+  })
   ricerca = ""
   prodotti: Prodotto[] = []
 
