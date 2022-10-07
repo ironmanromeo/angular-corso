@@ -20,6 +20,7 @@ import { AdminComponent } from './admin/admin.component';
 import { PaginaNonTrovataComponent } from './pagina-non-trovata/pagina-non-trovata.component';
 import { HomeComponent } from './home/home.component';
 import { RiduciLunghezzaPipe } from './riduci-lunghezza.pipe';
+import { FiltraArrayPipe } from './filtra-array.pipe';
 
 @NgModule({
   declarations: [
@@ -37,6 +38,7 @@ import { RiduciLunghezzaPipe } from './riduci-lunghezza.pipe';
     PaginaNonTrovataComponent,
     HomeComponent,
     RiduciLunghezzaPipe,
+    FiltraArrayPipe,
   ],
   imports: [
     BrowserModule,
