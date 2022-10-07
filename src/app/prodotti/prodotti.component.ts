@@ -9,12 +9,11 @@ import { ProdottoService } from '../prodotto.service';
   styleUrls: ['./prodotti.component.css']
 })
 export class ProdottiComponent implements OnInit {
-  testoAsync= new Promise((resolve, reject)=>
-  {
-    setTimeout (()=>{
-    resolve("pippo")
-  },2000)
-   
+
+  testoAsync = new Promise((resolve, reject) => {
+    setTimeout( () => {
+      resolve("Pippo")
+    }, 2000)
   })
   ricerca = ""
   prodotti :Prodotto[] = []
@@ -24,7 +23,7 @@ export class ProdottiComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  
+
 
 
 
