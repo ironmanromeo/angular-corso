@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { PostsComponent } from './posts/posts.component'
 import { PostComponent } from './post/post.component';
 import { FormComponent } from './form/form.component';
+import{HttpClientModule} from '@angular/common/http'
 
 import './training_javascript'
 import './training_typescript';
@@ -23,6 +24,7 @@ import { RiduciLunghezzaPipe } from './riduci-lunghezza.pipe';
 import { FiltraArrayPipe } from './filtra-array.pipe';
 import { CheckoutComponent } from './checkout/checkout.component';
 import { Checkout2Component } from './checkout2/checkout2.component';
+import { Post2Component } from './post2/post2.component';
 
 @NgModule({
   declarations: [
@@ -44,12 +46,14 @@ import { Checkout2Component } from './checkout2/checkout2.component';
     FiltraArrayPipe,
     CheckoutComponent,
     Checkout2Component,
+    Post2Component,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
