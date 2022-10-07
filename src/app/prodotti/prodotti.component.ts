@@ -12,6 +12,7 @@ import { interval, Subscription } from 'rxjs';
 export class ProdottiComponent implements OnInit, OnDestroy {
 
   private intervalSubscription?: Subscription
+  private prodottiSubscription?: Subscription
   ricerca = ""
   prodotti :Prodotto[] = []
 
@@ -19,9 +20,13 @@ export class ProdottiComponent implements OnInit, OnDestroy {
     this.prodotti = this.prodottoService.prodotti
     
    }
+
   ngOnInit(): void {
     this.intervalSubscription = interval(1000).subscribe( count => {
       console.log(count);
+    })
+    this.prodottiSubscription = this.prodottoService.emitter.subscribe( prods => {
+      this.prodotti = prods
     })
   }
 
@@ -29,10 +34,8 @@ export class ProdottiComponent implements OnInit, OnDestroy {
     this.intervalSubscription?.unsubscribe()
   }
 
-
-
-
-
-
+  aggiungiProdotti() {
+    this.prodottoService.aggiungiProdotti()
+    }
 
 }
