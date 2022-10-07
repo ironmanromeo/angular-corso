@@ -7,7 +7,9 @@ import { Router } from '@angular/router';
 })
 export class HomeComponent implements OnInit {
 
+  nome = "ciaoneeeeeeeeeeee"
   isLogged = false
+  myDate = new Date()
 
   constructor(private router: Router) {}
 

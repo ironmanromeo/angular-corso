@@ -22,6 +22,7 @@ import { ApplicaColoreDirective } from './applica-colore.directive';
 import './training_javascript'
 import './training_typescript';
 import { PaginaNonTrovataComponent } from './pagina-non-trovata/pagina-non-trovata.component';
+import { RiduciLunghezzaPipe } from './riduci-lunghezza.pipe';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { PaginaNonTrovataComponent } from './pagina-non-trovata/pagina-non-trova
     AdminComponent,
     LoginComponent,
     HomeComponent,
-    PaginaNonTrovataComponent
+    PaginaNonTrovataComponent,
+    RiduciLunghezzaPipe
   ],
   imports: [
     BrowserModule,
