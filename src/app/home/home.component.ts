@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-home',
@@ -8,17 +9,13 @@ import { Router } from '@angular/router';
 })
 export class HomeComponent implements OnInit {
 
-  nome = "Pippo Pluto e Paperino"
-  miaData = new Date()
-  isLogged = false
-
-  //testoBottone = "Non loggato"
+  
 
   constructor(private router: Router) {
-
   }
 
   ngOnInit(): void {
+    this.prodService.observable.subscribe
   }
 
   onVaiAProdotto() {
