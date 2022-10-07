@@ -10,6 +10,10 @@ export class HomeComponent implements OnInit {
 
   private _isLogged = false
 
+  nome = "Il grandissimo Pippo"
+
+  miaData = new Date()
+
   //testoBottone = "Non loggato"
 
   //testoBottone = "Non loggato"
