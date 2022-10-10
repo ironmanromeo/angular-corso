@@ -1,13 +1,12 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
-
-
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PostsComponent } from './posts/posts.component'
 import { PostComponent } from './post/post.component';
 import { FormComponent } from './form/form.component';
+import { HttpClientModule } from '@angular/common/http';
 
 import './training_javascript'
 import './training_typescript';
@@ -20,6 +19,12 @@ import { ProdottoComponent } from './prodotto/prodotto.component';
 import { AdminComponent } from './admin/admin.component';
 import { LoginComponent } from './login/login.component';
 import { PaginaNonTrovataComponent } from './pagina-non-trovata/pagina-non-trovata.component';
+import { HomeComponent } from './home/home.component';
+import { RiduciLunghezzaPipe } from './riduci-lunghezza.pipe';
+import { FiltraArrayPipe } from './filtra-array.pipe';
+import { CheckoutComponent } from './checkout/checkout.component';
+import { Checkout2Component } from './checkout2/checkout2.component';
+import { Posts2Component } from './posts2/posts2.component';
 
 @NgModule({
   declarations: [
@@ -36,11 +41,19 @@ import { PaginaNonTrovataComponent } from './pagina-non-trovata/pagina-non-trova
     AdminComponent,
     LoginComponent,
     PaginaNonTrovataComponent,
+    HomeComponent,
+    RiduciLunghezzaPipe,
+    FiltraArrayPipe,
+    CheckoutComponent,
+    Checkout2Component,
+    Posts2Component,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
