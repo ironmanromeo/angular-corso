@@ -7,6 +7,7 @@ import { Checkout2Component } from './checkout2/checkout2.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { PaginaNonTrovataComponent } from './pagina-non-trovata/pagina-non-trovata.component';
+import { Posts2Component } from './posts2/posts2.component';
 import { ProdottiComponent } from './prodotti/prodotti.component';
 import { ProdottoComponent } from './prodotto/prodotto.component';
 
@@ -17,6 +18,7 @@ const routes: Routes = [
   {path:"log-in", component:LoginComponent},
   {path:"checkout", component:CheckoutComponent},
   {path:"checkout2", component:Checkout2Component},
+  {path:"posts", component:Posts2Component},
   {path:"prodotti/:slug", component:ProdottoComponent},
   {path:"pagina-non-trovata", component: PaginaNonTrovataComponent},
   {path:"**", redirectTo:"pagina-non-trovata"},
