@@ -22,10 +22,13 @@ export class AuthService {
 
   isAutenticated() {
     const promise = new Promise<boolean>((resolve, reject) => {
-      setTimeout(()=> {
-       resolve(this.isLogged)
+      if (this.isLogged){
+        resolve(this.isLogged)
+      } else {
+        setTimeout(()=> {
+          resolve(this.isLogged)
+         } , 500)
       }
-       , 500)
     })
     return promise
   }
